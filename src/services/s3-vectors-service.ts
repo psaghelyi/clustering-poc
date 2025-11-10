@@ -115,13 +115,19 @@ export class S3VectorsService {
 
     for (let i = 0; i < docs.length; i += BATCH_SIZE) {
       const batch = docs.slice(i, i + BATCH_SIZE);
-      const vectors = batch.map(doc => ({
-        key: doc.id,
-        data: {
-          float32: Array.from(doc.embedding),
-        },
-        metadata: this.prepareMetadata(doc),
-      }));
+      const vectors = batch.map(doc => {
+        if (!doc.embedding || !Array.isArray(doc.embedding)) {
+          throw new Error(`Document ${doc.id} has invalid or missing embedding`);
+        }
+
+        return {
+          key: doc.id,
+          data: {
+            float32: Array.from(doc.embedding),
+          },
+          metadata: this.prepareMetadata(doc),
+        };
+      });
 
       await this.client.send(
         new PutVectorsCommand({
