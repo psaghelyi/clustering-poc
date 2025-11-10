@@ -127,16 +127,24 @@ async function main() {
     // Use batch processing for faster embedding generation
     const totalDocs = documents.length;
     const batchSize = CONFIG.embeddingProvider === 'cohere' ? 96 : 10;
-    
+
     embeddedDocs = [];
     let processedCount = 0;
-    
+
     // Process in batches with progress logging
     for (let i = 0; i < documents.length; i += batchSize) {
       const batch = documents.slice(i, i + batchSize);
       const batchResults = await embeddingService.embedDocuments(batch);
+
+      // Validate embeddings before adding them
+      for (const doc of batchResults) {
+        if (!doc.embedding || !Array.isArray(doc.embedding)) {
+          console.error(`⚠️  Warning: Document ${doc.id} has invalid embedding:`, typeof doc.embedding);
+        }
+      }
+
       embeddedDocs.push(...batchResults);
-      
+
       processedCount += batch.length;
       if (processedCount % 10 === 0 || processedCount === totalDocs) {
         console.log(`   Progress: ${processedCount}/${totalDocs} embeddings generated (${Math.round(processedCount/totalDocs*100)}%)`);
