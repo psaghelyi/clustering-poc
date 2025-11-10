@@ -5,30 +5,22 @@ import {
   ListObjectsV2Command,
   DeleteObjectCommand,
 } from '@aws-sdk/client-s3';
-import { EmbeddedDocument, S3Config } from '../types.js';
+import { EmbeddedDocument, S3Config, VectorStore } from '../types.js';
 
 /**
- * Service for storing and retrieving embeddings from S3
+ * Service for storing and retrieving embeddings from S3 as JSON files
+ * Implements VectorStore interface for simple S3-based storage
  */
-export class S3Service {
+export class S3Service implements VectorStore {
   private client: S3Client;
   private bucket: string;
 
   constructor(config: S3Config) {
     this.bucket = config.bucket;
 
-    // Configure S3 client (supports localstack)
+    // Configure S3 client
     this.client = new S3Client({
       region: config.region,
-      endpoint: config.endpoint,
-      forcePathStyle: config.forcePathStyle ?? false,
-      // Credentials for localstack (will use AWS credentials in production)
-      ...(config.endpoint && {
-        credentials: {
-          accessKeyId: 'test',
-          secretAccessKey: 'test',
-        },
-      }),
     });
   }
 

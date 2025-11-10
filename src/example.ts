@@ -1,4 +1,5 @@
-import { S3Service } from './services/s3-service.js';
+import { VectorStoreFactory } from './services/vector-store-factory.js';
+import { S3VectorsService } from './services/s3-vectors-service.js';
 import { EmbeddingService } from './services/embedding-service.js';
 import { ClusteringService } from './services/clustering-service.js';
 import {
@@ -6,16 +7,19 @@ import {
   EmbeddedDocument,
   EMBEDDING_MODELS,
   EmbeddingProvider,
+  VectorStoreType,
+  VectorStore,
 } from './types.js';
-import { CreateBucketCommand, S3Client } from '@aws-sdk/client-s3';
 
 /**
  * Configuration
  */
 const USE_MOCK_EMBEDDINGS = process.env.USE_MOCK_EMBEDDINGS !== 'false'; // Default to true for testing
 const EMBEDDING_PROVIDER = (process.env.EMBEDDING_PROVIDER || 'nova') as EmbeddingProvider;
-const USE_LOCALSTACK = process.env.USE_LOCALSTACK !== 'false'; // Default to true
+const VECTOR_STORE_TYPE = (process.env.VECTOR_STORE_TYPE || 'simple-s3') as VectorStoreType;
 const S3_BUCKET = process.env.S3_BUCKET || 'clustering-poc-embeddings';
+const S3_VECTOR_BUCKET = process.env.S3_VECTOR_BUCKET || 'clustering-poc-vectors';
+const S3_VECTOR_INDEX = process.env.S3_VECTOR_INDEX || 'embeddings-index';
 const AWS_REGION = process.env.AWS_REGION || 'us-east-1';
 
 /**
@@ -132,71 +136,61 @@ function generateMockEmbeddings(docs: Document[]): EmbeddedDocument[] {
 }
 
 /**
- * Ensure S3 bucket exists (for localstack)
- */
-async function ensureBucketExists(s3Config: any): Promise<void> {
-  const client = new S3Client({
-    region: s3Config.region,
-    endpoint: s3Config.endpoint,
-    forcePathStyle: s3Config.forcePathStyle,
-    credentials: s3Config.endpoint
-      ? { accessKeyId: 'test', secretAccessKey: 'test' }
-      : undefined,
-  });
-
-  try {
-    await client.send(new CreateBucketCommand({ Bucket: S3_BUCKET }));
-    console.log(`✓ Created bucket: ${S3_BUCKET}`);
-  } catch (error: any) {
-    if (error.name === 'BucketAlreadyOwnedByYou' || error.name === 'BucketAlreadyExists') {
-      console.log(`✓ Bucket already exists: ${S3_BUCKET}`);
-    } else {
-      throw error;
-    }
-  }
-}
-
-/**
  * Main example workflow
  */
 async function main() {
   console.log('=== Document Clustering with S3 Embeddings ===\n');
 
-  // Configure S3
-  const s3Config = {
-    bucket: S3_BUCKET,
-    region: AWS_REGION,
-    ...(USE_LOCALSTACK && {
-      endpoint: 'http://localhost:4566',
-      forcePathStyle: true,
-    }),
-  };
-
   console.log(`Configuration:
   - Embedding Provider: ${EMBEDDING_PROVIDER}
   - Mock Embeddings: ${USE_MOCK_EMBEDDINGS}
-  - LocalStack: ${USE_LOCALSTACK}
-  - S3 Bucket: ${S3_BUCKET}
+  - Vector Store: ${VECTOR_STORE_TYPE}
+  - Clustering Algorithm: HDBSCAN
   - Region: ${AWS_REGION}
+${VECTOR_STORE_TYPE === 'simple-s3' ? `  - S3 Bucket: ${S3_BUCKET}` : `  - Vector Bucket: ${S3_VECTOR_BUCKET}\n  - Vector Index: ${S3_VECTOR_INDEX}`}
 \n`);
 
   // Initialize services
-  const s3Service = new S3Service(s3Config);
+  const embeddingModelConfig = EMBEDDING_MODELS[EMBEDDING_PROVIDER];
+
+  // Create vector store based on configuration
+  let vectorStore: VectorStore;
+  if (VECTOR_STORE_TYPE === 'simple-s3') {
+    vectorStore = VectorStoreFactory.create({
+      type: 'simple-s3',
+      s3Config: {
+        bucket: S3_BUCKET,
+        region: AWS_REGION,
+      },
+    });
+  } else {
+    vectorStore = VectorStoreFactory.create({
+      type: 's3-vectors',
+      s3VectorsConfig: {
+        vectorBucket: S3_VECTOR_BUCKET,
+        indexName: S3_VECTOR_INDEX,
+        region: AWS_REGION,
+        dimensions: embeddingModelConfig.dimensions || 1024,
+      },
+    });
+  }
+
   const embeddingService = new EmbeddingService(
-    EMBEDDING_MODELS[EMBEDDING_PROVIDER],
+    embeddingModelConfig,
     AWS_REGION
   );
   const clusteringService = new ClusteringService({
-    algorithm: 'dbscan',
-    epsilon: 0.3, // Cosine distance threshold (lower = more similar required)
-    minPoints: 2,
-    distanceMetric: 'cosine',
+    algorithm: 'hdbscan',
+    minClusterSize: 2,
+    minSamples: 2,
   });
 
   try {
-    // Ensure bucket exists (important for localstack)
-    if (USE_LOCALSTACK) {
-      await ensureBucketExists(s3Config);
+    // Initialize vector store
+    if (VECTOR_STORE_TYPE === 's3-vectors') {
+      console.log('Step 0: Initializing S3 Vectors bucket and index...');
+      await (vectorStore as S3VectorsService).initialize();
+      console.log('✓ Vector store initialized\n');
     }
 
     // Step 1: Generate sample documents
@@ -217,15 +211,15 @@ async function main() {
     }
     console.log(`✓ Generated ${embeddedDocs.length} embeddings\n`);
 
-    // Step 3: Store embeddings in S3
-    console.log('Step 3: Storing embeddings in S3...');
-    await s3Service.storeEmbeddings(embeddedDocs);
-    console.log(`✓ Stored ${embeddedDocs.length} embeddings in S3\n`);
+    // Step 3: Store embeddings in vector store
+    console.log(`Step 3: Storing embeddings in ${VECTOR_STORE_TYPE}...`);
+    await vectorStore.storeEmbeddings(embeddedDocs);
+    console.log(`✓ Stored ${embeddedDocs.length} embeddings\n`);
 
-    // Step 4: Retrieve embeddings from S3
-    console.log('Step 4: Retrieving embeddings from S3...');
-    const retrievedDocs = await s3Service.getAllEmbeddings();
-    console.log(`✓ Retrieved ${retrievedDocs.length} embeddings from S3\n`);
+    // Step 4: Retrieve embeddings from vector store
+    console.log(`Step 4: Retrieving embeddings from ${VECTOR_STORE_TYPE}...`);
+    const retrievedDocs = await vectorStore.getAllEmbeddings();
+    console.log(`✓ Retrieved ${retrievedDocs.length} embeddings\n`);
 
     // Step 5: Cluster documents
     console.log('Step 5: Clustering documents by cosine similarity...');

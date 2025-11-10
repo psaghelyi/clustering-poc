@@ -1,4 +1,5 @@
 import * as clustering from 'density-clustering';
+import { HDBSCAN } from 'hdbscan-ts';
 import { EmbeddedDocument, Cluster, ClusteringConfig } from '../types.js';
 import { EmbeddingService } from './embedding-service.js';
 
@@ -29,6 +30,8 @@ export class ClusteringService {
         return this.clusterWithOPTICS(docs);
       case 'kmeans':
         return this.clusterWithKMeans(docs);
+      case 'hdbscan':
+        return this.clusterWithHDBSCAN(docs);
       default:
         throw new Error(`Unsupported algorithm: ${algorithm}`);
     }
@@ -98,6 +101,47 @@ export class ClusteringService {
     const dataset = docs.map((doc) => doc.embedding);
 
     const clusterIndices = kmeans.run(dataset, k);
+
+    return this.indicesToClusters(docs, clusterIndices);
+  }
+
+  /**
+   * Cluster using HDBSCAN algorithm (hierarchical density-based, automatic cluster count)
+   * HDBSCAN is superior to DBSCAN as it doesn't require epsilon parameter and
+   * automatically determines the number of clusters at varying densities.
+   */
+  private clusterWithHDBSCAN(docs: EmbeddedDocument[]): Cluster[] {
+    const minClusterSize = this.config.minClusterSize ?? 2;
+    const minSamples = this.config.minSamples ?? 2;
+
+    // Extract embeddings as dataset
+    const dataset = docs.map((doc) => doc.embedding);
+
+    // Run HDBSCAN clustering
+    const hdbscan = new HDBSCAN({
+      minClusterSize,
+      minSamples,
+      debugMode: false,
+    });
+
+    const labels = hdbscan.fit(dataset);
+
+    // Convert labels to cluster indices format
+    // Group document indices by cluster label
+    const clusterMap = new Map<number, number[]>();
+
+    labels.forEach((label, docIndex) => {
+      // HDBSCAN uses -1 for noise points, skip them
+      if (label === -1) return;
+
+      if (!clusterMap.has(label)) {
+        clusterMap.set(label, []);
+      }
+      clusterMap.get(label)!.push(docIndex);
+    });
+
+    // Convert map to array of index arrays
+    const clusterIndices = Array.from(clusterMap.values());
 
     return this.indicesToClusters(docs, clusterIndices);
   }
