@@ -45,10 +45,12 @@ export class EmbeddingService {
 
     switch (provider) {
       case 'nova':
+        // Nova multimodal embeddings support text input
         requestBody = {
           inputText: text,
-          dimensions: dimensions || 1024,
-          normalize: true,
+          embeddingConfig: {
+            outputEmbeddingLength: dimensions || 1024,
+          },
         };
         break;
 
@@ -87,7 +89,8 @@ export class EmbeddingService {
 
     switch (provider) {
       case 'nova':
-        embedding = responseBody.embedding;
+        // Nova returns embedding in the response
+        embedding = responseBody.embedding || responseBody.embeddings?.[0];
         break;
 
       case 'titan':
@@ -100,6 +103,10 @@ export class EmbeddingService {
 
       default:
         throw new Error(`Unsupported provider: ${provider}`);
+    }
+
+    if (!embedding) {
+      throw new Error(`Failed to extract embedding from response: ${JSON.stringify(responseBody)}`);
     }
 
     return embedding;

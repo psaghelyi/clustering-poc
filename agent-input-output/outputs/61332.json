@@ -1,0 +1,122 @@
+[
+  {
+    "description": "Current audit and accountability policy document, including version history and approval records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current audit and accountability procedures document, including version history and last review date",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of designated official responsible for managing audit and accountability policy and procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of auditable event types configured across all system components (network, data storage, and computing devices)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit configuration documentation showing event types selected for continuous logging",
+    "owner": "No owner"
+  },
+  {
+    "description": "Rationale document explaining why selected event types are adequate for after-the-fact investigations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Sample audit records demonstrating inclusion of required content (event type, timestamp, location, source, outcome, and identity)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit log storage capacity allocation documentation and retention requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit logging process failure alert configuration and recipient list",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of audit storage capacity warning thresholds (75% or one month before impact) and alert recipients",
+    "owner": "No owner"
+  },
+  {
+    "description": "Real-time alert configuration for audit failure events, including recipient roles with authority to address failures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of weekly audit record review and analysis activities for the past quarter",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit review findings reports and documentation of reporting to designated personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of automated mechanisms used for audit record review, analysis, and reporting integration",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of audit record correlation across different repositories for organization-wide situational awareness",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security Information and Event Management (SIEM) tool configuration for centralized audit record review and analysis",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of integrated analysis combining audit records with vulnerability scanning, performance data, system monitoring, and penetration test data",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of correlation between audit records and physical access monitoring information",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control matrix showing permitted actions (read, write, execute, append, delete) for audit record information by role and user",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit record reduction and report generation tool documentation and sample customizable reports",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration of automated audit record processing, sorting, and searching capabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Time synchronization configuration showing one-second granularity and use of Coordinated Universal Time (UTC)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access controls and alert configuration for unauthorized access, modification, or deletion of audit information",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of weekly storage of audit records in a physically separate repository from audited systems",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cryptographic mechanisms documentation for protecting integrity of audit information and audit tools (FIPS-validated)",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of privileged users or roles authorized to manage audit logging functionality",
+    "owner": "No owner"
+  },
+  {
+    "description": "Non-repudiation mechanisms documentation covering addition, modification, deletion, approval, sending, and receiving of data",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit record retention policy and evidence of compliance with M-21-31 and NARA requirements (minimum 90 days online, long-term offline)",
+    "owner": "No owner"
+  },
+  {
+    "description": "System-wide audit trail compilation documentation showing time-correlated records from all network, data storage, and computing devices",
+    "owner": "No owner"
+  },
+  {
+    "description": "Role-based audit configuration change procedures and documentation of authorized individuals with audit configuration responsibilities",
+    "owner": "No owner"
+  }
+]

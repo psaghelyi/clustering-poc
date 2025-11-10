@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Current maintenance policy and procedures documentation, including roles, responsibilities, and approval authority",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual review and updates to maintenance policy and procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Maintenance schedules and records for system components, including dates, descriptions, and personnel involved",
+    "owner": "No owner"
+  },
+  {
+    "description": "Approval records for off-site maintenance, repair, or replacement activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media sanitization procedures and records for equipment removed for off-site maintenance",
+    "owner": "No owner"
+  },
+  {
+    "description": "Post-maintenance verification testing records demonstrating controls are functioning properly",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of approved maintenance tools and annual review documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inspection records for maintenance tools checking for unauthorized modifications or malicious code",
+    "owner": "No owner"
+  },
+  {
+    "description": "Procedures and records for preventing unauthorized removal of maintenance equipment containing organizational information",
+    "owner": "No owner"
+  },
+  {
+    "description": "Nonlocal maintenance approval and monitoring records, including session logs and authentication methods",
+    "owner": "No owner"
+  },
+  {
+    "description": "Strong authentication mechanisms documentation for nonlocal maintenance sessions (e.g., multi-factor authentication, PKI certificates)",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of authorized maintenance personnel and organizations, including access authorization verification records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Escort and supervision procedures for maintenance personnel without appropriate security clearances",
+    "owner": "No owner"
+  },
+  {
+    "description": "Maintenance support contracts and spare parts inventory for critical system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Service level agreements or documentation supporting advertised uptime and availability requirements",
+    "owner": "No owner"
+  }
+]

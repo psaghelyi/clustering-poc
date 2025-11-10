@@ -1,0 +1,86 @@
+[
+  {
+    "description": "System and Services Acquisition policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
+    "owner": "No owner"
+  },
+  {
+    "description": "Capital planning and investment control documentation showing resource allocation for information security and privacy, including discrete line items in programming and budgeting documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "System Development Life Cycle (SDLC) documentation that incorporates security and privacy considerations, including defined roles and responsibilities throughout the lifecycle",
+    "owner": "No owner"
+  },
+  {
+    "description": "Acquisition contracts for systems, components, or services, including security and privacy functional requirements, assurance requirements, acceptance criteria, and Federal Acquisition Regulation (FAR) Section 889 compliance documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security configuration baseline documentation (DoD STIGs, CIS Level 2 benchmarks, or custom baselines) for all systems, components, and services",
+    "owner": "No owner"
+  },
+  {
+    "description": "Administrator and user documentation for systems, components, and services, including secure configuration, installation, operation guidance, and known vulnerabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Systems security and privacy engineering principles documentation showing application throughout the specification, design, development, implementation, and modification phases",
+    "owner": "No owner"
+  },
+  {
+    "description": "External system services agreements, service-level agreements, and continuous monitoring documentation demonstrating compliance with FedRAMP security controls baselines",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk assessment documentation for acquisition or outsourcing of information security services, including organizational approvals",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of functions, ports, protocols, and services required for all external system services where Federal information is processed or stored",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation confirming that information processing, data storage, and system services are restricted to U.S./U.S. Territories or locations with U.S. jurisdiction for all High impact data, systems, or services",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer configuration management documentation, including change control procedures, integrity verification methods, and security flaw tracking and resolution reports",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer security and privacy assessment plans, including unit/integration/system/regression testing results, flaw remediation processes, and evidence of test execution",
+    "owner": "No owner"
+  },
+  {
+    "description": "Static code analysis reports documenting identified flaws, remediation actions, and methodology for reviewing newly developed code (or dynamic code analysis if source code is unavailable)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Threat modeling and vulnerability analysis documentation performed during development and testing, including contextual information, tools/methods used, rigor level, and acceptance criteria",
+    "owner": "No owner"
+  },
+  {
+    "description": "Development process documentation showing security and privacy requirements integration, standards and tools used, tool configurations, and integrity controls for process changes (reviewed annually)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Criticality analysis documentation performed at key decision points in the SDLC, including breadth and depth of analysis for high value assets",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer-provided training materials and records on the correct use and operation of implemented security and privacy functions, controls, and mechanisms",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer security and privacy architecture and design specifications showing consistency with enterprise architecture, allocation of controls, and unified approach to protection",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer personnel screening documentation, including access authorizations, background checks, clearances, and list of individuals authorized to perform development activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inventory of system components with support status, including replacement plans for unsupported components or documentation of alternative support arrangements (in-house or external providers)",
+    "owner": "No owner"
+  }
+]

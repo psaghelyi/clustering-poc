@@ -1,0 +1,122 @@
+[
+  {
+    "description": "System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "System and communications protection policy and procedures documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "FIPS 140-2 or FIPS 140-3 validation certificates for all cryptographic modules in use",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cryptographic key management procedures including key generation, distribution, storage, access, and destruction processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Network architecture diagrams showing boundary protection devices, subnets, DMZs, and managed interfaces",
+    "owner": "No owner"
+  },
+  {
+    "description": "Firewall and boundary protection device configuration files and rulesets",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of encryption implementation for data in transit (TLS/IPSec configurations)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of encryption implementation for data at rest across all system components storing Federal data",
+    "owner": "No owner"
+  },
+  {
+    "description": "DNSSEC implementation documentation for authoritative and recursive DNS servers",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of external network connections and access points to the system",
+    "owner": "No owner"
+  },
+  {
+    "description": "Traffic flow policies for each managed interface including documented exceptions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Deny-by-default, allow-by-exception network communications policy and implementation evidence",
+    "owner": "No owner"
+  },
+  {
+    "description": "Split tunneling prevention controls and configuration for remote devices",
+    "owner": "No owner"
+  },
+  {
+    "description": "Authenticated proxy server configurations and routing policies",
+    "owner": "No owner"
+  },
+  {
+    "description": "Data exfiltration prevention controls and testing results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Host-based protection system (HIPS/HIDS/firewall) deployment evidence across all system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Boundary protection device fail-secure configuration documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component isolation and segregation implementation documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Session timeout and network disconnect configuration for privileged and user sessions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Public Key Infrastructure (PKI) certificate policy and approved trust anchor list",
+    "owner": "No owner"
+  },
+  {
+    "description": "Mobile code policy defining acceptable and unacceptable mobile code technologies",
+    "owner": "No owner"
+  },
+  {
+    "description": "Session authenticity protection mechanisms and implementation evidence",
+    "owner": "No owner"
+  },
+  {
+    "description": "System time synchronization configuration with NIST authoritative time sources",
+    "owner": "No owner"
+  },
+  {
+    "description": "Process isolation implementation documentation showing separate execution domains",
+    "owner": "No owner"
+  },
+  {
+    "description": "Denial-of-service protection controls for ICMP flood, SYN flood, slowloris, buffer overflow, and volume attacks",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix showing role assignments for system administration functions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Services, ports, and protocols inventory with justifications for each",
+    "owner": "No owner"
+  },
+  {
+    "description": "Collaborative computing device remote activation controls and user indication mechanisms",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information sharing controls for shared system resources to prevent unauthorized information transfer",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security function isolation implementation showing separation of security and non-security functions",
+    "owner": "No owner"
+  }
+]

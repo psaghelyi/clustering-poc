@@ -1,0 +1,142 @@
+[
+  {
+    "description": "System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current system and information integrity policy and procedures, including review and update dates",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vulnerability scanning reports and flaw remediation tracking records for the past 90 days",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of security-relevant software and firmware updates installed within 30 days of release",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration management documentation showing integration of flaw remediation processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Malicious code protection mechanism configuration documentation, including signature-based and non-signature-based technologies",
+    "owner": "No owner"
+  },
+  {
+    "description": "Malicious code scanning logs showing weekly scans and real-time scanning at endpoints and network entry/exit points",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alert notifications sent to administrators in response to malicious code detection",
+    "owner": "No owner"
+  },
+  {
+    "description": "System monitoring objectives and monitoring device deployment architecture diagrams",
+    "owner": "No owner"
+  },
+  {
+    "description": "Intrusion detection and prevention system (IDS/IPS) configuration and alert logs",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security Information and Event Management (SIEM) system configuration and real-time analysis reports",
+    "owner": "No owner"
+  },
+  {
+    "description": "Network traffic monitoring logs for inbound and outbound communications showing continuous monitoring",
+    "owner": "No owner"
+  },
+  {
+    "description": "System-generated security alerts and notifications sent to designated personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Wireless intrusion detection system configuration and scanning reports",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of monitoring information correlation across multiple security tools",
+    "owner": "No owner"
+  },
+  {
+    "description": "Host-based monitoring mechanisms configuration on servers, workstations, and mobile devices",
+    "owner": "No owner"
+  },
+  {
+    "description": "US-CERT and CISA security alerts, advisories, and directives received and disseminated in the past year",
+    "owner": "No owner"
+  },
+  {
+    "description": "CISA Emergency and Binding Operational Directives compliance status documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security directive implementation records showing compliance within established timeframes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security and privacy function verification test results performed at system startup/restart and monthly",
+    "owner": "No owner"
+  },
+  {
+    "description": "Software, firmware, and information integrity verification tool configuration and scan results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Integrity check logs performed at least monthly and during security-relevant events",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated notifications of integrity violations sent to ISSO and security personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cryptographic code authentication mechanisms for software and firmware components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Spam protection mechanism configuration at system entry and exit points",
+    "owner": "No owner"
+  },
+  {
+    "description": "DMARC configuration documentation for outgoing email domains (if applicable)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information input validation procedures and exception documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Error handling procedures and error message logs showing restricted disclosure",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information management and retention schedules in accordance with NARA requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Memory protection controls documentation including data execution prevention and address space layout randomization",
+    "owner": "No owner"
+  },
+  {
+    "description": "Services, ports, and protocols inventory with purpose and authorized users",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix showing role assignments for privileged and non-privileged functions",
+    "owner": "No owner"
+  },
+  {
+    "description": "System owner and ISSO contact information and organizational chart",
+    "owner": "No owner"
+  },
+  {
+    "description": "FedRAMP Package ID and authorization documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident response plan and incident reporting procedures aligned with US-CERT guidelines",
+    "owner": "No owner"
+  }
+]

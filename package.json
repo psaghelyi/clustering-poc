@@ -9,6 +9,8 @@
     "dev": "tsx src/example.ts",
     "start": "node dist/example.js",
     "test": "tsx src/example.ts",
+    "merge": "tsx src/merge-documents.ts",
+    "merge:aws": "aws-vault exec acl-playground -- npm run merge",
     "localstack:up": "docker-compose up -d",
     "localstack:down": "docker-compose down",
     "clean": "rm -rf dist"

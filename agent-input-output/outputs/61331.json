@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Current awareness and training policy document, including purpose, scope, roles, responsibilities, management commitment, coordination, and compliance requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Procedures for implementing awareness and training policy and associated controls",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of the designated official responsible for managing awareness and training policy development and dissemination",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual review and update of awareness and training policy and procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security and privacy literacy training materials provided to system users, including managers, senior executives, and contractors",
+    "owner": "No owner"
+  },
+  {
+    "description": "Training completion records for all system users showing initial and annual security and privacy literacy training",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of awareness techniques employed (e.g., posters, email advisories, logon screen messages, awareness events)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual updates to literacy training and awareness content, including incorporation of lessons learned from security or privacy incidents",
+    "owner": "No owner"
+  },
+  {
+    "description": "Insider threat awareness training materials covering recognition and reporting of potential indicators",
+    "owner": "No owner"
+  },
+  {
+    "description": "Social engineering and social mining awareness training materials covering phishing, pretexting, impersonation, and other attack vectors",
+    "owner": "No owner"
+  },
+  {
+    "description": "Role-based security and privacy training materials for personnel with assigned security roles and responsibilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Training completion records for role-based training showing initial training before system access and annual refresher training",
+    "owner": "No owner"
+  },
+  {
+    "description": "Individual training records retained for five years or five years after completion of specific training programs",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of training content updates following system changes or significant events",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of personnel roles and responsibilities requiring role-based security and privacy training",
+    "owner": "No owner"
+  }
+]

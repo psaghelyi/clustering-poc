@@ -1,0 +1,138 @@
+[
+  {
+    "description": "Physical and environmental protection policy and procedures documentation (PE-1)",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of individuals with authorized physical access to the facility where the system resides",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access authorization credentials (ID badges, identification cards, smart cards) issuance records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access list review records for the past 12 months demonstrating at least quarterly reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access audit logs for all entry and exit points for the past 12 months",
+    "owner": "No owner"
+  },
+  {
+    "description": "Visitor access records for the past 12 months including names, organizations, dates, entry/departure times, and purpose of visits",
+    "owner": "No owner"
+  },
+  {
+    "description": "Visitor access record review documentation demonstrating at least monthly reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access control system documentation including entry/exit points, guards, and physical access control devices",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical intrusion alarm and surveillance equipment documentation and monitoring records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access monitoring logs and incident response records for suspicious activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Visitor escort procedures and records demonstrating visitor control within restricted access areas",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access device inventory records (keys, combinations, access cards) with annual inventory verification",
+    "owner": "No owner"
+  },
+  {
+    "description": "Key and combination change records demonstrating at least annual changes or changes following security events",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access control documentation for system distribution and transmission lines including wiring closets and cable protection",
+    "owner": "No owner"
+  },
+  {
+    "description": "Output device physical access controls documentation (printers, monitors, scanners, copiers)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Power equipment and cabling protection documentation including UPS systems and emergency power capabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Emergency shutoff switch locations and protection documentation with labeling and access procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Uninterruptible power supply (UPS) specifications and testing records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alternate power supply documentation demonstrating automatic activation capability for extended power loss",
+    "owner": "No owner"
+  },
+  {
+    "description": "Emergency lighting system documentation and testing records for emergency exits and evacuation routes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Fire detection and suppression system documentation including independent energy source specifications",
+    "owner": "No owner"
+  },
+  {
+    "description": "Fire detection system automatic activation and notification procedures with personnel notification lists",
+    "owner": "No owner"
+  },
+  {
+    "description": "Fire suppression system automatic activation documentation and notification procedures for unstaffed facilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Environmental controls documentation consistent with ASHRAE Thermal Guidelines for Data Processing Environments including temperature and humidity monitoring records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Environmental monitoring system documentation with alarm and notification capabilities to designated personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Water damage protection documentation including master shutoff valve locations and water detection sensor specifications",
+    "owner": "No owner"
+  },
+  {
+    "description": "Water detection system automated alert mechanisms and notification procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component delivery and removal authorization procedures and records",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component inventory records for all components entering and exiting the facility",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alternate work site policy and approved locations documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alternate work site security controls documentation and effectiveness assessment results",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component location documentation addressing physical and environmental hazards identified during threat assessment",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix with role assignments for physical access administration and enforcement",
+    "owner": "No owner"
+  },
+  {
+    "description": "Services, ports, and protocols documentation including purpose and authorized users",
+    "owner": "No owner"
+  }
+]

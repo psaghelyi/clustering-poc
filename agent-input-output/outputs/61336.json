@@ -1,0 +1,74 @@
+[
+  {
+    "description": "Identification and authentication policy and procedures documentation, including roles, responsibilities, review frequency, and approval records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Multi-factor authentication configuration documentation demonstrating phishing-resistant MFA implementation for privileged and non-privileged accounts",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of user accounts with privileged access (super admin, system admin, security officer roles) to all system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of NIST SP 800-63B compliance for all authentication mechanisms, including AAL3 requirements for high baseline systems",
+    "owner": "No owner"
+  },
+  {
+    "description": "Password policy documentation showing compliance with NIST SP 800-63B, including minimum length requirements, prohibited password lists, and composition rules",
+    "owner": "No owner"
+  },
+  {
+    "description": "User account provisioning and de-provisioning procedures, including identifier management and reuse prevention controls (minimum 2-year restriction)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Authenticator management procedures covering initial distribution, lost/compromised authenticators, and revocation processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "PIV/CAC credential acceptance and verification configuration for federal agency users",
+    "owner": "No owner"
+  },
+  {
+    "description": "Device identification and authentication mechanisms documentation for local, network, and remote connections",
+    "owner": "No owner"
+  },
+  {
+    "description": "Public key infrastructure (PKI) certificate validation procedures, including certification path construction and revocation checking",
+    "owner": "No owner"
+  },
+  {
+    "description": "Re-authentication policy and configuration showing session timeout limits (12 hours maximum or 15 minutes inactivity for AAL3)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Identity proofing procedures for user account establishment, including evidence collection, validation, and verification methods per NIST SP 800-63A",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix showing role assignments for privileged administrative functions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cryptographic module authentication documentation showing FIPS 140-3 compliance",
+    "owner": "No owner"
+  },
+  {
+    "description": "Non-organizational user identification and authentication procedures, including external authenticator acceptance criteria",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cached authenticator expiration configuration and enforcement evidence",
+    "owner": "No owner"
+  },
+  {
+    "description": "User identifier management records demonstrating unique identification of contractors and foreign nationals (IA-4(4))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence that static authenticators are not embedded in applications or stored unencrypted",
+    "owner": "No owner"
+  }
+]

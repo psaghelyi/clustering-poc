@@ -1,0 +1,82 @@
+[
+  {
+    "description": "Current Configuration Management Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review",
+    "owner": "No owner"
+  },
+  {
+    "description": "Baseline configuration documentation for all system components, including hardware, software, firmware, network topology, and security control implementations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration Management Plan (CMP) with documented roles, responsibilities, processes, configuration items, and approval records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Change Control Board (CCB) charter, membership roster, meeting minutes, and records of configuration change decisions for the past 12 months",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration change request records including security and privacy impact analyses, approvals, implementation evidence, and testing results for a sample of recent changes",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component inventory with accountability information (owner names, positions, roles), update timestamps, and evidence of monthly reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security configuration checklists and hardening guides (DISA STIGs, CIS benchmarks, or custom baselines) applied to system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated configuration management tool reports showing baseline configurations, configuration drift detection, and compliance scan results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Least functionality documentation including list of prohibited/restricted functions, ports, protocols, and services with justification for enabled services",
+    "owner": "No owner"
+  },
+  {
+    "description": "Software allow-list (authorized software inventory) with version numbers, approval records, and evidence of quarterly reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control documentation for configuration change privileges, including role definitions, separation of duties matrix, and quarterly privilege reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated unauthorized component detection tool configuration, alert logs, and incident response records for detected unauthorized components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Test environment documentation and evidence of security testing performed prior to production implementation of configuration changes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Version control system records showing retention of previous baseline configurations to support rollback capabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Software license inventory and tracking records demonstrating compliance with licensing agreements and copyright laws",
+    "owner": "No owner"
+  },
+  {
+    "description": "User-installed software policy, enforcement mechanisms (technical controls), and continuous monitoring evidence via allow-listing tools",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information location documentation identifying where Federal data is processed and stored, including system component mappings and user access records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Digital signature verification process documentation and evidence that software/firmware components are cryptographically verified before installation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cryptographic key and certificate management records for all security controls that rely on cryptography",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit logs demonstrating automated enforcement of configuration change restrictions and notifications to approval authorities",
+    "owner": "No owner"
+  }
+]

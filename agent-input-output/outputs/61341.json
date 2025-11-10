@@ -1,0 +1,82 @@
+[
+  {
+    "description": "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, and security controls implementation details",
+    "owner": "No owner"
+  },
+  {
+    "description": "FIPS PUB 199 security categorization documentation with supporting rationale for the High baseline determination",
+    "owner": "No owner"
+  },
+  {
+    "description": "FedRAMP Package ID and authorization path documentation (JAB or Agency authorization)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Enterprise architecture documentation showing how the system integrates with organizational architecture",
+    "owner": "No owner"
+  },
+  {
+    "description": "System security and privacy architecture diagrams including network topology, data flows, and external system connections",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inventory of all system components within the authorization boundary, including services, ports, and protocols in use",
+    "owner": "No owner"
+  },
+  {
+    "description": "Privacy Impact Assessment (PIA) or privacy risk assessment results for systems processing personally identifiable information",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current organizational planning policy and procedures documentation, including most recent review and approval dates",
+    "owner": "No owner"
+  },
+  {
+    "description": "Rules of Behavior document with documented user acknowledgments (electronic or physical signatures)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Social media and external site usage policy and restrictions documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix showing role assignments for privileged and non-privileged administrators",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of FedRAMP-authorized cloud service providers (CSPs) and cloud service offerings (CSOs) with connection details and data types",
+    "owner": "No owner"
+  },
+  {
+    "description": "Interconnection security agreements (ISAs) or memoranda of understanding (MOUs) for external system connections",
+    "owner": "No owner"
+  },
+  {
+    "description": "Control baseline tailoring documentation showing scoping decisions, compensating controls, and parameter assignments for FedRAMP High baseline",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk assessment reports identifying system-specific threats, vulnerabilities, and risk determinations for architecture and design decisions",
+    "owner": "No owner"
+  },
+  {
+    "description": "SSP approval documentation from authorizing official or designated representative",
+    "owner": "No owner"
+  },
+  {
+    "description": "SSP distribution records showing dissemination to Chief Privacy Officer, ISSO, and other required personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual SSP review and updates addressing system changes or assessment findings",
+    "owner": "No owner"
+  },
+  {
+    "description": "Concept of Operations (CONOPS) document describing operational environment and mission/business processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "System criticality analysis and restoration priorities documentation",
+    "owner": "No owner"
+  }
+]

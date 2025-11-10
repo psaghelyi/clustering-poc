@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, network diagrams, and control implementation details",
+    "owner": "No owner"
+  },
+  {
+    "description": "Most recent control assessment report from an accredited Third Party Assessment Organization (3PAO) documenting the results of annual security control testing",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current Plan of Action and Milestones (POA&M) document showing all open security weaknesses, remediation plans, and monthly updates",
+    "owner": "No owner"
+  },
+  {
+    "description": "Continuous Monitoring Strategy and Plan documenting the approach, frequency, and responsibilities for ongoing security monitoring activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Most recent penetration test report conducted by an independent testing team, including findings, risk ratings, and remediation status",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vulnerability scan reports from the past 12 months showing monthly scanning of operating systems, databases, web applications, containers, and services",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current Interconnection Security Agreements (ISAs) or Memoranda of Understanding (MOUs) for all external system connections and data exchanges",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inventory of internal system connections including all authorized components, interface characteristics, and security requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Assessment, authorization, and monitoring policy and procedures documentation, including most recent review and approval dates",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of independent assessor qualifications and accreditation status (3PAO accreditation documentation)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Continuous monitoring reports and dashboards provided to the JAB or Authorizing Official showing security and privacy status",
+    "owner": "No owner"
+  },
+  {
+    "description": "Authorization to Operate (ATO) letter or memorandum from the Authorizing Official, including any conditions or limitations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of specialized security assessments conducted, including announced vulnerability scanning, malicious user testing, or insider threat assessments",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual review and updates to all interconnection agreements and internal connection authorizations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk monitoring documentation showing effectiveness monitoring, compliance monitoring, and change monitoring activities",
+    "owner": "No owner"
+  }
+]

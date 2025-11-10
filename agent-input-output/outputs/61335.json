@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Current Information System Contingency Plan (ISCP) using the FedRAMP template, including all appendices",
+    "owner": "No owner"
+  },
+  {
+    "description": "Contingency Plan Test Report (Appendix G) documenting the most recent annual functional exercise results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Business Impact Analysis (BIA) documenting Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Service Level Agreement (SLA) defining recovery time and recovery point objectives for contingency operations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of backup verification testing conducted at least monthly, including media reliability and information integrity test results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Backup and restoration logs demonstrating daily incremental and weekly full backups of user-level, system-level, and documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alternate processing site agreement(s) and documentation of equivalent security controls at alternate sites",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alternate storage site agreement(s) and documentation of geographic separation from primary sites",
+    "owner": "No owner"
+  },
+  {
+    "description": "Telecommunications service provider agreements, including priority-of-service provisions and evidence of provider contingency plan reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual contingency training completion for personnel with contingency roles and responsibilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Contingency plan distribution list showing key contingency personnel by name and role",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of cryptographic mechanisms used to protect backup information at rest and in transit",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual contingency policy and procedures review and approval",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inventory of critical system assets supporting essential mission and business functions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Capacity planning documentation demonstrating sufficient resources for contingency operations",
+    "owner": "No owner"
+  }
+]

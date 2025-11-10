@@ -1,0 +1,74 @@
+[
+  {
+    "description": "Current Incident Response Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident Response Plan with defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident response training records for privileged users and incident response personnel, including training completion dates, content, and attendance rosters",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of incident response testing conducted within the past six months, including test plans, functional test results, and JAB/AO approval documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident handling procedures documentation covering preparation, detection, analysis, containment, eradication, and recovery phases",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident tracking and monitoring records, including incident logs, status reports, and documentation of incidents from the past 12 months",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of incident reporting to US-CERT and FedRAMP per NIST SP 800-61 timelines, including sample incident reports and communication records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident response support resource documentation, including help desk procedures, ticketing system access, and forensics service availability",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of incident response personnel and organizational elements with distribution records showing dissemination of the incident response plan to designated FedRAMP personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information spillage response procedures, including assigned personnel roles, communication methods, isolation protocols, and eradication processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of automated incident handling mechanisms, including system configurations for incident tracking, data collection, analysis tools, and dynamic reconfiguration capabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident response training materials covering simulated events, tabletop exercises, and information spillage scenarios with evidence of annual delivery",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of lessons learned from incident handling activities and evidence of incorporation into incident response procedures, training, and testing",
+    "owner": "No owner"
+  },
+  {
+    "description": "Insider threat incident handling procedures and capabilities documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Integrated incident response team charter, including team composition, deployment capabilities, time-to-deploy metrics, and cross-organizational coordination procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of coordination between incident response testing and related plans (business continuity, disaster recovery, contingency, crisis communications)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supply chain incident reporting procedures and evidence of coordination with product/service providers per SR-8 requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel security documentation demonstrating that incident handlers meet security requirements commensurate with system criticality/sensitivity",
+    "owner": "No owner"
+  }
+]

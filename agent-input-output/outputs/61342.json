@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Personnel security policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
+    "owner": "No owner"
+  },
+  {
+    "description": "Position risk designation documentation for all organizational positions, including screening criteria and annual review records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel screening and background investigation records, including initial screening and rescreening documentation per FedRAMP requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access authorization verification records for individuals accessing systems processing information requiring special protection",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel termination procedures and records, including evidence of system access disablement within one hour of termination",
+    "owner": "No owner"
+  },
+  {
+    "description": "Exit interview documentation covering information security topics for terminated employees",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated notification logs or mechanisms used to alert personnel of termination actions and disable system access",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel transfer procedures and records, including access authorization reviews and modifications completed within 24 hours",
+    "owner": "No owner"
+  },
+  {
+    "description": "Signed access agreements (nondisclosure agreements, acceptable use agreements, rules of behavior) for all personnel with system access",
+    "owner": "No owner"
+  },
+  {
+    "description": "Annual access agreement review and re-signature records",
+    "owner": "No owner"
+  },
+  {
+    "description": "External provider personnel security requirements and compliance documentation, including contractual agreements",
+    "owner": "No owner"
+  },
+  {
+    "description": "External provider notification records for personnel transfers and terminations (immediate for terminations, within 24 hours for transfers)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Formal personnel sanctions policy and process documentation for security and privacy policy violations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel sanctions notification records to ISSO within 24 hours of sanction initiation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Organizational position descriptions incorporating security and privacy roles and responsibilities",
+    "owner": "No owner"
+  }
+]

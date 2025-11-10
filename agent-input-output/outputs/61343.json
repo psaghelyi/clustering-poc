@@ -1,0 +1,82 @@
+[
+  {
+    "description": "Current System Security Plan (SSP) with all required sections completed, including system information, authorization details, and approval signatures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk Assessment Policy and Procedures documentation addressing purpose, scope, roles, responsibilities, and compliance requirements (RA-1)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security categorization documentation with FIPS 199 analysis and supporting rationale, including authorizing official approval (RA-2)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current risk assessment report documenting threats, vulnerabilities, likelihood and magnitude of harm, and impact to individuals from PII processing (RA-3)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supply chain risk assessment documentation for systems, components, and services, including update frequency and significant change triggers (RA-3(1))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vulnerability scan reports from the past 12 months for operating systems, infrastructure, web applications, APIs, and databases (RA-5)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Annual independent assessor vulnerability scan reports for operating systems/infrastructure, web applications, and databases (RA-5)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Plan of Action and Milestones (POA&M) documenting all open vulnerabilities with risk ratings, remediation timelines, and status tracking (RA-5)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of vulnerability scanner updates within 24 hours prior to scans, including update logs or configuration records (RA-5(2))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vulnerability scanning coverage documentation defining breadth and depth of scanning across system components (RA-5(3))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Procedures and evidence for reviewing discoverable system information and taking corrective actions (RA-5(4))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Privileged access authorization documentation for authenticated vulnerability scanning activities (RA-5(5))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Historic audit log review documentation for high or critical vulnerability findings to determine prior exploitation (RA-5(8))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Public vulnerability disclosure program documentation, including reporting channel details and authorization language (RA-5(11))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk response documentation showing how findings from security assessments, monitoring, and audits are addressed in accordance with organizational risk tolerance (RA-7)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Criticality analysis documentation identifying critical system components, functions, and services at key decision points in the system development life cycle (RA-9)",
+    "owner": "No owner"
+  },
+  {
+    "description": "FedRAMP authorization package documentation including authorization type (JAB or Agency) and FedRAMP Package ID",
+    "owner": "No owner"
+  },
+  {
+    "description": "FIPS 199 categorization documentation and FIPS PUB 199 Level determination (SSP Appendix K)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Digital Identity Level (DIL) determination documentation (SSP Appendix E)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix documenting role assignments for privileged functions including admin additions/removals and policy enforcement",
+    "owner": "No owner"
+  }
+]

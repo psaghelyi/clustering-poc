@@ -1,0 +1,42 @@
+[
+  {
+    "description": "Media protection policy and procedures documentation, including roles, responsibilities, review frequency, and approval records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control lists or authorization matrices for digital and non-digital media containing sensitive information",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media marking procedures and examples of marked media showing distribution limitations, handling caveats, and security markings",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media storage inventory records and physical security controls documentation for controlled areas where media is stored",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media transport procedures, including encryption methods, accountability logs, and authorized courier personnel list",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media sanitization procedures compliant with NIST SP 800-88, including sanitization techniques for disposal and reuse",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media sanitization logs documenting review, approval, tracking, verification, and disposal actions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Sanitization equipment testing records and validation results conducted at least every six months",
+    "owner": "No owner"
+  },
+  {
+    "description": "Procedures for nondestructive sanitization of portable storage devices prior to system connection",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media use restrictions policy and technical controls documentation for portable storage devices and removable media",
+    "owner": "No owner"
+  }
+]

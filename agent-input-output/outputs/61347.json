@@ -1,0 +1,78 @@
+[
+  {
+    "description": "Supply Chain Risk Management (SCRM) Policy and Procedures documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supply Chain Risk Management Plan including risk tolerance, mitigation strategies, roles and responsibilities, and lifecycle security engineering processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "SCRM Team charter or documentation identifying team members, roles, responsibilities, and assigned SCRM activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supply chain custody documentation for all devices, including replacement devices, showing integrity verification before introduction to the system boundary",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documented supply chain controls and processes to identify and address weaknesses in supply chain elements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Acquisition strategies, contract tools, and procurement methods documentation addressing supply chain risk mitigation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supplier and contractor risk assessment reports conducted at least annually, including security processes, FOCI analysis, and subordinate supplier assessments",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence that supply chain vendors build and test systems in alignment with NIST SP 800-171 or commensurate security framework",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vendor compliance documentation for physical facility access and logical access controls to supplied products",
+    "owner": "No owner"
+  },
+  {
+    "description": "Notification agreements and procedures with supply chain entities for supply chain compromises and assessment/audit results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of vendor notification process for newly discovered vulnerabilities including zero-day vulnerabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Tamper protection program documentation including safeguards for authenticity of software and patches supplied by vendors",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of anti-tamper technologies, tools, and techniques employed throughout the system development lifecycle",
+    "owner": "No owner"
+  },
+  {
+    "description": "System and component inspection procedures and records to detect tampering",
+    "owner": "No owner"
+  },
+  {
+    "description": "Anti-counterfeit policy and procedures including detection and prevention measures for counterfeit components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vendor plan to protect the development pipeline and ensure authenticity of software and patches",
+    "owner": "No owner"
+  },
+  {
+    "description": "Anti-counterfeit training materials and records for personnel responsible for detecting counterfeit components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration control procedures and records for system components awaiting service, repair, or return to service",
+    "owner": "No owner"
+  },
+  {
+    "description": "Component disposal procedures and documentation including techniques and methods for secure disposal of data, documentation, tools, and system components",
+    "owner": "No owner"
+  }
+]

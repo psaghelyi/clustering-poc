@@ -1,0 +1,142 @@
+[
+  {
+    "description": "Current System Security Plan (SSP) document with all completed sections including system information, authorization details, and approval signatures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control policy and procedures documentation (AC-1)",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of all user accounts (privileged and non-privileged) with assigned roles, permissions, and account types",
+    "owner": "No owner"
+  },
+  {
+    "description": "Account management procedures including account creation, modification, and termination workflows (AC-2)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of monthly privileged account reviews and semi-annual non-privileged account reviews (AC-2(j))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated account management system configuration and audit logs (AC-2(1), AC-2(4))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of temporary and emergency account policies with evidence of automatic disablement within 24 hours (AC-2(2), AC-2(3))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix showing role assignments and conflicting duties (AC-5)",
+    "owner": "Alex Fung"
+  },
+  {
+    "description": "Role-based access control (RBAC) or attribute-based access control (ABAC) implementation documentation (AC-6, AC-2(7))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual privileged user access reviews (AC-6(7))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit logs demonstrating privileged function execution logging (AC-6(9))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Account lockout configuration showing failed logon attempt thresholds and lockout duration (AC-7)",
+    "owner": "No owner"
+  },
+  {
+    "description": "System use notification banner text and implementation evidence (AC-8)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Session timeout and device lock configuration set to 15 minutes of inactivity (AC-11, AC-12)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Concurrent session limits configuration (3 for privileged, 2 for non-privileged) (AC-10)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Remote access policy and procedures including VPN configuration and usage restrictions (AC-17)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Remote access monitoring logs and encryption implementation evidence (AC-17(1), AC-17(2))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Wireless access policy, authentication mechanisms, and encryption standards (AC-18, AC-18(1))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Mobile device management (MDM) policy and configuration requirements (AC-19)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Mobile device encryption implementation evidence (full-device or container-based) (AC-19(5))",
+    "owner": "No owner"
+  },
+  {
+    "description": "External system usage policy and approved connection agreements (AC-20, AC-20(1))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information sharing agreements and data classification guidelines (AC-21)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Publicly accessible content review procedures and quarterly review logs (AC-22)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information flow control policy and enforcement mechanisms (AC-4)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Intrusion detection system (IDS) configuration for encrypted traffic inspection (AC-4(4))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Network architecture diagrams showing logical and physical separation of information flows (AC-4(21))",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of functions and information accessible without authentication with documented justification (AC-14)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Services, ports, and protocols inventory with purpose and authorized users",
+    "owner": "No owner"
+  },
+  {
+    "description": "FedRAMP authorization package ID and current authorization status",
+    "owner": "No owner"
+  },
+  {
+    "description": "FIPS 199 security categorization documentation (SSP Appendix K)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Digital Identity Level (DIL) determination documentation (SSP Appendix E)",
+    "owner": "No owner"
+  },
+  {
+    "description": "System owner and ISSO contact information and role assignments",
+    "owner": "No owner"
+  },
+  {
+    "description": "FedRAMP-authorized cloud service provider (CSP) and cloud service offering (CSO) dependencies list",
+    "owner": "No owner"
+  },
+  {
+    "description": "Non-FedRAMP external system connections inventory with risk assessments",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security awareness and training records for personnel with access control responsibilities (AT family)",
+    "owner": "No owner"
+  }
+]
