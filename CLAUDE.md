@@ -36,21 +36,15 @@ npm run merge:aws
 npm run merge
 ```
 
-### Testing Infrastructure
+### Testing
 ```bash
-# Start LocalStack (local S3)
-npm run localstack:up
-
-# Stop LocalStack
-npm run localstack:down
-
-# Run example/test
+# Run example/test with mock embeddings
 npm test
 ```
 
 ## Architecture
 
-The codebase follows a service-oriented architecture with six core services and a factory pattern for vector storage:
+The codebase follows a service-oriented architecture with seven core services and a factory pattern for vector storage:
 
 ### Core Services
 
@@ -62,7 +56,7 @@ The codebase follows a service-oriented architecture with six core services and 
 
 2. **S3Service** (`src/services/s3-service.ts`):
    - Manages simple S3 storage of embeddings as JSON files
-   - Supports both real S3 and LocalStack
+   - Stores embeddings as individual JSON objects
    - Implements VectorStore interface
    - Ideal for debugging and simple use cases
 
@@ -80,7 +74,8 @@ The codebase follows a service-oriented architecture with six core services and 
    - Enables easy switching between storage backends
 
 5. **ClusteringService** (`src/services/clustering-service.ts`):
-   - Implements DBSCAN, OPTICS, and K-Means clustering
+   - Implements HDBSCAN (default), DBSCAN, OPTICS, and K-Means clustering
+   - HDBSCAN: Hierarchical density-based clustering with automatic cluster detection
    - Uses cosine similarity for distance calculation
    - Provides cluster statistics and similarity search
 
@@ -101,7 +96,6 @@ The codebase follows a service-oriented architecture with six core services and 
 - **Provider abstraction**: Embedding models are abstracted through `EmbeddingProvider` interface
 - **Vector store abstraction**: Multiple storage backends (simple S3, S3 Vectors) through `VectorStore` interface
 - **Mock support**: Built-in mock embeddings for testing without AWS
-- **LocalStack integration**: Full S3 functionality without AWS costs
 
 ## Vector Storage Backends
 
@@ -113,11 +107,11 @@ Stores embeddings as JSON files in regular S3 buckets.
 **Pros:**
 - Simple setup, works with any S3 bucket
 - Easy to inspect and debug (JSON format)
-- Works with LocalStack for local testing
+- Standard S3 bucket (no special configuration)
 
 **Cons:**
 - No native similarity search
-- Manual clustering required via DBSCAN/OPTICS
+- Manual clustering required via HDBSCAN/DBSCAN/OPTICS
 
 **Configuration:**
 ```bash
@@ -169,13 +163,23 @@ The application uses environment variables and configuration objects:
 - `EMBEDDING_DIMENSIONS`: Vector dimensions (for s3-vectors backend, e.g., 1024)
 - `EMBEDDING_PROVIDER`: nova | titan | cohere
 - `USE_MOCK_EMBEDDINGS`: true/false for mock mode
-- `USE_LOCALSTACK`: true/false for LocalStack S3 (simple-s3 only)
 
 ### Clustering Parameters
-Configured in `src/example.ts`:
+Configured in `src/example.ts` and `src/merge-documents.ts`:
+
+**HDBSCAN (default, recommended):**
+- `algorithm`: 'hdbscan'
+- `minClusterSize`: Minimum documents to form a cluster (2-5 typical)
+- `minSamples`: Minimum samples for core points (2-5 typical)
+
+**DBSCAN:**
+- `algorithm`: 'dbscan'
 - `epsilon`: Distance threshold (0.1-0.5 for cosine)
-- `minPoints`: Minimum cluster size (2-5 typical)
-- `algorithm`: dbscan | optics | kmeans
+- `minPoints`: Minimum points in neighborhood (2-5 typical)
+- `distanceMetric`: 'cosine' | 'euclidean'
+
+**Other algorithms:**
+- `algorithm`: 'optics' | 'kmeans'
 
 ## TypeScript Configuration
 
@@ -185,9 +189,9 @@ Configured in `src/example.ts`:
 
 ## Testing Strategy
 
-1. **Mock Mode**: Use `USE_MOCK_EMBEDDINGS=true` for deterministic testing
-2. **LocalStack**: Use `USE_LOCALSTACK=true` for S3 testing without AWS
-3. **Example Script**: `src/example.ts` serves as both demo and integration test
+1. **Mock Mode**: Use `USE_MOCK_EMBEDDINGS=true` for deterministic testing without AWS credentials
+2. **Example Script**: `src/example.ts` serves as both demo and integration test
+3. **AWS Testing**: Use aws-vault for production testing with real AWS credentials
 
 ## Document Merging Workflow
 
@@ -195,7 +199,7 @@ The `src/merge-documents.ts` script implements a complete workflow for clusterin
 
 1. **Load Documents**: Reads JSON files from `agent-input-output/outputs/` directory
 2. **Generate Embeddings**: Creates vector embeddings for each document using AWS Bedrock
-3. **Cluster Documents**: Groups semantically similar documents using DBSCAN
+3. **Cluster Documents**: Groups semantically similar documents using HDBSCAN
 4. **Merge Clusters**: Uses Claude 4.5 Haiku to merge documents in each cluster into single consolidated entries
 5. **Output Results**: Saves merged documents to `agent-input-output/output.json`
 
@@ -204,8 +208,9 @@ The `src/merge-documents.ts` script implements a complete workflow for clusterin
 Key parameters in `src/merge-documents.ts`:
 - `embeddingProvider`: Embedding model to use (titan | nova | cohere)
 - `claudeModelId`: Claude model for merging (default: claude-haiku-4-5)
-- `epsilon`: Clustering threshold (0.15 default, lower = stricter)
-- `minPoints`: Minimum documents to form a cluster (2 default)
+- `algorithm`: Clustering algorithm (hdbscan default)
+- `minClusterSize`: Minimum documents to form a cluster (2 default)
+- `minSamples`: Minimum samples for core points (2 default)
 
 ### Embedding Cache
 
@@ -278,6 +283,15 @@ if (vectorStore.querySimilar) {
 3. Implement provider-specific logic in `EmbeddingService.embedDocument()`
 
 ### Adjusting Clustering Sensitivity
+
+**HDBSCAN (recommended):**
+Modify `minClusterSize` and `minSamples`:
+- Lower minClusterSize (2-3): More, smaller clusters
+- Higher minClusterSize (5-10): Fewer, larger clusters
+- Lower minSamples: More sensitive to local density variations
+- Higher minSamples: More robust to noise
+
+**DBSCAN:**
 Modify epsilon in clustering config:
 - Lower epsilon (0.1-0.2): Stricter clusters, near-duplicates only
 - Higher epsilon (0.3-0.5): Looser clusters, broader topics
@@ -292,11 +306,11 @@ Set `EMBEDDING_PROVIDER` environment variable:
 
 ### Debugging S3 Issues
 ```bash
-# Check LocalStack logs
-docker logs clustering-localstack
+# List S3 contents
+aws s3 ls s3://clustering-poc-embeddings
 
-# List S3 contents (with LocalStack)
-aws s3 ls s3://clustering-poc-embeddings --endpoint-url http://localhost:4566
+# Check specific embedding
+aws s3 cp s3://clustering-poc-embeddings/embeddings/doc-1.json -
 ```
 
 ## Performance Considerations

@@ -18,18 +18,9 @@ export class S3Service implements VectorStore {
   constructor(config: S3Config) {
     this.bucket = config.bucket;
 
-    // Configure S3 client (supports localstack)
+    // Configure S3 client
     this.client = new S3Client({
       region: config.region,
-      endpoint: config.endpoint,
-      forcePathStyle: config.forcePathStyle ?? false,
-      // Credentials for localstack (will use AWS credentials in production)
-      ...(config.endpoint && {
-        credentials: {
-          accessKeyId: 'test',
-          secretAccessKey: 'test',
-        },
-      }),
     });
   }
 

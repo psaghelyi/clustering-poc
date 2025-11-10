@@ -67,11 +67,15 @@ export interface Cluster {
  */
 export interface ClusteringConfig {
   /** Algorithm to use */
-  algorithm: 'dbscan' | 'optics' | 'kmeans';
+  algorithm: 'dbscan' | 'optics' | 'kmeans' | 'hdbscan';
   /** Epsilon (maximum distance between points for DBSCAN) */
   epsilon?: number;
-  /** Minimum points in neighborhood for DBSCAN */
+  /** Minimum points in neighborhood for DBSCAN/OPTICS */
   minPoints?: number;
+  /** Minimum cluster size for HDBSCAN */
+  minClusterSize?: number;
+  /** Minimum samples for HDBSCAN */
+  minSamples?: number;
   /** Number of clusters for k-means */
   k?: number;
   /** Distance metric */
@@ -84,8 +88,6 @@ export interface ClusteringConfig {
 export interface S3Config {
   bucket: string;
   region: string;
-  endpoint?: string; // For localstack
-  forcePathStyle?: boolean; // For localstack
 }
 
 /**

@@ -29,10 +29,9 @@ const CONFIG = {
   embeddingProvider: (process.env.EMBEDDING_PROVIDER || 'titan') as 'nova' | 'titan' | 'cohere',
   claudeModelId: process.env.CLAUDE_MODEL_ID || 'anthropic.claude-3-5-haiku-20241022-v1:0',
   clustering: {
-    algorithm: 'dbscan' as const,
-    epsilon: 0.50, // Cosine distance threshold (0.50 = 50% similarity) - lower = stricter clustering
-    minPoints: 2,  // Minimum documents to form a cluster
-    distanceMetric: 'cosine' as const,
+    algorithm: 'hdbscan' as const,
+    minClusterSize: 2,  // Minimum documents to form a cluster
+    minSamples: 2,      // Minimum samples for core points
   },
 };
 

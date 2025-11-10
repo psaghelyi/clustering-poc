@@ -45,7 +45,6 @@ export class VectorStoreFactory {
    * For simple-s3:
    * - S3_BUCKET: Bucket name
    * - AWS_REGION: AWS region
-   * - USE_LOCALSTACK: true/false (optional)
    *
    * For s3-vectors:
    * - S3_VECTOR_BUCKET: Vector bucket name
@@ -63,16 +62,11 @@ export class VectorStoreFactory {
         throw new Error('S3_BUCKET environment variable is required for simple-s3 vector store');
       }
 
-      const useLocalStack = process.env.USE_LOCALSTACK === 'true';
       const config: VectorStoreConfig = {
         type: 'simple-s3',
         s3Config: {
           bucket,
           region,
-          ...(useLocalStack && {
-            endpoint: 'http://localhost:4566',
-            forcePathStyle: true,
-          }),
         },
       };
 
