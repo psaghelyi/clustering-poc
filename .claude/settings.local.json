@@ -9,7 +9,10 @@
       "Bash(git branch:*)",
       "Bash(gh repo edit:*)",
       "Bash(npm run build)",
-      "Bash(git add -A)"
+      "Bash(git add -A)",
+      "Bash(git log -1 --format='%an %ae')",
+      "Bash(git commit -m \"$(cat <<''EOF''\nSimplify implementation to focus on S3 Vectors and HDBSCAN clustering\n\n- Remove simple-s3 storage backend and VectorStore abstraction\n- Remove example.ts, test files, and vector-store-factory\n- Update merge-documents.ts to only merge clusters with >2 documents\n- Simplify configuration to S3 Vectors only\n- Update CLAUDE.md with streamlined workflow documentation\n- Clean up package.json scripts\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(npm install dotenv)"
     ],
     "deny": [],
     "ask": []

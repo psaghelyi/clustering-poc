@@ -2,7 +2,7 @@
 
 /**
  * Document Clustering and Merging Workflow with S3 Vectors
- * 
+ *
  * This script:
  * 1. Loads all documents from JSON files in agent-input-output/outputs/
  * 2. Generates embeddings for each document using AWS Bedrock
@@ -13,6 +13,7 @@
  * 7. Outputs a single merged JSON file
  */
 
+import 'dotenv/config';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
 import { EmbeddingService } from './services/embedding-service.js';
