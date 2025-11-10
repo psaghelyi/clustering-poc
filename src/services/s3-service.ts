@@ -5,12 +5,13 @@ import {
   ListObjectsV2Command,
   DeleteObjectCommand,
 } from '@aws-sdk/client-s3';
-import { EmbeddedDocument, S3Config } from '../types.js';
+import { EmbeddedDocument, S3Config, VectorStore } from '../types.js';
 
 /**
- * Service for storing and retrieving embeddings from S3
+ * Service for storing and retrieving embeddings from S3 as JSON files
+ * Implements VectorStore interface for simple S3-based storage
  */
-export class S3Service {
+export class S3Service implements VectorStore {
   private client: S3Client;
   private bucket: string;
 

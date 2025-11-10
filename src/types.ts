@@ -79,7 +79,7 @@ export interface ClusteringConfig {
 }
 
 /**
- * S3 configuration
+ * S3 configuration (for simple JSON storage)
  */
 export interface S3Config {
   bucket: string;
@@ -89,10 +89,63 @@ export interface S3Config {
 }
 
 /**
+ * Vector store backend types
+ */
+export type VectorStoreType = 'simple-s3' | 's3-vectors';
+
+/**
+ * S3 Vectors configuration (for native vector storage)
+ */
+export interface S3VectorsConfig {
+  /** Vector bucket name */
+  vectorBucket: string;
+  /** Vector index name */
+  indexName: string;
+  /** AWS region */
+  region: string;
+  /** Optional endpoint (for testing) */
+  endpoint?: string;
+  /** Number of dimensions (must match embedding model) */
+  dimensions: number;
+}
+
+/**
+ * Vector store configuration (supports multiple backends)
+ */
+export interface VectorStoreConfig {
+  /** Type of vector store backend */
+  type: VectorStoreType;
+  /** Configuration for simple S3 backend */
+  s3Config?: S3Config;
+  /** Configuration for S3 Vectors backend */
+  s3VectorsConfig?: S3VectorsConfig;
+}
+
+/**
+ * Vector store interface (abstraction for multiple backends)
+ */
+export interface VectorStore {
+  /** Store a single embedding */
+  storeEmbedding(doc: EmbeddedDocument): Promise<void>;
+  /** Store multiple embeddings in batch */
+  storeEmbeddings(docs: EmbeddedDocument[]): Promise<void>;
+  /** Get a specific embedding by ID */
+  getEmbedding(id: string): Promise<EmbeddedDocument | null>;
+  /** Get all embeddings */
+  getAllEmbeddings(): Promise<EmbeddedDocument[]>;
+  /** Delete a specific embedding */
+  deleteEmbedding(id: string): Promise<void>;
+  /** Delete all embeddings */
+  deleteAllEmbeddings(): Promise<void>;
+  /** Query similar vectors (if supported) */
+  querySimilar?(queryVector: number[], topK: number): Promise<EmbeddedDocument[]>;
+}
+
+/**
  * Application configuration
  */
 export interface AppConfig {
   embeddingModel: EmbeddingModelConfig;
-  s3: S3Config;
+  vectorStore: VectorStoreConfig;
   clustering: ClusteringConfig;
 }
