@@ -63,6 +63,8 @@ async function checkS3VectorsPopulated(s3Vectors: S3VectorsService): Promise<boo
 }
 
 async function main() {
+  const forceReindex = process.argv.includes('--reindex');
+
   console.log('🚀 Starting document clustering and merging workflow with S3 Vectors...\n');
 
   // Step 1: Initialize S3 Vectors
@@ -78,6 +80,13 @@ async function main() {
   });
   await s3Vectors.initialize();
   console.log('✅ S3 Vectors initialized\n');
+
+  // Force reindex if requested
+  if (forceReindex) {
+    console.log('🗑️  Force reindex requested - deleting all existing embeddings...');
+    await s3Vectors.deleteAllEmbeddings();
+    console.log('✅ All embeddings deleted\n');
+  }
 
   // Step 2: Load documents
   console.log('📂 Loading documents from:', CONFIG.inputDir);

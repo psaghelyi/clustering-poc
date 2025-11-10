@@ -22,6 +22,9 @@ Document clustering tool that uses AWS Bedrock embeddings, S3 Vectors storage, a
 # Main workflow (requires aws-vault)
 npm run merge:aws
 
+# Force reindex - deletes all S3 Vectors embeddings and regenerates them
+npm run reindex:aws
+
 # Build
 npm run build
 ```

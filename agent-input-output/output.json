@@ -1,6 +1,6 @@
 [
   {
-    "description": "Physical access audit logs, monitoring logs, and incident response records for all entry and exit points for the past 12 months, including evidence of at least quarterly access list reviews, correlation between audit records and physical access monitoring information, and documentation of suspicious activities and incident responses.",
+    "description": "Physical access records for the past 12 months, including at least quarterly reviews, monitoring logs, and incident response records for suspicious activities. This includes audit logs for all entry and exit points, correlation between audit records and physical access monitoring information.",
     "owner": "No owner",
     "mergedFrom": [
       "Physical access list review records for the past 12 months demonstrating at least quarterly reviews",
@@ -10,8 +10,8 @@
     ]
   },
   {
-    "description": "Comprehensive incident handling procedures and capabilities documentation covering all phases of incident response including preparation, detection, analysis, containment, eradication, and recovery. Documentation includes insider threat incident handling procedures, lessons learned from incident handling activities, and evidence of incorporation of lessons learned into incident response procedures, training, and testing programs.",
-    "owner": "No owner",
+    "description": "This document consolidates the procedures and capabilities for handling insider threat incidents, incorporating lessons learned from past incident handling activities into response procedures, training, and testing. It covers the entire incident handling process including preparation, detection, analysis, containment, eradication, and recovery phases.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Insider threat incident handling procedures and capabilities documentation",
       "Documentation of lessons learned from incident handling activities and evidence of incorporation into incident response procedures, training, and testing",
@@ -19,8 +19,8 @@
     ]
   },
   {
-    "description": "Comprehensive physical access control documentation covering entry/exit points, security guards, and physical access control devices. Includes controls for output devices (printers, monitors, scanners, copiers) and system distribution infrastructure (transmission lines, wiring closets, cable protection). Encompasses all physical security measures for facility perimeter, internal access points, equipment areas, and network infrastructure.",
-    "owner": "No owner",
+    "description": "This document outlines the physical access control system, encompassing various aspects of physical security. It includes entry and exit points, the role of guards, and the use of physical access control devices. Additionally, it covers output devices such as printers, monitors, scanners, and copiers, detailing their physical access controls. The document also addresses the physical access control for system distribution and transmission lines, focusing on wiring closets and cable protection. Each section provides specific guidelines and requirements to ensure comprehensive security coverage.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Physical access control system documentation including entry/exit points, guards, and physical access control devices",
       "Output device physical access controls documentation (printers, monitors, scanners, copiers)",
@@ -28,8 +28,8 @@
     ]
   },
   {
-    "description": "FedRAMP authorization package documentation including Package ID, authorization type (JAB or Agency authorization path), and current authorization status",
-    "owner": "No owner",
+    "description": "This document provides comprehensive information on FedRAMP authorization packages, including the FedRAMP Package ID, authorization type (JAB or Agency), authorization path, and current authorization status. It consolidates details from multiple sources to ensure all unique information is included without redundancy.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "FedRAMP Package ID and authorization documentation",
       "FedRAMP authorization package documentation including authorization type (JAB or Agency) and FedRAMP Package ID",
@@ -38,8 +38,8 @@
     ]
   },
   {
-    "description": "Comprehensive procedures and records for media sanitization, equipment maintenance, and authorized removal of system components. Includes prevention of unauthorized removal of maintenance equipment containing organizational information, sanitization procedures compliant with NIST SP 800-88 for equipment removed for off-site maintenance, sanitization techniques for disposal and reuse, system component delivery and removal authorization procedures, and media sanitization logs documenting review, approval, tracking, verification, and disposal actions.",
-    "owner": "No owner",
+    "description": "This document outlines comprehensive procedures and records for the prevention of unauthorized removal of maintenance equipment containing organizational information, media sanitization procedures for equipment removed for off-site maintenance, and system component delivery and removal authorization. It includes media sanitization procedures compliant with NIST SP 800-88, detailing sanitization techniques for disposal and reuse. Additionally, it covers media sanitization logs documenting review, approval, tracking, verification, and disposal actions.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Procedures and records for preventing unauthorized removal of maintenance equipment containing organizational information",
       "Media sanitization procedures and records for equipment removed for off-site maintenance",
@@ -49,8 +49,8 @@
     ]
   },
   {
-    "description": "Comprehensive awareness and training policy management documentation, including: current policy document with purpose, scope, roles, responsibilities, management commitment, coordination, and compliance requirements; procedures for implementation and associated controls; documentation of the designated official responsible for policy development and dissemination; and evidence of annual review and updates to policy and procedures.",
-    "owner": "No owner",
+    "description": "This consolidated document outlines the procedures for implementing the awareness and training policy, including associated controls, and evidence of its annual review and updates. It details the designated official responsible for managing the policy's development and dissemination, and includes the current awareness and training policy document, covering its purpose, scope, roles, responsibilities, management commitment, coordination, and compliance requirements. Additionally, it provides evidence of annual reviews and updates to related maintenance policy and procedures.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Procedures for implementing awareness and training policy and associated controls",
       "Evidence of annual review and update of awareness and training policy and procedures",
@@ -60,8 +60,8 @@
     ]
   },
   {
-    "description": "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, network diagrams, control implementation details, authorization details, and approval signatures",
-    "owner": "No owner",
+    "description": "The consolidated System Security Plan (SSP) document includes all required sections: system information, authorization boundary, network diagrams, security controls implementation details, authorization details, and approval signatures. This merged document ensures comprehensive coverage of all necessary components while eliminating redundancy.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, network diagrams, and control implementation details",
       "Current System Security Plan (SSP) with all required sections completed, including system information, authorization details, and approval signatures",
@@ -70,8 +70,8 @@
     ]
   },
   {
-    "description": "Intrusion detection and prevention system (IDS/IPS) configuration including wireless intrusion detection, alert logs, and encrypted traffic inspection capabilities (AC-4(4)). Encompasses system configuration, scanning reports, and monitoring of network traffic for security threats.",
-    "owner": "No owner",
+    "description": "This document consolidates configuration and scanning reports for wireless intrusion detection systems (IDS), intrusion detection and prevention systems (IDS/IPS), and intrusion detection systems (IDS) specifically for encrypted traffic inspection (AC-4(4)). It includes details on system configurations, scanning reports, alert logs, and the inspection of encrypted traffic. The document ensures comprehensive coverage of IDS/IPS configurations, operational logs, and specific protocols for encrypted traffic inspection.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Wireless intrusion detection system configuration and scanning reports",
       "Intrusion detection and prevention system (IDS/IPS) configuration and alert logs",
@@ -79,8 +79,8 @@
     ]
   },
   {
-    "description": "Comprehensive Supply Chain Risk Management (SCRM) documentation encompassing policy, procedures, and operational frameworks. Includes acquisition strategies, contract tools, and procurement methods for supply chain risk mitigation; risk tolerance levels and mitigation strategies; roles and responsibilities; and lifecycle security engineering processes.",
-    "owner": "No owner",
+    "description": "This consolidated document addresses supply chain risk management, encompassing acquisition strategies, contract tools, procurement methods, risk tolerance, mitigation strategies, roles and responsibilities, and lifecycle security engineering processes. It includes a comprehensive Supply Chain Risk Management (SCRM) Policy and Procedures documentation, ensuring clarity and specificity in managing supply chain risks.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Acquisition strategies, contract tools, and procurement methods documentation addressing supply chain risk mitigation",
       "Supply Chain Risk Management Plan including risk tolerance, mitigation strategies, roles and responsibilities, and lifecycle security engineering processes",
@@ -88,8 +88,8 @@
     ]
   },
   {
-    "description": "Session management and authentication configuration including: session timeout and device lock set to 15 minutes of inactivity for user sessions (AC-11, AC-12); privileged session timeout and network disconnect configuration; account lockout configuration with failed logon attempt thresholds and lockout duration (AC-7); re-authentication policy with session timeout limits of 12 hours maximum or 15 minutes inactivity for AAL3 sessions.",
-    "owner": "No owner",
+    "description": "This document outlines the configuration settings for session timeout, network disconnect, device lock, account lockout, and re-authentication policies. For privileged and user sessions, session timeout and network disconnect are configured to trigger after a certain period of inactivity. The device lock configuration is set to lock after 15 minutes of inactivity (AC-11, AC-12). Account lockout is configured with thresholds for failed logon attempts and a specified lockout duration (AC-7). Re-authentication policy includes session timeout limits, with a maximum of 12 hours or 15 minutes of inactivity for AAL3.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Session timeout and network disconnect configuration for privileged and user sessions",
       "Session timeout and device lock configuration set to 15 minutes of inactivity (AC-11, AC-12)",
@@ -98,8 +98,8 @@
     ]
   },
   {
-    "description": "Separation of duties matrix showing role assignments for privileged and non-privileged functions and administrators",
-    "owner": "No owner",
+    "description": "A separation of duties matrix detailing role assignments for both privileged and non-privileged functions, including privileged and non-privileged administrators, as well as privileged administrative functions. This matrix ensures that no single individual has control over all critical aspects of the system, thereby maintaining security and accountability.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Separation of duties matrix showing role assignments for privileged and non-privileged functions",
       "Separation of duties matrix showing role assignments for privileged and non-privileged administrators",
@@ -107,8 +107,8 @@
     ]
   },
   {
-    "description": "Documentation and configuration of automated mechanisms for centralized audit record review, analysis, processing, and reporting integration, including Security Information and Event Management (SIEM) tool setup with capabilities for sorting, searching, and automated analysis of audit records.",
-    "owner": "No owner",
+    "description": "This document outlines the configuration and utilization of automated mechanisms for the review, analysis, and reporting of audit records. It includes the integration of these mechanisms, the configuration of Security Information and Event Management (SIEM) tools for centralized audit record review and analysis, and the setup of automated audit record processing, sorting, and searching capabilities. The goal is to ensure efficient and effective management of audit records through automation.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Documentation of automated mechanisms used for audit record review, analysis, and reporting integration",
       "Security Information and Event Management (SIEM) tool configuration for centralized audit record review and analysis",
@@ -116,8 +116,8 @@
     ]
   },
   {
-    "description": "Comprehensive security and privacy training program encompassing: (1) personnel roles and responsibilities requiring role-based training; (2) developer-provided training materials and records on correct use and operation of implemented security and privacy functions, controls, and mechanisms; (3) role-based security and privacy training materials for personnel with assigned security roles and responsibilities; (4) security and privacy literacy training materials provided to all system users including managers, senior executives, and contractors; and (5) training completion records for all system users documenting initial and annual security and privacy literacy training completion.",
-    "owner": "No owner",
+    "description": "This consolidated document includes: 1) a list of personnel roles and responsibilities requiring role-based security and privacy training, 2) developer-provided training materials and records on the correct use and operation of implemented security and privacy functions, controls, and mechanisms, 3) security and privacy literacy training materials provided to system users, including managers, senior executives, and contractors, and 4) training completion records for all system users showing initial and annual security and privacy literacy training. These materials ensure that all personnel with assigned security roles and responsibilities receive the necessary training and documentation.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "List of personnel roles and responsibilities requiring role-based security and privacy training",
       "Developer-provided training materials and records on the correct use and operation of implemented security and privacy functions, controls, and mechanisms",
@@ -127,8 +127,8 @@
     ]
   },
   {
-    "description": "FIPS 199 security categorization documentation including SSP Appendix K, FIPS PUB 199 Level determination, and supporting rationale for baseline determination with authorizing official approval (RA-2)",
-    "owner": "No owner",
+    "description": "This consolidated document includes FIPS 199 security categorization documentation, analysis, and supporting rationale, with a focus on FIPS PUB 199 Level determination and the High baseline. It covers SSP Appendix K, FIPS 199 categorization, and includes authorizing official approval (RA-2). The document provides a comprehensive overview of the security categorization process, detailing the rationale for categorization levels, and the determination of the High baseline. It is intended for use by security professionals and authorizing officials.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "FIPS 199 security categorization documentation (SSP Appendix K)",
       "Security categorization documentation with FIPS 199 analysis and supporting rationale, including authorizing official approval (RA-2)",
@@ -137,8 +137,8 @@
     ]
   },
   {
-    "description": "Comprehensive Incident Response Plan aligned with US-CERT guidelines that includes defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities. The plan incorporates coordination with related organizational plans including business continuity, disaster recovery, contingency planning, and crisis communications. The plan is supported by evidence of regular testing and integration across all related response and recovery functions.",
-    "owner": "No owner",
+    "description": "This consolidated Incident Response Plan includes defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities. It aligns with US-CERT guidelines for incident reporting procedures and evidence of coordination between incident response testing and related plans such as business continuity, disaster recovery, contingency, and crisis communications.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Incident Response Plan with defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities",
       "Incident response plan and incident reporting procedures aligned with US-CERT guidelines",
@@ -146,8 +146,8 @@
     ]
   },
   {
-    "description": "Alternate work site policy, approved locations, and security controls documentation including: site agreements for processing and storage locations; documentation of equivalent security controls at alternate sites; evidence of geographic separation from primary sites; and security controls effectiveness assessment results.",
-    "owner": "No owner",
+    "description": "This document consolidates policies and agreements related to alternate work, processing, and storage sites. It includes documentation of approved locations, equivalent security controls, geographic separation from primary sites, and security controls effectiveness assessment results for alternate sites. The document ensures compliance with security standards and operational requirements at alternate sites.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Alternate work site policy and approved locations documentation",
       "Alternate processing site agreement(s) and documentation of equivalent security controls at alternate sites",
@@ -156,8 +156,8 @@
     ]
   },
   {
-    "description": "Comprehensive system and network architecture diagrams documenting logical and physical separation of information flows, boundary protection devices, subnets, DMZs, managed interfaces, network topology, data flows, and external system connections. These diagrams support security and privacy architecture requirements including AC-4(21) controls.",
-    "owner": "No owner",
+    "description": "Network architecture diagrams illustrating both logical and physical separation of information flows, boundary protection devices, subnets, demilitarized zones (DMZs), managed interfaces, system security, privacy architecture, network topology, data flows, and external system connections (AC-4(21)).",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Network architecture diagrams showing logical and physical separation of information flows (AC-4(21))",
       "Network architecture diagrams showing boundary protection devices, subnets, DMZs, and managed interfaces",
@@ -165,7 +165,7 @@
     ]
   },
   {
-    "description": "Criticality analysis documentation performed at key decision points in the system development life cycle (SDLC) to identify critical system components, functions, and services, including breadth and depth of analysis for high value assets, along with system restoration priorities documentation.",
+    "description": "Criticality analysis documentation performed at key decision points in the system development life cycle (SDLC), including breadth and depth of analysis for high value assets, critical system components, functions, and services. This documentation also covers system criticality analysis and restoration priorities. (RA-9)",
     "owner": "No owner",
     "mergedFrom": [
       "Criticality analysis documentation performed at key decision points in the SDLC, including breadth and depth of analysis for high value assets",
@@ -174,8 +174,8 @@
     ]
   },
   {
-    "description": "Integrated policy and procedures documentation covering System and Services Acquisition, Personnel Security, and Identification and Authentication. Includes roles, responsibilities, review frequency, approval authority, and approval records for all three domains.",
-    "owner": "No owner",
+    "description": "This consolidated document outlines the policies and procedures for System and Services Acquisition, Personnel Security, and Identification and Authentication. It includes details on roles and responsibilities, review frequency, and approval authority for each area. The document ensures that all unique information is combined, redundancy is eliminated, and clarity and specificity are maintained.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "System and Services Acquisition policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
       "Personnel security policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
@@ -183,8 +183,8 @@
     ]
   },
   {
-    "description": "Comprehensive security assessment and risk management documentation encompassing: (1) specialized security assessments including announced vulnerability scanning, malicious user testing, and insider threat assessments; (2) risk response documentation demonstrating how findings from security assessments, monitoring, and audits are addressed in accordance with organizational risk tolerance (RA-7); and (3) risk assessment documentation for acquisition or outsourcing of information security services, including required organizational approvals.",
-    "owner": "No owner",
+    "description": "This document consolidates specialized security assessments, risk response documentation, and risk assessment for information security services. It includes announced vulnerability scanning, malicious user testing, insider threat assessments, and how findings from these assessments, monitoring, and audits are addressed according to organizational risk tolerance (RA-7). Additionally, it covers the risk assessment process for the acquisition or outsourcing of information security services, including necessary organizational approvals.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Documentation of specialized security assessments conducted, including announced vulnerability scanning, malicious user testing, or insider threat assessments",
       "Risk response documentation showing how findings from security assessments, monitoring, and audits are addressed in accordance with organizational risk tolerance (RA-7)",
@@ -192,8 +192,8 @@
     ]
   },
   {
-    "description": "Vulnerability scan reports and flaw remediation tracking records from the past 12 months, including monthly scanning of operating systems, infrastructure, databases, web applications, containers, APIs, and services (RA-5)",
-    "owner": "No owner",
+    "description": "Vulnerability scan reports from the past 12 months showing monthly scanning of operating systems, databases, web applications, containers, services, and APIs. This includes flaw remediation tracking records for the past 90 days.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Vulnerability scan reports from the past 12 months showing monthly scanning of operating systems, databases, web applications, containers, and services",
       "Vulnerability scanning reports and flaw remediation tracking records for the past 90 days",
@@ -201,8 +201,8 @@
     ]
   },
   {
-    "description": "Consolidated policy documentation encompassing audit and accountability, configuration management, and organizational planning. Includes current policies and procedures with complete version history, approval records, approval signatures, and evidence of annual reviews with most recent review and approval dates.",
-    "owner": "No owner",
+    "description": "This consolidated document includes the current audit and accountability policy, configuration management policy and procedures, and organizational planning policy and procedures. It encompasses version history, approval records, evidence of annual review, and most recent review and approval dates. Each policy and procedure is detailed to ensure compliance and governance within the organization.",
+    "owner": "Multiple owners",
     "mergedFrom": [
       "Current audit and accountability policy document, including version history and approval records",
       "Current Configuration Management Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review",
@@ -210,7 +210,7 @@
     ]
   },
   {
-    "description": "Comprehensive inventory and documentation of services, ports, and protocols including purpose, justifications, and authorized users for each entry",
+    "description": "This document provides a comprehensive inventory of services, ports, and protocols, including their purposes and authorized users. Each entry is justified to ensure clarity and specificity. The inventory covers all necessary details to understand the role and permissions associated with each service, port, and protocol.",
     "owner": "No owner",
     "mergedFrom": [
       "Services, ports, and protocols documentation including purpose and authorized users",

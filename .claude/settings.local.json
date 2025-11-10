@@ -12,7 +12,9 @@
       "Bash(git add -A)",
       "Bash(git log -1 --format='%an %ae')",
       "Bash(git commit -m \"$(cat <<''EOF''\nSimplify implementation to focus on S3 Vectors and HDBSCAN clustering\n\n- Remove simple-s3 storage backend and VectorStore abstraction\n- Remove example.ts, test files, and vector-store-factory\n- Update merge-documents.ts to only merge clusters with >2 documents\n- Simplify configuration to S3 Vectors only\n- Update CLAUDE.md with streamlined workflow documentation\n- Clean up package.json scripts\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
-      "Bash(npm install dotenv)"
+      "Bash(npm install dotenv)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd dotenv support to load .env file automatically\n\n- Install dotenv package\n- Import dotenv/config at the top of merge-documents.ts\n- Environment variables from .env now load automatically\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd reindex command to force regeneration of embeddings\n\n- Add --reindex flag to merge-documents.ts\n- Delete all embeddings from S3 Vectors when --reindex is used\n- Add npm scripts: reindex and reindex:aws\n- Update CLAUDE.md with reindex command documentation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []

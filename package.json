@@ -8,6 +8,8 @@
     "build": "tsc",
     "merge": "tsx src/merge-documents.ts",
     "merge:aws": "aws-vault exec ${AWS_ACCOUNT:-acl-playground} -- npm run merge",
+    "reindex": "tsx src/merge-documents.ts --reindex",
+    "reindex:aws": "aws-vault exec ${AWS_ACCOUNT:-acl-playground} -- npm run reindex",
     "clean": "rm -rf dist"
   },
   "keywords": [
