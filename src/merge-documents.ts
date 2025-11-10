@@ -146,9 +146,8 @@ async function main() {
       embeddedDocs.push(...batchResults);
 
       processedCount += batch.length;
-      if (processedCount % 10 === 0 || processedCount === totalDocs) {
-        console.log(`   Progress: ${processedCount}/${totalDocs} embeddings generated (${Math.round(processedCount/totalDocs*100)}%)`);
-      }
+      // Show progress for every batch
+      console.log(`   Progress: ${processedCount}/${totalDocs} embeddings generated (${Math.round(processedCount/totalDocs*100)}%)`);
     }
     console.log(`✅ Generated ${embeddedDocs.length} embeddings\n`);
     
