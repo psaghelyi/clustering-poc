@@ -17,7 +17,9 @@
       "Bash(git commit -m \"$(cat <<''EOF''\nAdd reindex command to force regeneration of embeddings\n\n- Add --reindex flag to merge-documents.ts\n- Delete all embeddings from S3 Vectors when --reindex is used\n- Add npm scripts: reindex and reindex:aws\n- Update CLAUDE.md with reindex command documentation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git commit -m \"$(cat <<''EOF''\nAdd error handling for invalid embeddings in S3 Vectors\n\n- Add validation to check if embedding exists and is an array\n- Provide clear error message with document ID when embedding is invalid\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git commit -m \"Add debug logging for invalid embeddings\")",
-      "Bash(git commit -m \"Show progress for every batch during embedding generation\")"
+      "Bash(git commit -m \"Show progress for every batch during embedding generation\")",
+      "Bash(npm run reindex:aws)",
+      "Bash(git commit -m \"Fix Nova embedding model ID to amazon.nova-embed-text-v1:0\")"
     ],
     "deny": [],
     "ask": []

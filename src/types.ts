@@ -21,8 +21,8 @@ export interface EmbeddingModelConfig {
 export const EMBEDDING_MODELS: Record<EmbeddingProvider, EmbeddingModelConfig> = {
   nova: {
     provider: 'nova',
-    modelId: 'amazon.nova-2-multimodal-embeddings-v1:0',
-    dimensions: 1024, // Supports 256, 384, 1024
+    modelId: 'amazon.nova-embed-text-v1:0',
+    dimensions: 1024, // Supports 256, 384, 512, 1024
   },
   titan: {
     provider: 'titan',
