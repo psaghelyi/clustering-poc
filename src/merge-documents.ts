@@ -110,7 +110,11 @@ async function main() {
     console.log(`✅ Loaded ${embeddedDocs.length} embeddings from S3 Vectors\n`);
   } else {
     console.log('🧠 Generating embeddings using AWS Bedrock...');
-    const embeddingModelConfig = EMBEDDING_MODELS[CONFIG.embeddingProvider];
+    const embeddingModelConfig = {
+      ...EMBEDDING_MODELS[CONFIG.embeddingProvider],
+      // Override dimensions from environment variable if specified
+      dimensions: CONFIG.s3Vectors.dimensions,
+    };
     const embeddingService = new EmbeddingService(embeddingModelConfig, CONFIG.awsRegion);
 
     const documents: Document[] = sourceDocs.map(doc => ({

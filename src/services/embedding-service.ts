@@ -91,7 +91,7 @@ export class EmbeddingService {
    * Generate embeddings for multiple texts in one API call (Cohere only)
    */
   private async generateEmbeddingsBatch(texts: string[]): Promise<number[][]> {
-    const { provider, modelId } = this.config;
+    const { provider, modelId, dimensions } = this.config;
     
     if (provider !== 'cohere') {
       throw new Error('Batch embedding only supported for Cohere');
@@ -101,6 +101,8 @@ export class EmbeddingService {
       texts,
       input_type: 'search_document',
       truncate: 'END',
+      embedding_types: ['float'],
+      ...(dimensions && { output_dimension: dimensions }),
     };
     
     const command = new InvokeModelCommand({
@@ -113,7 +115,8 @@ export class EmbeddingService {
     const response = await this.client.send(command);
     const responseBody = JSON.parse(new TextDecoder().decode(response.body));
     
-    return responseBody.embeddings;
+    // Cohere v4 returns embeddings in a nested structure
+    return responseBody.embeddings?.float || responseBody.embeddings;
   }
 
   /**
@@ -148,6 +151,8 @@ export class EmbeddingService {
           texts: [text],
           input_type: 'search_document',
           truncate: 'END',
+          embedding_types: ['float'],
+          ...(dimensions && { output_dimension: dimensions }),
         };
         break;
 
@@ -179,7 +184,8 @@ export class EmbeddingService {
         break;
 
       case 'cohere':
-        embedding = responseBody.embeddings[0];
+        // Cohere v4 returns embeddings in a nested structure
+        embedding = responseBody.embeddings?.float?.[0] || responseBody.embeddings?.[0];
         break;
 
       default:

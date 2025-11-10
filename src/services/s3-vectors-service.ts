@@ -58,15 +58,18 @@ export class S3VectorsService {
 
     try {
       // Check if index exists
-      await this.client.send(
+      const indexInfo = await this.client.send(
         new GetIndexCommand({
           vectorBucketName: this.config.vectorBucket,
           indexName: this.config.indexName,
         })
       );
       console.log(`Vector index '${this.config.indexName}' already exists`);
+      if (indexInfo.dimension && indexInfo.dimension !== this.config.dimensions) {
+        console.log(`⚠️  Warning: Existing index has ${indexInfo.dimension} dimensions but configured for ${this.config.dimensions}`);
+      }
     } catch (error: any) {
-      if (error.name === 'NoSuchIndex' || error.$metadata?.httpStatusCode === 404) {
+      if (error.name === 'NotFoundException' || error.name === 'NoSuchIndex' || error.$metadata?.httpStatusCode === 404) {
         // Create index if it doesn't exist
         console.log(`Creating vector index '${this.config.indexName}'...`);
         await this.client.send(

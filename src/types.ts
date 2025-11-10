@@ -21,7 +21,7 @@ export interface EmbeddingModelConfig {
 export const EMBEDDING_MODELS: Record<EmbeddingProvider, EmbeddingModelConfig> = {
   nova: {
     provider: 'nova',
-    modelId: 'amazon.nova-embed-text-v1:0',
+    modelId: 'amazon.nova-2-multimodal-embeddings-v1:0',
     dimensions: 1024, // Supports 256, 384, 512, 1024
   },
   titan: {
@@ -31,8 +31,8 @@ export const EMBEDDING_MODELS: Record<EmbeddingProvider, EmbeddingModelConfig> =
   },
   cohere: {
     provider: 'cohere',
-    modelId: 'us.cohere.embed-v4:0', // Using cross-region inference profile
-    dimensions: 1024, // Cohere v4 supports 1024 dimensions
+    modelId: 'us.cohere.embed-v4:0',
+    dimensions: 1536, // Cohere v4 default dimensions
   },
 };
 

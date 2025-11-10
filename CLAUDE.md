@@ -36,7 +36,10 @@ npm run build
 - `LLM_MODEL`: `claude-haiku` | `nova` (for merging documents)
 - `S3_VECTOR_BUCKET`: S3 bucket name for vector storage
 - `S3_VECTOR_INDEX`: Index name in S3 Vectors
-- `EMBEDDING_DIMENSIONS`: Vector dimensions (must match provider, typically 1024)
+- `EMBEDDING_DIMENSIONS`: Vector dimensions (provider-dependent)
+  - Titan: up to 1024
+  - Nova: 256, 384, 512, 1024
+  - Cohere v4 (Matryoshka): 256, 512, 1024, 1536
 
 **HDBSCAN Parameters:**
 - `DISTANCE_METRIC`: `euclidean` | `cosine` (cosine recommended for text)
@@ -47,6 +50,8 @@ npm run build
 
 **HDBSCAN**: Density-based clustering that automatically finds cluster count. Documents not fitting any cluster are marked as "noise" (label -1) and kept unmerged. The `metric` parameter significantly impacts results - cosine is better for semantic similarity.
 
-**S3 Vectors**: AWS preview service for native vector storage. Only available in specific regions (us-east-1, us-east-2, us-west-2, eu-central-1, ap-southeast-2). Requires bucket initialization on first run.
+**S3 Vectors**: AWS preview service for native vector storage. Only available in specific regions (us-east-1, us-east-2, us-west-2, eu-central-1, ap-southeast-2). Requires bucket initialization on first run. Index dimensions are fixed at creation - changing `EMBEDDING_DIMENSIONS` requires deleting and recreating the index.
 
 **Clustering threshold**: Controlled indirectly via `MIN_CLUSTER_SIZE` and `MIN_SAMPLES`. Lower values create more/smaller clusters. HDBSCAN automatically adapts to varying densities.
+
+**Cohere batch embeddings**: Cohere v4 supports native batch processing (up to 96 documents per API call) for significantly faster embedding generation. Uses Matryoshka embeddings with configurable dimensions (256, 512, 1024, or 1536) via `EMBEDDING_DIMENSIONS`.
