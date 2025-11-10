@@ -1,846 +1,350 @@
 [
   {
-    "description": "Current System Security Plan (SSP) document with all completed sections including system information, authorization details, and approval signatures; Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, network diagrams, and control implementation details; Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, and security controls implementation details; SSP approval documentation from authorizing official or designated representative; Current System Security Plan (SSP) with all required sections completed, including system information, authorization details, and approval signatures; System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements; System and communications protection policy and procedures documentation; System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements; Current Information System Contingency Plan (ISCP) using the FedRAMP template, including all appendices; Current maintenance policy and procedures documentation, including roles, responsibilities, and approval authority; Media protection policy and procedures documentation, including roles, responsibilities, review frequency, and approval records; Personnel security policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority; System and Services Acquisition policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority; Administrator and user documentation for systems, components, and services, including secure configuration, installation, operation guidance, and known vulnerabilities; Systems security and privacy engineering principles documentation showing application throughout the specification, design, development, implementation, and modification phases; Development process documentation showing security and privacy requirements integration, standards and tools used, tool configurations, and integrity controls for process changes (reviewed annually); Supply Chain Risk Management (SCRM) Policy and Procedures documentation; Current audit and accountability policy document, including version history and approval records; Current audit and accountability procedures document, including version history and last review date; Assessment, authorization, and monitoring policy and procedures documentation, including most recent review and approval dates; Current Configuration Management Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review; Identification and authentication policy and procedures documentation, including roles, responsibilities, review frequency, and approval records; Current Incident Response Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review; Evidence of annual review and updates to maintenance policy and procedures; List of approved maintenance tools and annual review documentation; Current organizational planning policy and procedures documentation, including most recent review and approval dates; Media use restrictions policy and technical controls documentation for portable storage devices and removable media; Personnel security documentation demonstrating that incident handlers meet security requirements commensurate with system criticality/sensitivity; Formal personnel sanctions policy and process documentation for security and privacy policy violations; Acquisition contracts for systems, components, or services, including security and privacy functional requirements, assurance requirements, acceptance criteria, and Federal Acquisition Regulation (FAR) Section 889 compliance documentation; Risk assessment documentation for acquisition or outsourcing of information security services, including organizational approvals; Baseline configuration documentation for all system components, including hardware, software, firmware, network topology, and security control implementations; Access control documentation for configuration change privileges, including role definitions, separation of duties matrix, and quarterly privilege reviews; Services, ports, and protocols documentation including purpose and authorized users; Developer configuration management documentation, including change control procedures, integrity verification methods, and security flaw tracking and resolution reports; System security and privacy architecture diagrams including network topology, data flows, and external system connections; Developer-provided training materials and records on the correct use and operation of implemented security and privacy functions, controls, and mechanisms; Developer security and privacy architecture and design specifications showing consistency with enterprise architecture, allocation of controls, and unified approach to protection; Capital planning and investment control documentation showing resource allocation for information security and privacy, including discrete line items in programming and budgeting documentation; System Development Life Cycle (SDLC) documentation that incorporates security and privacy considerations, including defined roles and responsibilities throughout the lifecycle; Threat modeling and vulnerability analysis documentation performed during development and testing, including contextual information, tools/methods used, rigor level, and acceptance criteria; Developer personnel screening documentation, including access authorizations, background checks, clearances, and list of individuals authorized to perform development activities; Supply Chain Risk Management Plan including risk tolerance, mitigation strategies, roles and responsibilities, and lifecycle security engineering processes; Documented supply chain controls and processes to identify and address weaknesses in supply chain elements; Acquisition strategies, contract tools, and procurement methods documentation addressing supply chain risk mitigation; Documentation of designated official responsible for managing audit and accountability policy and procedures; Current system and information integrity policy and procedures, including review and update dates; Configuration Management Plan (CMP) with documented roles, responsibilities, processes, configuration items, and approval records; Evidence of annual contingency policy and procedures review and approval; Configuration management documentation showing integration of flaw remediation processes; Access control policy and procedures documentation (AC-1); Device identification and authentication mechanisms documentation for local, network, and remote connections; Risk Assessment Policy and Procedures documentation addressing purpose, scope, roles, responsibilities, and compliance requirements (RA-1); Incident handling procedures documentation covering preparation, detection, analysis, containment, eradication, and recovery phases; Incident response support resource documentation, including help desk procedures, ticketing system access, and forensics service availability; Evidence of annual review and update of awareness and training policy and procedures; Evidence of annual review and updates to all interconnection agreements and internal connection authorizations; Evidence of annual SSP review and updates addressing system changes or assessment findings; Inspection records for maintenance tools checking for unauthorized modifications or malicious code; Media storage inventory records and physical security controls documentation for controlled areas where media is stored; Social media and external site usage policy and restrictions documentation; Documentation of specialized security assessments conducted, including announced vulnerability scanning, malicious user testing, or insider threat assessments; Documentation of lessons learned from incident handling activities and evidence of incorporation into incident response procedures, training, and testing; Insider threat incident handling procedures and capabilities documentation; External provider personnel security requirements and compliance documentation, including contractual agreements; Security categorization documentation with FIPS 199 analysis and supporting rationale, including authorizing official approval (RA-2); Risk response documentation showing how findings from security assessments, monitoring, and audits are addressed in accordance with organizational risk tolerance (RA-7); Security configuration baseline documentation (DoD STIGs, CIS Level 2 benchmarks, or custom baselines) for all systems, components, and services; Role-based audit configuration change procedures and documentation of authorized individuals with audit configuration responsibilities; Configuration change request records including security and privacy impact analyses, approvals, implementation evidence, and testing results for a sample of recent changes; Physical access control system documentation including entry/exit points, guards, and physical access control devices; Separation of duties matrix documenting role assignments for privileged functions including admin additions/removals and policy enforcement; Services, ports, and protocols inventory with purpose and authorized users; Least functionality documentation including list of prohibited/restricted functions, ports, protocols, and services with justification for enabled services; Services, ports, and protocols inventory with justifications for each; Services, ports, and protocols inventory with purpose and authorized users; Automated configuration management tool reports showing baseline configurations, configuration drift detection, and compliance scan results; Malicious code protection mechanism configuration documentation, including signature-based and non-signature-based technologies; Network architecture diagrams showing logical and physical separation of information flows (AC-4(21)); Network architecture diagrams showing boundary protection devices, subnets, DMZs, and managed interfaces; Security and privacy literacy training materials provided to system users, including managers, senior executives, and contractors; Training completion records for all system users showing initial and annual security and privacy literacy training; Role-based security and privacy training materials for personnel with assigned security roles and responsibilities; Personnel screening and background investigation records, including initial screening and rescreening documentation per FedRAMP requirements; Supply chain custody documentation for all devices, including replacement devices, showing integrity verification before introduction to the system boundary; Documentation of the designated official responsible for managing awareness and training policy development and dissemination; Evidence of annual contingency training completion for personnel with contingency roles and responsibilities; Automated account management system configuration and audit logs (AC-2(1), AC-2(4)); Role-based access control (RBAC) or attribute-based access control (ABAC) implementation documentation (AC-6, AC-2(7)); Information flow control policy and enforcement mechanisms (AC-4); Strong authentication mechanisms documentation for nonlocal maintenance sessions (e.g., multi-factor authentication, PKI certificates); Information spillage response procedures, including assigned personnel roles, communication methods, isolation protocols, and eradication processes; Evidence of automated incident handling mechanisms, including system configurations for incident tracking, data collection, analysis tools, and dynamic reconfiguration capabilities; Incident response plan and incident reporting procedures aligned with US-CERT guidelines; Incident Response Plan with defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities; Incident response training materials covering simulated events, tabletop exercises, and information spillage scenarios with evidence of annual delivery; Current awareness and training policy document, including purpose, scope, roles, responsibilities, management commitment, coordination, and compliance requirements; Procedures for implementing awareness and training policy and associated controls; Evidence of annual updates to literacy training and awareness content, including incorporation of lessons learned from security or privacy incidents; Annual access agreement review and re-signature records; Automated unauthorized component detection tool configuration, alert logs, and incident response records for detected unauthorized components; Post-maintenance verification testing records demonstrating controls are functioning properly; Procedures and records for preventing unauthorized removal of maintenance equipment containing organizational information; System and component inspection procedures and records to detect tampering; Physical intrusion alarm and surveillance equipment documentation and monitoring records; Documentation of integrated analysis combining audit records with vulnerability scanning, performance data, system monitoring, and penetration test data; Developer security and privacy assessment plans, including unit/integration/system/regression testing results, flaw remediation processes, and evidence of test execution; Evidence of coordination between incident response testing and related plans (business continuity, disaster recovery, contingency, crisis communications); Insider threat awareness training materials covering recognition and reporting of potential indicators; External system services agreements, service-level agreements, and continuous monitoring documentation demonstrating compliance with FedRAMP security controls baselines; FIPS 199 security categorization documentation (SSP Appendix K); FIPS PUB 199 security categorization documentation with supporting rationale for the High baseline determination; FIPS 199 categorization documentation and FIPS PUB 199 Level determination (SSP Appendix K); Risk monitoring documentation showing effectiveness monitoring, compliance monitoring, and change monitoring activities; Security configuration checklists and hardening guides (DISA STIGs, CIS benchmarks, or custom baselines) applied to system components; Access controls and alert configuration for unauthorized access, modification, or deletion of audit information; Audit logs demonstrating automated enforcement of configuration change restrictions and notifications to approval authorities; Test environment documentation and evidence of security testing performed prior to production implementation of configuration changes; Key and combination change records demonstrating at least annual changes or changes following security events; Physical access control documentation for system distribution and transmission lines including wiring closets and cable protection; Output device physical access controls documentation (printers, monitors, scanners, copiers); Vendor compliance documentation for physical facility access and logical access controls to supplied products; Separation of duties matrix showing role assignments and conflicting duties (AC-5); Separation of duties matrix showing role assignments for privileged administrative functions; Separation of duties matrix with role assignments for physical access administration and enforcement; Separation of duties matrix showing role assignments for privileged and non-privileged administrators; Separation of duties matrix showing role assignments for system administration functions; Separation of duties matrix showing role assignments for privileged and non-privileged functions; Inventory of internal system connections including all authorized components, interface characteristics, and security requirements; Inventory of all system components within the authorization boundary, including services, ports, and protocols in use; List of functions, ports, protocols, and services required for all external system services where Federal information is processed or stored; Software, firmware, and information integrity verification tool configuration and scan results; Social engineering and social mining awareness training materials covering phishing, pretexting, impersonation, and other attack vectors; List of personnel roles and responsibilities requiring role-based security and privacy training; Training completion records for role-based training showing initial training before system access and annual refresher training; Incident response training records for privileged users and incident response personnel, including training completion dates, content, and attendance rosters; Security awareness and training records for personnel with access control responsibilities (AT family); Organizational position descriptions incorporating security and privacy roles and responsibilities; Account management procedures including account creation, modification, and termination workflows (AC-2); Nonlocal maintenance approval and monitoring records, including session logs and authentication methods; Evidence of incident reporting to US-CERT and FedRAMP per NIST SP 800-61 timelines, including sample incident reports and communication records; Integrated incident response team charter, including team composition, deployment capabilities, time-to-deploy metrics, and cross-organizational coordination procedures; Documentation of training content updates following system changes or significant events; Evidence of annual privileged user access reviews (AC-6(7)); Media sanitization procedures and records for equipment removed for off-site maintenance; System component delivery and removal authorization procedures and records; Incident tracking and monitoring records, including incident logs, status reports, and documentation of incidents from the past 12 months; Physical access monitoring logs and incident response records for suspicious activities; Documentation of automated mechanisms used for audit record review, analysis, and reporting integration; System-wide audit trail compilation documentation showing time-correlated records from all network, data storage, and computing devices; Evidence of incident response testing conducted within the past six months, including test plans, functional test results, and JAB/AO approval documentation; FedRAMP Package ID and authorization documentation; Audit logging process failure alert configuration and recipient list; Access control matrix showing permitted actions (read, write, execute, append, delete) for audit record information by role and user; Automated notification logs or mechanisms used to alert personnel of termination actions and disable system access; Power equipment and cabling protection documentation including UPS systems and emergency power capabilities; System component inventory with accountability information (owner names, positions, roles), update timestamps, and evidence of monthly reviews; System component inventory records for all components entering and exiting the facility; Approval records for off-site maintenance, repair, or replacement activities; SCRM Team charter or documentation identifying team members, roles, responsibilities, and assigned SCRM activities; Evidence of monthly privileged account reviews and semi-annual non-privileged account reviews (AC-2(j)); Audit logs demonstrating privileged function execution logging (AC-6(9)); Media sanitization procedures compliant with NIST SP 800-88, including sanitization techniques for disposal and reuse; Media sanitization logs documenting review, approval, tracking, verification, and disposal actions; Configuration control procedures and records for system components awaiting service, repair, or return to service; Component disposal procedures and documentation including techniques and methods for secure disposal of data, documentation, tools, and system components; Remote access monitoring logs and encryption implementation evidence (AC-17(1), AC-17(2)); Evidence of correlation between audit records and physical access monitoring information; Physical access audit logs for all entry and exit points for the past 12 months; Audit review findings reports and documentation of reporting to designated personnel; Security Information and Event Management (SIEM) tool configuration for centralized audit record review and analysis; Audit record reduction and report generation tool documentation and sample customizable reports; Configuration of automated audit record processing, sorting, and searching capabilities; FedRAMP authorization package ID and current authorization status; FedRAMP Package ID and authorization path documentation (JAB or Agency authorization); FedRAMP authorization package documentation including authorization type (JAB or Agency) and FedRAMP Package ID; Real-time alert configuration for audit failure events, including recipient roles with authority to address failures; List of privileged users or roles authorized to manage audit logging functionality; Fire detection system automatic activation and notification procedures with personnel notification lists; Personnel termination procedures and records, including evidence of system access disablement within one hour of termination; System-generated security alerts and notifications sent to designated personnel; Automated notifications of integrity violations sent to ISSO and security personnel; Emergency shutoff switch locations and protection documentation with labeling and access procedures; Software allow-list (authorized software inventory) with version numbers, approval records, and evidence of quarterly reviews; Inventory of system components with support status, including replacement plans for unsupported components or documentation of alternative support arrangements (in-house or external providers); Maintenance schedules and records for system components, including dates, descriptions, and personnel involved; Remote access policy and procedures including VPN configuration and usage restrictions (AC-17); Evidence of audit record correlation across different repositories for organization-wide situational awareness; Evidence of weekly storage of audit records in a physically separate repository from audited systems; Physical access list review records for the past 12 months demonstrating at least quarterly reviews; Visitor access records for the past 12 months including names, organizations, dates, entry/departure times, and purpose of visits; Security Information and Event Management (SIEM) system configuration and real-time analysis reports; List of user accounts with privileged access (super admin, system admin, security officer roles) to all system components; Fire suppression system automatic activation documentation and notification procedures for unstaffed facilities; Water detection system automated alert mechanisms and notification procedures; Exit interview documentation covering information security topics for terminated employees; External provider notification records for personnel transfers and terminations (immediate for terminations, within 24 hours for transfers); Alert notifications sent to administrators in response to malicious code detection; Personnel sanctions notification records to ISSO within 24 hours of sanction initiation; Emergency lighting system documentation and testing records for emergency exits and evacuation routes; Water damage protection documentation including master shutoff valve locations and water detection sensor specifications; Software license inventory and tracking records demonstrating compliance with licensing agreements and copyright laws; Maintenance support contracts and spare parts inventory for critical system components; Wireless access policy, authentication mechanisms, and encryption standards (AC-18, AC-18(1)); Audit log storage capacity allocation documentation and retention requirements; Publicly accessible content review procedures and quarterly review logs (AC-22); Visitor access record review documentation demonstrating at least monthly reviews; List of all user accounts (privileged and non-privileged) with assigned roles, permissions, and account types; Fire detection and suppression system documentation including independent energy source specifications; Personnel transfer procedures and records, including access authorization reviews and modifications completed within 24 hours; Documentation of audit storage capacity warning thresholds (75% or one month before impact) and alert recipients",
+    "description": "Physical access audit logs, monitoring logs, and incident response records for all entry and exit points for the past 12 months, including evidence of at least quarterly access list reviews, correlation between audit records and physical access monitoring information, and documentation of suspicious activities and incident responses.",
     "owner": "No owner",
     "mergedFrom": [
-      "Current System Security Plan (SSP) document with all completed sections including system information, authorization details, and approval signatures",
-      "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, network diagrams, and control implementation details",
-      "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, and security controls implementation details",
-      "SSP approval documentation from authorizing official or designated representative",
-      "Current System Security Plan (SSP) with all required sections completed, including system information, authorization details, and approval signatures",
-      "System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements",
-      "System and communications protection policy and procedures documentation",
-      "System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements",
-      "Current Information System Contingency Plan (ISCP) using the FedRAMP template, including all appendices",
-      "Current maintenance policy and procedures documentation, including roles, responsibilities, and approval authority",
-      "Media protection policy and procedures documentation, including roles, responsibilities, review frequency, and approval records",
-      "Personnel security policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
-      "System and Services Acquisition policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
-      "Administrator and user documentation for systems, components, and services, including secure configuration, installation, operation guidance, and known vulnerabilities",
-      "Systems security and privacy engineering principles documentation showing application throughout the specification, design, development, implementation, and modification phases",
-      "Development process documentation showing security and privacy requirements integration, standards and tools used, tool configurations, and integrity controls for process changes (reviewed annually)",
-      "Supply Chain Risk Management (SCRM) Policy and Procedures documentation",
-      "Current audit and accountability policy document, including version history and approval records",
-      "Current audit and accountability procedures document, including version history and last review date",
-      "Assessment, authorization, and monitoring policy and procedures documentation, including most recent review and approval dates",
-      "Current Configuration Management Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review",
-      "Identification and authentication policy and procedures documentation, including roles, responsibilities, review frequency, and approval records",
-      "Current Incident Response Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review",
-      "Evidence of annual review and updates to maintenance policy and procedures",
-      "List of approved maintenance tools and annual review documentation",
-      "Current organizational planning policy and procedures documentation, including most recent review and approval dates",
-      "Media use restrictions policy and technical controls documentation for portable storage devices and removable media",
-      "Personnel security documentation demonstrating that incident handlers meet security requirements commensurate with system criticality/sensitivity",
-      "Formal personnel sanctions policy and process documentation for security and privacy policy violations",
-      "Acquisition contracts for systems, components, or services, including security and privacy functional requirements, assurance requirements, acceptance criteria, and Federal Acquisition Regulation (FAR) Section 889 compliance documentation",
-      "Risk assessment documentation for acquisition or outsourcing of information security services, including organizational approvals",
-      "Baseline configuration documentation for all system components, including hardware, software, firmware, network topology, and security control implementations",
-      "Access control documentation for configuration change privileges, including role definitions, separation of duties matrix, and quarterly privilege reviews",
-      "Services, ports, and protocols documentation including purpose and authorized users",
-      "Developer configuration management documentation, including change control procedures, integrity verification methods, and security flaw tracking and resolution reports",
-      "System security and privacy architecture diagrams including network topology, data flows, and external system connections",
-      "Developer-provided training materials and records on the correct use and operation of implemented security and privacy functions, controls, and mechanisms",
-      "Developer security and privacy architecture and design specifications showing consistency with enterprise architecture, allocation of controls, and unified approach to protection",
-      "Capital planning and investment control documentation showing resource allocation for information security and privacy, including discrete line items in programming and budgeting documentation",
-      "System Development Life Cycle (SDLC) documentation that incorporates security and privacy considerations, including defined roles and responsibilities throughout the lifecycle",
-      "Threat modeling and vulnerability analysis documentation performed during development and testing, including contextual information, tools/methods used, rigor level, and acceptance criteria",
-      "Developer personnel screening documentation, including access authorizations, background checks, clearances, and list of individuals authorized to perform development activities",
-      "Supply Chain Risk Management Plan including risk tolerance, mitigation strategies, roles and responsibilities, and lifecycle security engineering processes",
-      "Documented supply chain controls and processes to identify and address weaknesses in supply chain elements",
-      "Acquisition strategies, contract tools, and procurement methods documentation addressing supply chain risk mitigation",
-      "Documentation of designated official responsible for managing audit and accountability policy and procedures",
-      "Current system and information integrity policy and procedures, including review and update dates",
-      "Configuration Management Plan (CMP) with documented roles, responsibilities, processes, configuration items, and approval records",
-      "Evidence of annual contingency policy and procedures review and approval",
-      "Configuration management documentation showing integration of flaw remediation processes",
-      "Access control policy and procedures documentation (AC-1)",
-      "Device identification and authentication mechanisms documentation for local, network, and remote connections",
-      "Risk Assessment Policy and Procedures documentation addressing purpose, scope, roles, responsibilities, and compliance requirements (RA-1)",
-      "Incident handling procedures documentation covering preparation, detection, analysis, containment, eradication, and recovery phases",
-      "Incident response support resource documentation, including help desk procedures, ticketing system access, and forensics service availability",
-      "Evidence of annual review and update of awareness and training policy and procedures",
-      "Evidence of annual review and updates to all interconnection agreements and internal connection authorizations",
-      "Evidence of annual SSP review and updates addressing system changes or assessment findings",
-      "Inspection records for maintenance tools checking for unauthorized modifications or malicious code",
-      "Media storage inventory records and physical security controls documentation for controlled areas where media is stored",
-      "Social media and external site usage policy and restrictions documentation",
-      "Documentation of specialized security assessments conducted, including announced vulnerability scanning, malicious user testing, or insider threat assessments",
-      "Documentation of lessons learned from incident handling activities and evidence of incorporation into incident response procedures, training, and testing",
-      "Insider threat incident handling procedures and capabilities documentation",
-      "External provider personnel security requirements and compliance documentation, including contractual agreements",
-      "Security categorization documentation with FIPS 199 analysis and supporting rationale, including authorizing official approval (RA-2)",
-      "Risk response documentation showing how findings from security assessments, monitoring, and audits are addressed in accordance with organizational risk tolerance (RA-7)",
-      "Security configuration baseline documentation (DoD STIGs, CIS Level 2 benchmarks, or custom baselines) for all systems, components, and services",
-      "Role-based audit configuration change procedures and documentation of authorized individuals with audit configuration responsibilities",
-      "Configuration change request records including security and privacy impact analyses, approvals, implementation evidence, and testing results for a sample of recent changes",
-      "Physical access control system documentation including entry/exit points, guards, and physical access control devices",
-      "Separation of duties matrix documenting role assignments for privileged functions including admin additions/removals and policy enforcement",
-      "Services, ports, and protocols inventory with purpose and authorized users",
-      "Least functionality documentation including list of prohibited/restricted functions, ports, protocols, and services with justification for enabled services",
-      "Services, ports, and protocols inventory with justifications for each",
-      "Services, ports, and protocols inventory with purpose and authorized users",
-      "Automated configuration management tool reports showing baseline configurations, configuration drift detection, and compliance scan results",
-      "Malicious code protection mechanism configuration documentation, including signature-based and non-signature-based technologies",
-      "Network architecture diagrams showing logical and physical separation of information flows (AC-4(21))",
-      "Network architecture diagrams showing boundary protection devices, subnets, DMZs, and managed interfaces",
-      "Security and privacy literacy training materials provided to system users, including managers, senior executives, and contractors",
-      "Training completion records for all system users showing initial and annual security and privacy literacy training",
-      "Role-based security and privacy training materials for personnel with assigned security roles and responsibilities",
-      "Personnel screening and background investigation records, including initial screening and rescreening documentation per FedRAMP requirements",
-      "Supply chain custody documentation for all devices, including replacement devices, showing integrity verification before introduction to the system boundary",
-      "Documentation of the designated official responsible for managing awareness and training policy development and dissemination",
-      "Evidence of annual contingency training completion for personnel with contingency roles and responsibilities",
-      "Automated account management system configuration and audit logs (AC-2(1), AC-2(4))",
-      "Role-based access control (RBAC) or attribute-based access control (ABAC) implementation documentation (AC-6, AC-2(7))",
-      "Information flow control policy and enforcement mechanisms (AC-4)",
-      "Strong authentication mechanisms documentation for nonlocal maintenance sessions (e.g., multi-factor authentication, PKI certificates)",
-      "Information spillage response procedures, including assigned personnel roles, communication methods, isolation protocols, and eradication processes",
-      "Evidence of automated incident handling mechanisms, including system configurations for incident tracking, data collection, analysis tools, and dynamic reconfiguration capabilities",
-      "Incident response plan and incident reporting procedures aligned with US-CERT guidelines",
-      "Incident Response Plan with defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities",
-      "Incident response training materials covering simulated events, tabletop exercises, and information spillage scenarios with evidence of annual delivery",
-      "Current awareness and training policy document, including purpose, scope, roles, responsibilities, management commitment, coordination, and compliance requirements",
-      "Procedures for implementing awareness and training policy and associated controls",
-      "Evidence of annual updates to literacy training and awareness content, including incorporation of lessons learned from security or privacy incidents",
-      "Annual access agreement review and re-signature records",
-      "Automated unauthorized component detection tool configuration, alert logs, and incident response records for detected unauthorized components",
-      "Post-maintenance verification testing records demonstrating controls are functioning properly",
-      "Procedures and records for preventing unauthorized removal of maintenance equipment containing organizational information",
-      "System and component inspection procedures and records to detect tampering",
-      "Physical intrusion alarm and surveillance equipment documentation and monitoring records",
-      "Documentation of integrated analysis combining audit records with vulnerability scanning, performance data, system monitoring, and penetration test data",
-      "Developer security and privacy assessment plans, including unit/integration/system/regression testing results, flaw remediation processes, and evidence of test execution",
-      "Evidence of coordination between incident response testing and related plans (business continuity, disaster recovery, contingency, crisis communications)",
-      "Insider threat awareness training materials covering recognition and reporting of potential indicators",
-      "External system services agreements, service-level agreements, and continuous monitoring documentation demonstrating compliance with FedRAMP security controls baselines",
-      "FIPS 199 security categorization documentation (SSP Appendix K)",
-      "FIPS PUB 199 security categorization documentation with supporting rationale for the High baseline determination",
-      "FIPS 199 categorization documentation and FIPS PUB 199 Level determination (SSP Appendix K)",
-      "Risk monitoring documentation showing effectiveness monitoring, compliance monitoring, and change monitoring activities",
-      "Security configuration checklists and hardening guides (DISA STIGs, CIS benchmarks, or custom baselines) applied to system components",
-      "Access controls and alert configuration for unauthorized access, modification, or deletion of audit information",
-      "Audit logs demonstrating automated enforcement of configuration change restrictions and notifications to approval authorities",
-      "Test environment documentation and evidence of security testing performed prior to production implementation of configuration changes",
-      "Key and combination change records demonstrating at least annual changes or changes following security events",
-      "Physical access control documentation for system distribution and transmission lines including wiring closets and cable protection",
-      "Output device physical access controls documentation (printers, monitors, scanners, copiers)",
-      "Vendor compliance documentation for physical facility access and logical access controls to supplied products",
-      "Separation of duties matrix showing role assignments and conflicting duties (AC-5)",
-      "Separation of duties matrix showing role assignments for privileged administrative functions",
-      "Separation of duties matrix with role assignments for physical access administration and enforcement",
-      "Separation of duties matrix showing role assignments for privileged and non-privileged administrators",
-      "Separation of duties matrix showing role assignments for system administration functions",
-      "Separation of duties matrix showing role assignments for privileged and non-privileged functions",
-      "Inventory of internal system connections including all authorized components, interface characteristics, and security requirements",
-      "Inventory of all system components within the authorization boundary, including services, ports, and protocols in use",
-      "List of functions, ports, protocols, and services required for all external system services where Federal information is processed or stored",
-      "Software, firmware, and information integrity verification tool configuration and scan results",
-      "Social engineering and social mining awareness training materials covering phishing, pretexting, impersonation, and other attack vectors",
-      "List of personnel roles and responsibilities requiring role-based security and privacy training",
-      "Training completion records for role-based training showing initial training before system access and annual refresher training",
-      "Incident response training records for privileged users and incident response personnel, including training completion dates, content, and attendance rosters",
-      "Security awareness and training records for personnel with access control responsibilities (AT family)",
-      "Organizational position descriptions incorporating security and privacy roles and responsibilities",
-      "Account management procedures including account creation, modification, and termination workflows (AC-2)",
-      "Nonlocal maintenance approval and monitoring records, including session logs and authentication methods",
-      "Evidence of incident reporting to US-CERT and FedRAMP per NIST SP 800-61 timelines, including sample incident reports and communication records",
-      "Integrated incident response team charter, including team composition, deployment capabilities, time-to-deploy metrics, and cross-organizational coordination procedures",
-      "Documentation of training content updates following system changes or significant events",
-      "Evidence of annual privileged user access reviews (AC-6(7))",
-      "Media sanitization procedures and records for equipment removed for off-site maintenance",
-      "System component delivery and removal authorization procedures and records",
-      "Incident tracking and monitoring records, including incident logs, status reports, and documentation of incidents from the past 12 months",
+      "Physical access list review records for the past 12 months demonstrating at least quarterly reviews",
       "Physical access monitoring logs and incident response records for suspicious activities",
-      "Documentation of automated mechanisms used for audit record review, analysis, and reporting integration",
-      "System-wide audit trail compilation documentation showing time-correlated records from all network, data storage, and computing devices",
-      "Evidence of incident response testing conducted within the past six months, including test plans, functional test results, and JAB/AO approval documentation",
+      "Evidence of correlation between audit records and physical access monitoring information",
+      "Physical access audit logs for all entry and exit points for the past 12 months"
+    ]
+  },
+  {
+    "description": "Comprehensive incident handling procedures and capabilities documentation covering all phases of incident response including preparation, detection, analysis, containment, eradication, and recovery. Documentation includes insider threat incident handling procedures, lessons learned from incident handling activities, and evidence of incorporation of lessons learned into incident response procedures, training, and testing programs.",
+    "owner": "No owner",
+    "mergedFrom": [
+      "Insider threat incident handling procedures and capabilities documentation",
+      "Documentation of lessons learned from incident handling activities and evidence of incorporation into incident response procedures, training, and testing",
+      "Incident handling procedures documentation covering preparation, detection, analysis, containment, eradication, and recovery phases"
+    ]
+  },
+  {
+    "description": "Comprehensive physical access control documentation covering entry/exit points, security guards, and physical access control devices. Includes controls for output devices (printers, monitors, scanners, copiers) and system distribution infrastructure (transmission lines, wiring closets, cable protection). Encompasses all physical security measures for facility perimeter, internal access points, equipment areas, and network infrastructure.",
+    "owner": "No owner",
+    "mergedFrom": [
+      "Physical access control system documentation including entry/exit points, guards, and physical access control devices",
+      "Output device physical access controls documentation (printers, monitors, scanners, copiers)",
+      "Physical access control documentation for system distribution and transmission lines including wiring closets and cable protection"
+    ]
+  },
+  {
+    "description": "FedRAMP authorization package documentation including Package ID, authorization type (JAB or Agency authorization path), and current authorization status",
+    "owner": "No owner",
+    "mergedFrom": [
       "FedRAMP Package ID and authorization documentation",
-      "Audit logging process failure alert configuration and recipient list",
-      "Access control matrix showing permitted actions (read, write, execute, append, delete) for audit record information by role and user",
-      "Automated notification logs or mechanisms used to alert personnel of termination actions and disable system access",
-      "Power equipment and cabling protection documentation including UPS systems and emergency power capabilities",
-      "System component inventory with accountability information (owner names, positions, roles), update timestamps, and evidence of monthly reviews",
-      "System component inventory records for all components entering and exiting the facility",
-      "Approval records for off-site maintenance, repair, or replacement activities",
-      "SCRM Team charter or documentation identifying team members, roles, responsibilities, and assigned SCRM activities",
-      "Evidence of monthly privileged account reviews and semi-annual non-privileged account reviews (AC-2(j))",
-      "Audit logs demonstrating privileged function execution logging (AC-6(9))",
+      "FedRAMP authorization package documentation including authorization type (JAB or Agency) and FedRAMP Package ID",
+      "FedRAMP Package ID and authorization path documentation (JAB or Agency authorization)",
+      "FedRAMP authorization package ID and current authorization status"
+    ]
+  },
+  {
+    "description": "Comprehensive procedures and records for media sanitization, equipment maintenance, and authorized removal of system components. Includes prevention of unauthorized removal of maintenance equipment containing organizational information, sanitization procedures compliant with NIST SP 800-88 for equipment removed for off-site maintenance, sanitization techniques for disposal and reuse, system component delivery and removal authorization procedures, and media sanitization logs documenting review, approval, tracking, verification, and disposal actions.",
+    "owner": "No owner",
+    "mergedFrom": [
+      "Procedures and records for preventing unauthorized removal of maintenance equipment containing organizational information",
+      "Media sanitization procedures and records for equipment removed for off-site maintenance",
       "Media sanitization procedures compliant with NIST SP 800-88, including sanitization techniques for disposal and reuse",
       "Media sanitization logs documenting review, approval, tracking, verification, and disposal actions",
-      "Configuration control procedures and records for system components awaiting service, repair, or return to service",
-      "Component disposal procedures and documentation including techniques and methods for secure disposal of data, documentation, tools, and system components",
-      "Remote access monitoring logs and encryption implementation evidence (AC-17(1), AC-17(2))",
-      "Evidence of correlation between audit records and physical access monitoring information",
-      "Physical access audit logs for all entry and exit points for the past 12 months",
-      "Audit review findings reports and documentation of reporting to designated personnel",
-      "Security Information and Event Management (SIEM) tool configuration for centralized audit record review and analysis",
-      "Audit record reduction and report generation tool documentation and sample customizable reports",
-      "Configuration of automated audit record processing, sorting, and searching capabilities",
-      "FedRAMP authorization package ID and current authorization status",
-      "FedRAMP Package ID and authorization path documentation (JAB or Agency authorization)",
-      "FedRAMP authorization package documentation including authorization type (JAB or Agency) and FedRAMP Package ID",
-      "Real-time alert configuration for audit failure events, including recipient roles with authority to address failures",
-      "List of privileged users or roles authorized to manage audit logging functionality",
-      "Fire detection system automatic activation and notification procedures with personnel notification lists",
-      "Personnel termination procedures and records, including evidence of system access disablement within one hour of termination",
-      "System-generated security alerts and notifications sent to designated personnel",
-      "Automated notifications of integrity violations sent to ISSO and security personnel",
-      "Emergency shutoff switch locations and protection documentation with labeling and access procedures",
-      "Software allow-list (authorized software inventory) with version numbers, approval records, and evidence of quarterly reviews",
-      "Inventory of system components with support status, including replacement plans for unsupported components or documentation of alternative support arrangements (in-house or external providers)",
-      "Maintenance schedules and records for system components, including dates, descriptions, and personnel involved",
-      "Remote access policy and procedures including VPN configuration and usage restrictions (AC-17)",
-      "Evidence of audit record correlation across different repositories for organization-wide situational awareness",
-      "Evidence of weekly storage of audit records in a physically separate repository from audited systems",
-      "Physical access list review records for the past 12 months demonstrating at least quarterly reviews",
-      "Visitor access records for the past 12 months including names, organizations, dates, entry/departure times, and purpose of visits",
-      "Security Information and Event Management (SIEM) system configuration and real-time analysis reports",
-      "List of user accounts with privileged access (super admin, system admin, security officer roles) to all system components",
-      "Fire suppression system automatic activation documentation and notification procedures for unstaffed facilities",
-      "Water detection system automated alert mechanisms and notification procedures",
-      "Exit interview documentation covering information security topics for terminated employees",
-      "External provider notification records for personnel transfers and terminations (immediate for terminations, within 24 hours for transfers)",
-      "Alert notifications sent to administrators in response to malicious code detection",
-      "Personnel sanctions notification records to ISSO within 24 hours of sanction initiation",
-      "Emergency lighting system documentation and testing records for emergency exits and evacuation routes",
-      "Water damage protection documentation including master shutoff valve locations and water detection sensor specifications",
-      "Software license inventory and tracking records demonstrating compliance with licensing agreements and copyright laws",
-      "Maintenance support contracts and spare parts inventory for critical system components",
-      "Wireless access policy, authentication mechanisms, and encryption standards (AC-18, AC-18(1))",
-      "Audit log storage capacity allocation documentation and retention requirements",
-      "Publicly accessible content review procedures and quarterly review logs (AC-22)",
-      "Visitor access record review documentation demonstrating at least monthly reviews",
-      "List of all user accounts (privileged and non-privileged) with assigned roles, permissions, and account types",
-      "Fire detection and suppression system documentation including independent energy source specifications",
-      "Personnel transfer procedures and records, including access authorization reviews and modifications completed within 24 hours",
-      "Documentation of audit storage capacity warning thresholds (75% or one month before impact) and alert recipients"
+      "System component delivery and removal authorization procedures and records"
     ]
   },
   {
-    "description": "Account access control configuration including: failed logon attempt lockout thresholds, session timeout settings, and re-authentication policies. Configurations cover both privileged and standard user sessions with specific requirements such as: 15-minute device lock after inactivity, maximum 12-hour session duration, and authentication assurance level (AAL3) specific timeout limits for network and device sessions.",
-    "owner": "Multiple owners",
+    "description": "Comprehensive awareness and training policy management documentation, including: current policy document with purpose, scope, roles, responsibilities, management commitment, coordination, and compliance requirements; procedures for implementation and associated controls; documentation of the designated official responsible for policy development and dissemination; and evidence of annual review and updates to policy and procedures.",
+    "owner": "No owner",
     "mergedFrom": [
-      "Account lockout configuration showing failed logon attempt thresholds and lockout duration (AC-7)",
-      "Session timeout and device lock configuration set to 15 minutes of inactivity (AC-11, AC-12)",
-      "Re-authentication policy and configuration showing session timeout limits (12 hours maximum or 15 minutes inactivity for AAL3)",
-      "Session timeout and network disconnect configuration for privileged and user sessions"
+      "Procedures for implementing awareness and training policy and associated controls",
+      "Evidence of annual review and update of awareness and training policy and procedures",
+      "Documentation of the designated official responsible for managing awareness and training policy development and dissemination",
+      "Current awareness and training policy document, including purpose, scope, roles, responsibilities, management commitment, coordination, and compliance requirements",
+      "Evidence of annual review and updates to maintenance policy and procedures"
     ]
   },
   {
-    "description": "Intrusion detection and prevention system (IDS/IPS) configuration for encrypted traffic inspection, alert logs, and wireless scanning reports",
-    "owner": "Multiple owners",
+    "description": "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, network diagrams, control implementation details, authorization details, and approval signatures",
+    "owner": "No owner",
     "mergedFrom": [
-      "Intrusion detection system (IDS) configuration for encrypted traffic inspection (AC-4(4))",
+      "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, network diagrams, and control implementation details",
+      "Current System Security Plan (SSP) with all required sections completed, including system information, authorization details, and approval signatures",
+      "Current System Security Plan (SSP) document with all required sections completed, including system information, authorization boundary, and security controls implementation details",
+      "Current System Security Plan (SSP) document with all completed sections including system information, authorization details, and approval signatures"
+    ]
+  },
+  {
+    "description": "Intrusion detection and prevention system (IDS/IPS) configuration including wireless intrusion detection, alert logs, and encrypted traffic inspection capabilities (AC-4(4)). Encompasses system configuration, scanning reports, and monitoring of network traffic for security threats.",
+    "owner": "No owner",
+    "mergedFrom": [
+      "Wireless intrusion detection system configuration and scanning reports",
       "Intrusion detection and prevention system (IDS/IPS) configuration and alert logs",
-      "Wireless intrusion detection system configuration and scanning reports"
+      "Intrusion detection system (IDS) configuration for encrypted traffic inspection (AC-4(4))"
     ]
   },
   {
-    "description": "Digital Identity Level (DIL) determination documentation (SSP Appendix E)",
+    "description": "Comprehensive Supply Chain Risk Management (SCRM) documentation encompassing policy, procedures, and operational frameworks. Includes acquisition strategies, contract tools, and procurement methods for supply chain risk mitigation; risk tolerance levels and mitigation strategies; roles and responsibilities; and lifecycle security engineering processes.",
     "owner": "No owner",
     "mergedFrom": [
-      "Digital Identity Level (DIL) determination documentation (SSP Appendix E)",
-      "Digital Identity Level (DIL) determination documentation (SSP Appendix E)"
+      "Acquisition strategies, contract tools, and procurement methods documentation addressing supply chain risk mitigation",
+      "Supply Chain Risk Management Plan including risk tolerance, mitigation strategies, roles and responsibilities, and lifecycle security engineering processes",
+      "Supply Chain Risk Management (SCRM) Policy and Procedures documentation"
     ]
   },
   {
-    "description": "System owner and ISSO contact information, role assignments, and organizational chart",
+    "description": "Session management and authentication configuration including: session timeout and device lock set to 15 minutes of inactivity for user sessions (AC-11, AC-12); privileged session timeout and network disconnect configuration; account lockout configuration with failed logon attempt thresholds and lockout duration (AC-7); re-authentication policy with session timeout limits of 12 hours maximum or 15 minutes inactivity for AAL3 sessions.",
     "owner": "No owner",
     "mergedFrom": [
-      "System owner and ISSO contact information and role assignments",
-      "System owner and ISSO contact information and organizational chart"
+      "Session timeout and network disconnect configuration for privileged and user sessions",
+      "Session timeout and device lock configuration set to 15 minutes of inactivity (AC-11, AC-12)",
+      "Account lockout configuration showing failed logon attempt thresholds and lockout duration (AC-7)",
+      "Re-authentication policy and configuration showing session timeout limits (12 hours maximum or 15 minutes inactivity for AAL3)"
     ]
   },
   {
-    "description": "Comprehensive list of FedRAMP-authorized cloud service providers (CSPs) and cloud service offerings (CSOs), including dependencies, connection details, and associated data types",
+    "description": "Separation of duties matrix showing role assignments for privileged and non-privileged functions and administrators",
     "owner": "No owner",
     "mergedFrom": [
-      "FedRAMP-authorized cloud service provider (CSP) and cloud service offering (CSO) dependencies list",
-      "List of FedRAMP-authorized cloud service providers (CSPs) and cloud service offerings (CSOs) with connection details and data types"
+      "Separation of duties matrix showing role assignments for privileged and non-privileged functions",
+      "Separation of duties matrix showing role assignments for privileged and non-privileged administrators",
+      "Separation of duties matrix showing role assignments for privileged administrative functions"
     ]
   },
   {
-    "description": "Comprehensive documentation of auditable event types configured across system components (network, data storage, and computing devices), detailing the specific event types selected for continuous logging",
+    "description": "Documentation and configuration of automated mechanisms for centralized audit record review, analysis, processing, and reporting integration, including Security Information and Event Management (SIEM) tool setup with capabilities for sorting, searching, and automated analysis of audit records.",
     "owner": "No owner",
     "mergedFrom": [
-      "List of auditable event types configured across all system components (network, data storage, and computing devices)",
-      "Audit configuration documentation showing event types selected for continuous logging"
+      "Documentation of automated mechanisms used for audit record review, analysis, and reporting integration",
+      "Security Information and Event Management (SIEM) tool configuration for centralized audit record review and analysis",
+      "Configuration of automated audit record processing, sorting, and searching capabilities"
     ]
   },
   {
-    "description": "Time synchronization configuration utilizing one-second granularity with Coordinated Universal Time (UTC), configured using NIST authoritative time sources for precise system time synchronization",
+    "description": "Comprehensive security and privacy training program encompassing: (1) personnel roles and responsibilities requiring role-based training; (2) developer-provided training materials and records on correct use and operation of implemented security and privacy functions, controls, and mechanisms; (3) role-based security and privacy training materials for personnel with assigned security roles and responsibilities; (4) security and privacy literacy training materials provided to all system users including managers, senior executives, and contractors; and (5) training completion records for all system users documenting initial and annual security and privacy literacy training completion.",
     "owner": "No owner",
     "mergedFrom": [
-      "Time synchronization configuration showing one-second granularity and use of Coordinated Universal Time (UTC)",
-      "System time synchronization configuration with NIST authoritative time sources"
+      "List of personnel roles and responsibilities requiring role-based security and privacy training",
+      "Developer-provided training materials and records on the correct use and operation of implemented security and privacy functions, controls, and mechanisms",
+      "Security and privacy literacy training materials provided to system users, including managers, senior executives, and contractors",
+      "Training completion records for all system users showing initial and annual security and privacy literacy training",
+      "Role-based security and privacy training materials for personnel with assigned security roles and responsibilities"
     ]
   },
   {
-    "description": "Comprehensive documentation for cryptographic mechanisms, including FIPS-validated cryptographic modules, covering authentication, integrity protection, key and certificate management, and compliance documentation. Encompasses procedures for cryptographic key lifecycle (generation, distribution, storage, access, and destruction), validation certificates (FIPS 140-2 and FIPS 140-3), and protection of audit information, backup data at rest and in transit, and security control cryptographic components.",
-    "owner": "Information Security",
-    "mergedFrom": [
-      "Cryptographic mechanisms documentation for protecting integrity of audit information and audit tools (FIPS-validated)",
-      "Documentation of cryptographic mechanisms used to protect backup information at rest and in transit",
-      "Cryptographic module authentication documentation showing FIPS 140-3 compliance",
-      "Cryptographic key and certificate management records for all security controls that rely on cryptography",
-      "FIPS 140-2 or FIPS 140-3 validation certificates for all cryptographic modules in use",
-      "Cryptographic key management procedures including key generation, distribution, storage, access, and destruction processes"
-    ]
-  },
-  {
-    "description": "Plan of Action and Milestones (POA&M) document comprehensively tracking all open security weaknesses and vulnerabilities, including detailed risk ratings, monthly updates, remediation plans, timelines, and status tracking (RA-5 compliance)",
-    "owner": "Multiple owners",
-    "mergedFrom": [
-      "Current Plan of Action and Milestones (POA&M) document showing all open security weaknesses, remediation plans, and monthly updates",
-      "Plan of Action and Milestones (POA&M) documenting all open vulnerabilities with risk ratings, remediation timelines, and status tracking (RA-5)"
-    ]
-  },
-  {
-    "description": "Comprehensive vulnerability management documentation including: monthly vulnerability scan reports for operating systems, databases, web applications, containers, services, infrastructure, and APIs; annual independent assessor vulnerability scan reports; 90-day flaw remediation tracking records; malicious code scanning logs with weekly and real-time endpoint/network scans; vulnerability scanner update evidence; scanning coverage documentation defining breadth and depth of system component scanning; privileged access authorization for authenticated scanning; security-relevant software and firmware update records; access authorization verification for systems with special protection requirements; and public vulnerability disclosure program documentation with reporting channel details and authorization language",
+    "description": "FIPS 199 security categorization documentation including SSP Appendix K, FIPS PUB 199 Level determination, and supporting rationale for baseline determination with authorizing official approval (RA-2)",
     "owner": "No owner",
     "mergedFrom": [
-      "Vulnerability scan reports from the past 12 months showing monthly scanning of operating systems, databases, web applications, containers, and services",
-      "Vulnerability scan reports from the past 12 months for operating systems, infrastructure, web applications, APIs, and databases (RA-5)",
-      "Annual independent assessor vulnerability scan reports for operating systems/infrastructure, web applications, and databases (RA-5)",
-      "Vulnerability scanning reports and flaw remediation tracking records for the past 90 days",
-      "Malicious code scanning logs showing weekly scans and real-time scanning at endpoints and network entry/exit points",
-      "Evidence of vulnerability scanner updates within 24 hours prior to scans, including update logs or configuration records (RA-5(2))",
-      "Vulnerability scanning coverage documentation defining breadth and depth of scanning across system components (RA-5(3))",
-      "Privileged access authorization documentation for authenticated vulnerability scanning activities (RA-5(5))",
-      "Evidence of security-relevant software and firmware updates installed within 30 days of release",
-      "Access authorization verification records for individuals accessing systems processing information requiring special protection",
-      "Public vulnerability disclosure program documentation, including reporting channel details and authorization language (RA-5(11))"
+      "FIPS 199 security categorization documentation (SSP Appendix K)",
+      "Security categorization documentation with FIPS 199 analysis and supporting rationale, including authorizing official approval (RA-2)",
+      "FIPS 199 categorization documentation and FIPS PUB 199 Level determination (SSP Appendix K)",
+      "FIPS PUB 199 security categorization documentation with supporting rationale for the High baseline determination"
     ]
   },
   {
-    "description": "Current Interconnection Security Agreements (ISAs) or Memoranda of Understanding (MOUs) for all external system connections and data exchanges",
+    "description": "Comprehensive Incident Response Plan aligned with US-CERT guidelines that includes defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities. The plan incorporates coordination with related organizational plans including business continuity, disaster recovery, contingency planning, and crisis communications. The plan is supported by evidence of regular testing and integration across all related response and recovery functions.",
     "owner": "No owner",
     "mergedFrom": [
-      "Current Interconnection Security Agreements (ISAs) or Memoranda of Understanding (MOUs) for all external system connections and data exchanges",
-      "Interconnection security agreements (ISAs) or memoranda of understanding (MOUs) for external system connections"
+      "Incident Response Plan with defined reportable incidents, metrics, resource requirements, information sharing protocols, and designated responsibilities",
+      "Incident response plan and incident reporting procedures aligned with US-CERT guidelines",
+      "Evidence of coordination between incident response testing and related plans (business continuity, disaster recovery, contingency, crisis communications)"
     ]
   },
   {
-    "description": "Comprehensive documentation of digital signature verification and cryptographic authentication mechanisms for software and firmware components, including processes for cryptographically verifying software/firmware integrity before installation",
-    "owner": "Multiple owners",
+    "description": "Alternate work site policy, approved locations, and security controls documentation including: site agreements for processing and storage locations; documentation of equivalent security controls at alternate sites; evidence of geographic separation from primary sites; and security controls effectiveness assessment results.",
+    "owner": "No owner",
     "mergedFrom": [
-      "Digital signature verification process documentation and evidence that software/firmware components are cryptographically verified before installation",
-      "Cryptographic code authentication mechanisms for software and firmware components"
-    ]
-  },
-  {
-    "description": "Service Level Agreement (SLA) defining recovery time and recovery point objectives for contingency operations, including documentation supporting advertised uptime and availability requirements",
-    "owner": "Multiple owners",
-    "mergedFrom": [
-      "Service Level Agreement (SLA) defining recovery time and recovery point objectives for contingency operations",
-      "Service level agreements or documentation supporting advertised uptime and availability requirements"
-    ]
-  },
-  {
-    "description": "Comprehensive documentation for alternate site management, including processing, storage, and work site agreements, covering security controls, geographic separation, approved locations, and effectiveness assessment results",
-    "owner": "Business Continuity and Resilience Department",
-    "mergedFrom": [
+      "Alternate work site policy and approved locations documentation",
       "Alternate processing site agreement(s) and documentation of equivalent security controls at alternate sites",
       "Alternate storage site agreement(s) and documentation of geographic separation from primary sites",
-      "Alternate work site policy and approved locations documentation",
       "Alternate work site security controls documentation and effectiveness assessment results"
     ]
   },
   {
-    "description": "Comprehensive personnel distribution list for contingency and incident response plans, detailing key personnel names, roles, organizational elements, and distribution records for FedRAMP designated personnel",
-    "owner": "Multiple owners",
-    "mergedFrom": [
-      "Contingency plan distribution list showing key contingency personnel by name and role",
-      "List of incident response personnel and organizational elements with distribution records showing dissemination of the incident response plan to designated FedRAMP personnel"
-    ]
-  },
-  {
-    "description": "Comprehensive documentation of NIST SP 800-63B authentication compliance, covering authentication mechanisms at AAL3 baseline, including password policy requirements such as minimum length, prohibited password lists, composition rules, and high baseline system authentication standards",
-    "owner": "Compliance/Security Team",
-    "mergedFrom": [
-      "Evidence of NIST SP 800-63B compliance for all authentication mechanisms, including AAL3 requirements for high baseline systems",
-      "Password policy documentation showing compliance with NIST SP 800-63B, including minimum length requirements, prohibited password lists, and composition rules"
-    ]
-  },
-  {
-    "description": "Comprehensive authenticator management procedures covering initial distribution, lost/compromised authenticator handling, revocation processes, and cached authenticator expiration configuration and enforcement evidence",
+    "description": "Comprehensive system and network architecture diagrams documenting logical and physical separation of information flows, boundary protection devices, subnets, DMZs, managed interfaces, network topology, data flows, and external system connections. These diagrams support security and privacy architecture requirements including AC-4(21) controls.",
     "owner": "No owner",
     "mergedFrom": [
-      "Authenticator management procedures covering initial distribution, lost/compromised authenticators, and revocation processes",
-      "Cached authenticator expiration configuration and enforcement evidence"
+      "Network architecture diagrams showing logical and physical separation of information flows (AC-4(21))",
+      "Network architecture diagrams showing boundary protection devices, subnets, DMZs, and managed interfaces",
+      "System security and privacy architecture diagrams including network topology, data flows, and external system connections"
     ]
   },
   {
-    "description": "Public Key Infrastructure (PKI) comprehensive management, including certification path construction, certificate validation procedures, revocation checking, certificate policy definition, and approved trust anchor list management",
-    "owner": "Multiple owners",
-    "mergedFrom": [
-      "Public key infrastructure (PKI) certificate validation procedures, including certification path construction and revocation checking",
-      "Public Key Infrastructure (PKI) certificate policy and approved trust anchor list"
-    ]
-  },
-  {
-    "description": "Supply chain incident reporting procedures, coordination protocols, and notification agreements with product/service providers, covering requirements for documenting supply chain compromises, assessment/audit results, and evidence of inter-organizational communication per SR-8 standards",
-    "owner": "Supply Chain Risk Management",
-    "mergedFrom": [
-      "Supply chain incident reporting procedures and evidence of coordination with product/service providers per SR-8 requirements",
-      "Notification agreements and procedures with supply chain entities for supply chain compromises and assessment/audit results"
-    ]
-  },
-  {
-    "description": "Comprehensive list of authorized personnel with verified access to maintenance operations and physical facility locations, including access authorization records and verification documentation",
-    "owner": "Facility Security Management",
-    "mergedFrom": [
-      "List of authorized maintenance personnel and organizations, including access authorization verification records",
-      "List of individuals with authorized physical access to the facility where the system resides"
-    ]
-  },
-  {
-    "description": "Physical access authorization and device inventory records, including credentials (ID badges, identification cards, smart cards), access devices (keys, combinations, access cards), with annual inventory verification and issuance tracking",
+    "description": "Criticality analysis documentation performed at key decision points in the system development life cycle (SDLC) to identify critical system components, functions, and services, including breadth and depth of analysis for high value assets, along with system restoration priorities documentation.",
     "owner": "No owner",
     "mergedFrom": [
-      "Physical access authorization credentials (ID badges, identification cards, smart cards) issuance records",
-      "Physical access device inventory records (keys, combinations, access cards) with annual inventory verification"
-    ]
-  },
-  {
-    "description": "Comprehensive risk assessment reports identifying system-specific threats, vulnerabilities, risk determinations, likelihood and magnitude of harm, and impact to individuals from PII processing, supporting architecture and design decisions",
-    "owner": "No owner",
-    "mergedFrom": [
-      "Risk assessment reports identifying system-specific threats, vulnerabilities, and risk determinations for architecture and design decisions",
-      "Current risk assessment report documenting threats, vulnerabilities, likelihood and magnitude of harm, and impact to individuals from PII processing (RA-3)"
-    ]
-  },
-  {
-    "description": "Comprehensive criticality analysis documentation performed at key decision points in the system development life cycle (SDLC), identifying critical system components, functions, and services. Analysis includes assessment of restoration priorities, breadth and depth of analysis for high-value assets, and systematic evaluation of system criticality.",
-    "owner": "No owner",
-    "mergedFrom": [
-      "System criticality analysis and restoration priorities documentation",
+      "Criticality analysis documentation performed at key decision points in the SDLC, including breadth and depth of analysis for high value assets",
       "Criticality analysis documentation identifying critical system components, functions, and services at key decision points in the system development life cycle (RA-9)",
-      "Criticality analysis documentation performed at key decision points in the SDLC, including breadth and depth of analysis for high value assets"
+      "System criticality analysis and restoration priorities documentation"
     ]
   },
   {
-    "description": "Comprehensive documentation and configuration management for firewall and boundary protection devices, including configuration files, rulesets, and fail-secure operational protocols",
+    "description": "Integrated policy and procedures documentation covering System and Services Acquisition, Personnel Security, and Identification and Authentication. Includes roles, responsibilities, review frequency, approval authority, and approval records for all three domains.",
     "owner": "No owner",
     "mergedFrom": [
-      "Firewall and boundary protection device configuration files and rulesets",
-      "Boundary protection device fail-secure configuration documentation"
+      "System and Services Acquisition policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
+      "Personnel security policy and procedures documentation, including roles, responsibilities, review frequency, and approval authority",
+      "Identification and authentication policy and procedures documentation, including roles, responsibilities, review frequency, and approval records"
     ]
   },
   {
-    "description": "Evidence of encryption implementation for data in transit (TLS/IPSec configurations) and data at rest across all system components storing Federal data",
+    "description": "Comprehensive security assessment and risk management documentation encompassing: (1) specialized security assessments including announced vulnerability scanning, malicious user testing, and insider threat assessments; (2) risk response documentation demonstrating how findings from security assessments, monitoring, and audits are addressed in accordance with organizational risk tolerance (RA-7); and (3) risk assessment documentation for acquisition or outsourcing of information security services, including required organizational approvals.",
     "owner": "No owner",
     "mergedFrom": [
-      "Evidence of encryption implementation for data in transit (TLS/IPSec configurations)",
-      "Evidence of encryption implementation for data at rest across all system components storing Federal data"
+      "Documentation of specialized security assessments conducted, including announced vulnerability scanning, malicious user testing, or insider threat assessments",
+      "Risk response documentation showing how findings from security assessments, monitoring, and audits are addressed in accordance with organizational risk tolerance (RA-7)",
+      "Risk assessment documentation for acquisition or outsourcing of information security services, including organizational approvals"
     ]
   },
   {
-    "description": "Implementation documentation for system component isolation and process segregation, detailing techniques for creating separate execution domains and ensuring component-level isolation to enhance system security and performance",
+    "description": "Vulnerability scan reports and flaw remediation tracking records from the past 12 months, including monthly scanning of operating systems, infrastructure, databases, web applications, containers, APIs, and services (RA-5)",
     "owner": "No owner",
     "mergedFrom": [
-      "System component isolation and segregation implementation documentation",
-      "Process isolation implementation documentation showing separate execution domains"
+      "Vulnerability scan reports from the past 12 months showing monthly scanning of operating systems, databases, web applications, containers, and services",
+      "Vulnerability scanning reports and flaw remediation tracking records for the past 90 days",
+      "Vulnerability scan reports from the past 12 months for operating systems, infrastructure, web applications, APIs, and databases (RA-5)"
     ]
   },
   {
-    "description": "Comprehensive documentation of CISA Emergency and Binding Operational Directives compliance, including implementation records demonstrating adherence to established security directive timeframes and requirements",
-    "owner": "Compliance and Security Department",
-    "mergedFrom": [
-      "CISA Emergency and Binding Operational Directives compliance status documentation",
-      "Security directive implementation records showing compliance within established timeframes"
-    ]
-  },
-  {
-    "description": "Comprehensive tamper protection program documentation covering safeguards for ensuring the authenticity of software and patches supplied by vendors, including strategies to protect the development pipeline and maintain software integrity",
+    "description": "Consolidated policy documentation encompassing audit and accountability, configuration management, and organizational planning. Includes current policies and procedures with complete version history, approval records, approval signatures, and evidence of annual reviews with most recent review and approval dates.",
     "owner": "No owner",
     "mergedFrom": [
-      "Tamper protection program documentation including safeguards for authenticity of software and patches supplied by vendors",
-      "Vendor plan to protect the development pipeline and ensure authenticity of software and patches"
+      "Current audit and accountability policy document, including version history and approval records",
+      "Current Configuration Management Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review",
+      "Current organizational planning policy and procedures documentation, including most recent review and approval dates"
     ]
   },
   {
-    "description": "Comprehensive anti-counterfeit documentation including policy, procedures, detection and prevention measures, training materials, and personnel records for identifying and mitigating counterfeit component risks",
-    "owner": "Quality Assurance Department",
+    "description": "Comprehensive inventory and documentation of services, ports, and protocols including purpose, justifications, and authorized users for each entry",
+    "owner": "No owner",
     "mergedFrom": [
-      "Anti-counterfeit policy and procedures including detection and prevention measures for counterfeit components",
-      "Anti-counterfeit training materials and records for personnel responsible for detecting counterfeit components"
+      "Services, ports, and protocols documentation including purpose and authorized users",
+      "Services, ports, and protocols inventory with justifications for each",
+      "Services, ports, and protocols inventory with purpose and authorized users",
+      "Services, ports, and protocols inventory with purpose and authorized users"
     ]
   },
   {
-    "description": "Documentation of temporary and emergency account policies with evidence of automatic disablement within 24 hours (AC-2(2), AC-2(3))",
+    "description": "Documentation of cryptographic mechanisms used to protect backup information at rest and in transit",
     "owner": "No owner"
   },
   {
-    "description": "System use notification banner text and implementation evidence (AC-8)",
+    "description": "Cryptographic key and certificate management records for all security controls that rely on cryptography",
     "owner": "No owner"
   },
   {
-    "description": "Concurrent session limits configuration (3 for privileged, 2 for non-privileged) (AC-10)",
+    "description": "Inventory of system components with support status, including replacement plans for unsupported components or documentation of alternative support arrangements (in-house or external providers)",
     "owner": "No owner"
   },
   {
-    "description": "Mobile device management (MDM) policy and configuration requirements (AC-19)",
+    "description": "System component inventory with accountability information (owner names, positions, roles), update timestamps, and evidence of monthly reviews",
     "owner": "No owner"
   },
   {
-    "description": "Mobile device encryption implementation evidence (full-device or container-based) (AC-19(5))",
+    "description": "List of user accounts with privileged access (super admin, system admin, security officer roles) to all system components",
     "owner": "No owner"
   },
   {
-    "description": "External system usage policy and approved connection agreements (AC-20, AC-20(1))",
+    "description": "List of privileged users or roles authorized to manage audit logging functionality",
     "owner": "No owner"
   },
   {
-    "description": "Information sharing agreements and data classification guidelines (AC-21)",
+    "description": "Strong authentication mechanisms documentation for nonlocal maintenance sessions (e.g., multi-factor authentication, PKI certificates)",
     "owner": "No owner"
   },
   {
-    "description": "List of functions and information accessible without authentication with documented justification (AC-14)",
+    "description": "Nonlocal maintenance approval and monitoring records, including session logs and authentication methods",
     "owner": "No owner"
   },
   {
-    "description": "Non-FedRAMP external system connections inventory with risk assessments",
+    "description": "Security configuration baseline documentation (DoD STIGs, CIS Level 2 benchmarks, or custom baselines) for all systems, components, and services",
     "owner": "No owner"
   },
   {
-    "description": "Documentation of awareness techniques employed (e.g., posters, email advisories, logon screen messages, awareness events)",
+    "description": "Baseline configuration documentation for all system components, including hardware, software, firmware, network topology, and security control implementations",
     "owner": "No owner"
   },
   {
-    "description": "Individual training records retained for five years or five years after completion of specific training programs",
+    "description": "External provider notification records for personnel transfers and terminations (immediate for terminations, within 24 hours for transfers)",
     "owner": "No owner"
   },
   {
-    "description": "Rationale document explaining why selected event types are adequate for after-the-fact investigations",
+    "description": "Personnel termination procedures and records, including evidence of system access disablement within one hour of termination",
     "owner": "No owner"
   },
   {
-    "description": "Sample audit records demonstrating inclusion of required content (event type, timestamp, location, source, outcome, and identity)",
+    "description": "Cryptographic module authentication documentation showing FIPS 140-3 compliance",
     "owner": "No owner"
   },
   {
-    "description": "Evidence of weekly audit record review and analysis activities for the past quarter",
+    "description": "Cryptographic mechanisms documentation for protecting integrity of audit information and audit tools (FIPS-validated)",
     "owner": "No owner"
   },
   {
-    "description": "Non-repudiation mechanisms documentation covering addition, modification, deletion, approval, sending, and receiving of data",
+    "description": "Audit logging process failure alert configuration and recipient list",
     "owner": "No owner"
   },
   {
-    "description": "Audit record retention policy and evidence of compliance with M-21-31 and NARA requirements (minimum 90 days online, long-term offline)",
+    "description": "Access controls and alert configuration for unauthorized access, modification, or deletion of audit information",
     "owner": "No owner"
   },
   {
-    "description": "Most recent control assessment report from an accredited Third Party Assessment Organization (3PAO) documenting the results of annual security control testing",
+    "description": "Annual access agreement review and re-signature records",
     "owner": "No owner"
   },
   {
-    "description": "Continuous Monitoring Strategy and Plan documenting the approach, frequency, and responsibilities for ongoing security monitoring activities",
+    "description": "Evidence of annual privileged user access reviews (AC-6(7))",
     "owner": "No owner"
   },
   {
-    "description": "Most recent penetration test report conducted by an independent testing team, including findings, risk ratings, and remediation status",
+    "description": "Cached authenticator expiration configuration and enforcement evidence",
     "owner": "No owner"
   },
   {
-    "description": "Evidence of independent assessor qualifications and accreditation status (3PAO accreditation documentation)",
+    "description": "Authenticator management procedures covering initial distribution, lost/compromised authenticators, and revocation processes",
     "owner": "No owner"
   },
   {
-    "description": "Continuous monitoring reports and dashboards provided to the JAB or Authorizing Official showing security and privacy status",
+    "description": "Fire suppression system automatic activation documentation and notification procedures for unstaffed facilities",
     "owner": "No owner"
   },
   {
-    "description": "Authorization to Operate (ATO) letter or memorandum from the Authorizing Official, including any conditions or limitations",
+    "description": "Fire detection system automatic activation and notification procedures with personnel notification lists",
     "owner": "No owner"
   },
   {
-    "description": "Change Control Board (CCB) charter, membership roster, meeting minutes, and records of configuration change decisions for the past 12 months",
+    "description": "Emergency shutoff switch locations and protection documentation with labeling and access procedures",
     "owner": "No owner"
   },
   {
-    "description": "Version control system records showing retention of previous baseline configurations to support rollback capabilities",
+    "description": "Power equipment and cabling protection documentation including UPS systems and emergency power capabilities",
     "owner": "No owner"
   },
   {
-    "description": "User-installed software policy, enforcement mechanisms (technical controls), and continuous monitoring evidence via allow-listing tools",
+    "description": "Software, firmware, and information integrity verification tool configuration and scan results",
     "owner": "No owner"
   },
   {
-    "description": "Information location documentation identifying where Federal data is processed and stored, including system component mappings and user access records",
+    "description": "Digital signature verification process documentation and evidence that software/firmware components are cryptographically verified before installation",
     "owner": "No owner"
   },
   {
-    "description": "Contingency Plan Test Report (Appendix G) documenting the most recent annual functional exercise results",
+    "description": "Evidence of weekly storage of audit records in a physically separate repository from audited systems",
     "owner": "No owner"
   },
   {
-    "description": "Business Impact Analysis (BIA) documenting Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)",
+    "description": "Audit log storage capacity allocation documentation and retention requirements",
     "owner": "No owner"
   },
   {
-    "description": "Evidence of backup verification testing conducted at least monthly, including media reliability and information integrity test results",
+    "description": "System-generated security alerts and notifications sent to designated personnel",
     "owner": "No owner"
   },
   {
-    "description": "Backup and restoration logs demonstrating daily incremental and weekly full backups of user-level, system-level, and documentation",
+    "description": "Automated notification logs or mechanisms used to alert personnel of termination actions and disable system access",
     "owner": "No owner"
   },
   {
-    "description": "Telecommunications service provider agreements, including priority-of-service provisions and evidence of provider contingency plan reviews",
+    "description": "Access authorization verification records for individuals accessing systems processing information requiring special protection",
     "owner": "No owner"
   },
   {
-    "description": "Inventory of critical system assets supporting essential mission and business functions",
-    "owner": "No owner"
-  },
-  {
-    "description": "Capacity planning documentation demonstrating sufficient resources for contingency operations",
-    "owner": "No owner"
-  },
-  {
-    "description": "Multi-factor authentication configuration documentation demonstrating phishing-resistant MFA implementation for privileged and non-privileged accounts",
-    "owner": "No owner"
-  },
-  {
-    "description": "User account provisioning and de-provisioning procedures, including identifier management and reuse prevention controls (minimum 2-year restriction)",
-    "owner": "No owner"
-  },
-  {
-    "description": "PIV/CAC credential acceptance and verification configuration for federal agency users",
-    "owner": "No owner"
-  },
-  {
-    "description": "Identity proofing procedures for user account establishment, including evidence collection, validation, and verification methods per NIST SP 800-63A",
-    "owner": "No owner"
-  },
-  {
-    "description": "Non-organizational user identification and authentication procedures, including external authenticator acceptance criteria",
-    "owner": "No owner"
-  },
-  {
-    "description": "User identifier management records demonstrating unique identification of contractors and foreign nationals (IA-4(4))",
-    "owner": "No owner"
-  },
-  {
-    "description": "Evidence that static authenticators are not embedded in applications or stored unencrypted",
-    "owner": "No owner"
-  },
-  {
-    "description": "Escort and supervision procedures for maintenance personnel without appropriate security clearances",
-    "owner": "No owner"
-  },
-  {
-    "description": "Access control lists or authorization matrices for digital and non-digital media containing sensitive information",
-    "owner": "No owner"
-  },
-  {
-    "description": "Media marking procedures and examples of marked media showing distribution limitations, handling caveats, and security markings",
-    "owner": "No owner"
-  },
-  {
-    "description": "Media transport procedures, including encryption methods, accountability logs, and authorized courier personnel list",
-    "owner": "No owner"
-  },
-  {
-    "description": "Sanitization equipment testing records and validation results conducted at least every six months",
-    "owner": "No owner"
-  },
-  {
-    "description": "Procedures for nondestructive sanitization of portable storage devices prior to system connection",
-    "owner": "No owner"
-  },
-  {
-    "description": "Physical and environmental protection policy and procedures documentation (PE-1)",
-    "owner": "No owner"
-  },
-  {
-    "description": "Visitor escort procedures and records demonstrating visitor control within restricted access areas",
-    "owner": "No owner"
-  },
-  {
-    "description": "Uninterruptible power supply (UPS) specifications and testing records",
-    "owner": "No owner"
-  },
-  {
-    "description": "Alternate power supply documentation demonstrating automatic activation capability for extended power loss",
-    "owner": "No owner"
-  },
-  {
-    "description": "Environmental controls documentation consistent with ASHRAE Thermal Guidelines for Data Processing Environments including temperature and humidity monitoring records",
-    "owner": "No owner"
-  },
-  {
-    "description": "Environmental monitoring system documentation with alarm and notification capabilities to designated personnel",
-    "owner": "No owner"
-  },
-  {
-    "description": "System component location documentation addressing physical and environmental hazards identified during threat assessment",
-    "owner": "No owner"
-  },
-  {
-    "description": "Enterprise architecture documentation showing how the system integrates with organizational architecture",
-    "owner": "No owner"
-  },
-  {
-    "description": "Privacy Impact Assessment (PIA) or privacy risk assessment results for systems processing personally identifiable information",
-    "owner": "No owner"
-  },
-  {
-    "description": "Rules of Behavior document with documented user acknowledgments (electronic or physical signatures)",
-    "owner": "No owner"
-  },
-  {
-    "description": "Control baseline tailoring documentation showing scoping decisions, compensating controls, and parameter assignments for FedRAMP High baseline",
-    "owner": "No owner"
-  },
-  {
-    "description": "SSP distribution records showing dissemination to Chief Privacy Officer, ISSO, and other required personnel",
-    "owner": "No owner"
-  },
-  {
-    "description": "Concept of Operations (CONOPS) document describing operational environment and mission/business processes",
-    "owner": "No owner"
-  },
-  {
-    "description": "Position risk designation documentation for all organizational positions, including screening criteria and annual review records",
-    "owner": "No owner"
-  },
-  {
-    "description": "Signed access agreements (nondisclosure agreements, acceptable use agreements, rules of behavior) for all personnel with system access",
-    "owner": "No owner"
-  },
-  {
-    "description": "Supply chain risk assessment documentation for systems, components, and services, including update frequency and significant change triggers (RA-3(1))",
-    "owner": "No owner"
-  },
-  {
-    "description": "Procedures and evidence for reviewing discoverable system information and taking corrective actions (RA-5(4))",
-    "owner": "No owner"
-  },
-  {
-    "description": "Historic audit log review documentation for high or critical vulnerability findings to determine prior exploitation (RA-5(8))",
-    "owner": "No owner"
-  },
-  {
-    "description": "Documentation confirming that information processing, data storage, and system services are restricted to U.S./U.S. Territories or locations with U.S. jurisdiction for all High impact data, systems, or services",
-    "owner": "No owner"
-  },
-  {
-    "description": "Static code analysis reports documenting identified flaws, remediation actions, and methodology for reviewing newly developed code (or dynamic code analysis if source code is unavailable)",
-    "owner": "No owner"
-  },
-  {
-    "description": "DNSSEC implementation documentation for authoritative and recursive DNS servers",
-    "owner": "No owner"
-  },
-  {
-    "description": "List of external network connections and access points to the system",
-    "owner": "No owner"
-  },
-  {
-    "description": "Traffic flow policies for each managed interface including documented exceptions",
-    "owner": "No owner"
-  },
-  {
-    "description": "Deny-by-default, allow-by-exception network communications policy and implementation evidence",
-    "owner": "No owner"
-  },
-  {
-    "description": "Split tunneling prevention controls and configuration for remote devices",
-    "owner": "No owner"
-  },
-  {
-    "description": "Authenticated proxy server configurations and routing policies",
-    "owner": "No owner"
-  },
-  {
-    "description": "Data exfiltration prevention controls and testing results",
-    "owner": "No owner"
-  },
-  {
-    "description": "Host-based protection system (HIPS/HIDS/firewall) deployment evidence across all system components",
-    "owner": "No owner"
-  },
-  {
-    "description": "Mobile code policy defining acceptable and unacceptable mobile code technologies",
-    "owner": "No owner"
-  },
-  {
-    "description": "Session authenticity protection mechanisms and implementation evidence",
-    "owner": "No owner"
-  },
-  {
-    "description": "Denial-of-service protection controls for ICMP flood, SYN flood, slowloris, buffer overflow, and volume attacks",
-    "owner": "No owner"
-  },
-  {
-    "description": "Collaborative computing device remote activation controls and user indication mechanisms",
-    "owner": "No owner"
-  },
-  {
-    "description": "Information sharing controls for shared system resources to prevent unauthorized information transfer",
-    "owner": "No owner"
-  },
-  {
-    "description": "Security function isolation implementation showing separation of security and non-security functions",
-    "owner": "No owner"
-  },
-  {
-    "description": "System monitoring objectives and monitoring device deployment architecture diagrams",
-    "owner": "No owner"
-  },
-  {
-    "description": "Network traffic monitoring logs for inbound and outbound communications showing continuous monitoring",
-    "owner": "No owner"
-  },
-  {
-    "description": "Evidence of monitoring information correlation across multiple security tools",
-    "owner": "No owner"
-  },
-  {
-    "description": "Host-based monitoring mechanisms configuration on servers, workstations, and mobile devices",
-    "owner": "No owner"
-  },
-  {
-    "description": "US-CERT and CISA security alerts, advisories, and directives received and disseminated in the past year",
-    "owner": "No owner"
-  },
-  {
-    "description": "Security and privacy function verification test results performed at system startup/restart and monthly",
-    "owner": "No owner"
-  },
-  {
-    "description": "Integrity check logs performed at least monthly and during security-relevant events",
-    "owner": "No owner"
-  },
-  {
-    "description": "Spam protection mechanism configuration at system entry and exit points",
-    "owner": "No owner"
-  },
-  {
-    "description": "DMARC configuration documentation for outgoing email domains (if applicable)",
-    "owner": "No owner"
-  },
-  {
-    "description": "Information input validation procedures and exception documentation",
-    "owner": "No owner"
-  },
-  {
-    "description": "Error handling procedures and error message logs showing restricted disclosure",
-    "owner": "No owner"
-  },
-  {
-    "description": "Information management and retention schedules in accordance with NARA requirements",
-    "owner": "No owner"
-  },
-  {
-    "description": "Memory protection controls documentation including data execution prevention and address space layout randomization",
-    "owner": "No owner"
-  },
-  {
-    "description": "Supplier and contractor risk assessment reports conducted at least annually, including security processes, FOCI analysis, and subordinate supplier assessments",
+    "description": "List of authorized maintenance personnel and organizations, including access authorization verification records",
     "owner": "No owner"
   },
   {
@@ -848,11 +352,1083 @@
     "owner": "No owner"
   },
   {
-    "description": "Documentation of vendor notification process for newly discovered vulnerabilities including zero-day vulnerabilities",
+    "description": "Evidence of NIST SP 800-63B compliance for all authentication mechanisms, including AAL3 requirements for high baseline systems",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual review and updates to all interconnection agreements and internal connection authorizations",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component inventory records for all components entering and exiting the facility",
+    "owner": "No owner"
+  },
+  {
+    "description": "Sample audit records demonstrating inclusion of required content (event type, timestamp, location, source, outcome, and identity)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Most recent control assessment report from an accredited Third Party Assessment Organization (3PAO) documenting the results of annual security control testing",
+    "owner": "No owner"
+  },
+  {
+    "description": "Integrity check logs performed at least monthly and during security-relevant events",
+    "owner": "No owner"
+  },
+  {
+    "description": "Host-based protection system (HIPS/HIDS/firewall) deployment evidence across all system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Environmental monitoring system documentation with alarm and notification capabilities to designated personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Notification agreements and procedures with supply chain entities for supply chain compromises and assessment/audit results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Business Impact Analysis (BIA) documenting Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel sanctions notification records to ISSO within 24 hours of sanction initiation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Insider threat awareness training materials covering recognition and reporting of potential indicators",
+    "owner": "No owner"
+  },
+  {
+    "description": "Organizational position descriptions incorporating security and privacy roles and responsibilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Signed access agreements (nondisclosure agreements, acceptable use agreements, rules of behavior) for all personnel with system access",
+    "owner": "No owner"
+  },
+  {
+    "description": "Post-maintenance verification testing records demonstrating controls are functioning properly",
+    "owner": "No owner"
+  },
+  {
+    "description": "Time synchronization configuration showing one-second granularity and use of Coordinated Universal Time (UTC)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Position risk designation documentation for all organizational positions, including screening criteria and annual review records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current Plan of Action and Milestones (POA&M) document showing all open security weaknesses, remediation plans, and monthly updates",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix showing role assignments for system administration functions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Procedures and evidence for reviewing discoverable system information and taking corrective actions (RA-5(4))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security directive implementation records showing compliance within established timeframes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of security-relevant software and firmware updates installed within 30 days of release",
+    "owner": "No owner"
+  },
+  {
+    "description": "FIPS 140-2 or FIPS 140-3 validation certificates for all cryptographic modules in use",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit review findings reports and documentation of reporting to designated personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of training content updates following system changes or significant events",
+    "owner": "No owner"
+  },
+  {
+    "description": "Control baseline tailoring documentation showing scoping decisions, compensating controls, and parameter assignments for FedRAMP High baseline",
+    "owner": "No owner"
+  },
+  {
+    "description": "Assessment, authorization, and monitoring policy and procedures documentation, including most recent review and approval dates",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration management documentation showing integration of flaw remediation processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "User-installed software policy, enforcement mechanisms (technical controls), and continuous monitoring evidence via allow-listing tools",
+    "owner": "No owner"
+  },
+  {
+    "description": "Traffic flow policies for each managed interface including documented exceptions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Least functionality documentation including list of prohibited/restricted functions, ports, protocols, and services with justification for enabled services",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of audit storage capacity warning thresholds (75% or one month before impact) and alert recipients",
+    "owner": "No owner"
+  },
+  {
+    "description": "Version control system records showing retention of previous baseline configurations to support rollback capabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control matrix showing permitted actions (read, write, execute, append, delete) for audit record information by role and user",
+    "owner": "No owner"
+  },
+  {
+    "description": "Exit interview documentation covering information security topics for terminated employees",
+    "owner": "No owner"
+  },
+  {
+    "description": "Account management procedures including account creation, modification, and termination workflows (AC-2)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration change request records including security and privacy impact analyses, approvals, implementation evidence, and testing results for a sample of recent changes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information input validation procedures and exception documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alert notifications sent to administrators in response to malicious code detection",
+    "owner": "No owner"
+  },
+  {
+    "description": "Tamper protection program documentation including safeguards for authenticity of software and patches supplied by vendors",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel transfer procedures and records, including access authorization reviews and modifications completed within 24 hours",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer security and privacy assessment plans, including unit/integration/system/regression testing results, flaw remediation processes, and evidence of test execution",
+    "owner": "No owner"
+  },
+  {
+    "description": "Threat modeling and vulnerability analysis documentation performed during development and testing, including contextual information, tools/methods used, rigor level, and acceptance criteria",
+    "owner": "No owner"
+  },
+  {
+    "description": "SCRM Team charter or documentation identifying team members, roles, responsibilities, and assigned SCRM activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Visitor access records for the past 12 months including names, organizations, dates, entry/departure times, and purpose of visits",
+    "owner": "No owner"
+  },
+  {
+    "description": "Service Level Agreement (SLA) defining recovery time and recovery point objectives for contingency operations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Water damage protection documentation including master shutoff valve locations and water detection sensor specifications",
+    "owner": "No owner"
+  },
+  {
+    "description": "System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security awareness and training records for personnel with access control responsibilities (AT family)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of incident reporting to US-CERT and FedRAMP per NIST SP 800-61 timelines, including sample incident reports and communication records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Non-FedRAMP external system connections inventory with risk assessments",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supply chain risk assessment documentation for systems, components, and services, including update frequency and significant change triggers (RA-3(1))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated configuration management tool reports showing baseline configurations, configuration drift detection, and compliance scan results",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of functions and information accessible without authentication with documented justification (AC-14)",
+    "owner": "No owner"
+  },
+  {
+    "description": "External system services agreements, service-level agreements, and continuous monitoring documentation demonstrating compliance with FedRAMP security controls baselines",
+    "owner": "No owner"
+  },
+  {
+    "description": "External provider personnel security requirements and compliance documentation, including contractual agreements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Network traffic monitoring logs for inbound and outbound communications showing continuous monitoring",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of automated incident handling mechanisms, including system configurations for incident tracking, data collection, analysis tools, and dynamic reconfiguration capabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Emergency lighting system documentation and testing records for emergency exits and evacuation routes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident response training materials covering simulated events, tabletop exercises, and information spillage scenarios with evidence of annual delivery",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer configuration management documentation, including change control procedures, integrity verification methods, and security flaw tracking and resolution reports",
+    "owner": "No owner"
+  },
+  {
+    "description": "Authenticated proxy server configurations and routing policies",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media protection policy and procedures documentation, including roles, responsibilities, review frequency, and approval records",
+    "owner": "No owner"
+  },
+  {
+    "description": "DNSSEC implementation documentation for authoritative and recursive DNS servers",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inspection records for maintenance tools checking for unauthorized modifications or malicious code",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current audit and accountability procedures document, including version history and last review date",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control lists or authorization matrices for digital and non-digital media containing sensitive information",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual updates to literacy training and awareness content, including incorporation of lessons learned from security or privacy incidents",
+    "owner": "No owner"
+  },
+  {
+    "description": "Error handling procedures and error message logs showing restricted disclosure",
+    "owner": "No owner"
+  },
+  {
+    "description": "Telecommunications service provider agreements, including priority-of-service provisions and evidence of provider contingency plan reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Rationale document explaining why selected event types are adequate for after-the-fact investigations",
+    "owner": "No owner"
+  },
+  {
+    "description": "System monitoring objectives and monitoring device deployment architecture diagrams",
+    "owner": "No owner"
+  },
+  {
+    "description": "Mobile code policy defining acceptable and unacceptable mobile code technologies",
+    "owner": "No owner"
+  },
+  {
+    "description": "Identity proofing procedures for user account establishment, including evidence collection, validation, and verification methods per NIST SP 800-63A",
+    "owner": "No owner"
+  },
+  {
+    "description": "Non-repudiation mechanisms documentation covering addition, modification, deletion, approval, sending, and receiving of data",
+    "owner": "No owner"
+  },
+  {
+    "description": "Real-time alert configuration for audit failure events, including recipient roles with authority to address failures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Host-based monitoring mechanisms configuration on servers, workstations, and mobile devices",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of functions, ports, protocols, and services required for all external system services where Federal information is processed or stored",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix documenting role assignments for privileged functions including admin additions/removals and policy enforcement",
+    "owner": "No owner"
+  },
+  {
+    "description": "Social engineering and social mining awareness training materials covering phishing, pretexting, impersonation, and other attack vectors",
+    "owner": "No owner"
+  },
+  {
+    "description": "Change Control Board (CCB) charter, membership roster, meeting minutes, and records of configuration change decisions for the past 12 months",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vendor compliance documentation for physical facility access and logical access controls to supplied products",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of weekly audit record review and analysis activities for the past quarter",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of monitoring information correlation across multiple security tools",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident tracking and monitoring records, including incident logs, status reports, and documentation of incidents from the past 12 months",
+    "owner": "No owner"
+  },
+  {
+    "description": "Sanitization equipment testing records and validation results conducted at least every six months",
+    "owner": "No owner"
+  },
+  {
+    "description": "Individual training records retained for five years or five years after completion of specific training programs",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit logs demonstrating privileged function execution logging (AC-6(9))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vulnerability scanning coverage documentation defining breadth and depth of scanning across system components (RA-5(3))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel security documentation demonstrating that incident handlers meet security requirements commensurate with system criticality/sensitivity",
+    "owner": "No owner"
+  },
+  {
+    "description": "Remote access monitoring logs and encryption implementation evidence (AC-17(1), AC-17(2))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Firewall and boundary protection device configuration files and rulesets",
+    "owner": "No owner"
+  },
+  {
+    "description": "Training completion records for role-based training showing initial training before system access and annual refresher training",
+    "owner": "No owner"
+  },
+  {
+    "description": "Malicious code protection mechanism configuration documentation, including signature-based and non-signature-based technologies",
+    "owner": "No owner"
+  },
+  {
+    "description": "Wireless access policy, authentication mechanisms, and encryption standards (AC-18, AC-18(1))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supplier and contractor risk assessment reports conducted at least annually, including security processes, FOCI analysis, and subordinate supplier assessments",
+    "owner": "No owner"
+  },
+  {
+    "description": "Systems security and privacy engineering principles documentation showing application throughout the specification, design, development, implementation, and modification phases",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supply chain custody documentation for all devices, including replacement devices, showing integrity verification before introduction to the system boundary",
+    "owner": "No owner"
+  },
+  {
+    "description": "Escort and supervision procedures for maintenance personnel without appropriate security clearances",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component location documentation addressing physical and environmental hazards identified during threat assessment",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of approved maintenance tools and annual review documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cryptographic key management procedures including key generation, distribution, storage, access, and destruction processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "SSP approval documentation from authorizing official or designated representative",
+    "owner": "No owner"
+  },
+  {
+    "description": "Fire detection and suppression system documentation including independent energy source specifications",
+    "owner": "No owner"
+  },
+  {
+    "description": "Contingency Plan Test Report (Appendix G) documenting the most recent annual functional exercise results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Environmental controls documentation consistent with ASHRAE Thermal Guidelines for Data Processing Environments including temperature and humidity monitoring records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of designated official responsible for managing audit and accountability policy and procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical and environmental protection policy and procedures documentation (PE-1)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Service level agreements or documentation supporting advertised uptime and availability requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Process isolation implementation documentation showing separate execution domains",
+    "owner": "No owner"
+  },
+  {
+    "description": "Formal personnel sanctions policy and process documentation for security and privacy policy violations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Capacity planning documentation demonstrating sufficient resources for contingency operations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inventory of all system components within the authorization boundary, including services, ports, and protocols in use",
     "owner": "No owner"
   },
   {
     "description": "Evidence of anti-tamper technologies, tools, and techniques employed throughout the system development lifecycle",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of vendor notification process for newly discovered vulnerabilities including zero-day vulnerabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Visitor access record review documentation demonstrating at least monthly reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Memory protection controls documentation including data execution prevention and address space layout randomization",
+    "owner": "No owner"
+  },
+  {
+    "description": "Software license inventory and tracking records demonstrating compliance with licensing agreements and copyright laws",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access authorization credentials (ID badges, identification cards, smart cards) issuance records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of integrated analysis combining audit records with vulnerability scanning, performance data, system monitoring, and penetration test data",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk monitoring documentation showing effectiveness monitoring, compliance monitoring, and change monitoring activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "SSP distribution records showing dissemination to Chief Privacy Officer, ISSO, and other required personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Denial-of-service protection controls for ICMP flood, SYN flood, slowloris, buffer overflow, and volume attacks",
+    "owner": "No owner"
+  },
+  {
+    "description": "Digital Identity Level (DIL) determination documentation (SSP Appendix E)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Non-organizational user identification and authentication procedures, including external authenticator acceptance criteria",
+    "owner": "No owner"
+  },
+  {
+    "description": "External system usage policy and approved connection agreements (AC-20, AC-20(1))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Publicly accessible content review procedures and quarterly review logs (AC-22)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of backup verification testing conducted at least monthly, including media reliability and information integrity test results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of audit record correlation across different repositories for organization-wide situational awareness",
+    "owner": "No owner"
+  },
+  {
+    "description": "Vendor plan to protect the development pipeline and ensure authenticity of software and patches",
+    "owner": "No owner"
+  },
+  {
+    "description": "Rules of Behavior document with documented user acknowledgments (electronic or physical signatures)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of awareness techniques employed (e.g., posters, email advisories, logon screen messages, awareness events)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Software allow-list (authorized software inventory) with version numbers, approval records, and evidence of quarterly reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Privacy Impact Assessment (PIA) or privacy risk assessment results for systems processing personally identifiable information",
+    "owner": "No owner"
+  },
+  {
+    "description": "Cryptographic code authentication mechanisms for software and firmware components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Static code analysis reports documenting identified flaws, remediation actions, and methodology for reviewing newly developed code (or dynamic code analysis if source code is unavailable)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Supply chain incident reporting procedures and evidence of coordination with product/service providers per SR-8 requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Collaborative computing device remote activation controls and user indication mechanisms",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of encryption implementation for data in transit (TLS/IPSec configurations)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical access device inventory records (keys, combinations, access cards) with annual inventory verification",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer security and privacy architecture and design specifications showing consistency with enterprise architecture, allocation of controls, and unified approach to protection",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security Information and Event Management (SIEM) system configuration and real-time analysis reports",
+    "owner": "No owner"
+  },
+  {
+    "description": "Public vulnerability disclosure program documentation, including reporting channel details and authorization language (RA-5(11))",
+    "owner": "No owner"
+  },
+  {
+    "description": "System and component inspection procedures and records to detect tampering",
+    "owner": "No owner"
+  },
+  {
+    "description": "Procedures for nondestructive sanitization of portable storage devices prior to system connection",
+    "owner": "No owner"
+  },
+  {
+    "description": "Backup and restoration logs demonstrating daily incremental and weekly full backups of user-level, system-level, and documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Historic audit log review documentation for high or critical vulnerability findings to determine prior exploitation (RA-5(8))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit record reduction and report generation tool documentation and sample customizable reports",
+    "owner": "No owner"
+  },
+  {
+    "description": "User identifier management records demonstrating unique identification of contractors and foreign nationals (IA-4(4))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Data exfiltration prevention controls and testing results",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media transport procedures, including encryption methods, accountability logs, and authorized courier personnel list",
+    "owner": "No owner"
+  },
+  {
+    "description": "Administrator and user documentation for systems, components, and services, including secure configuration, installation, operation guidance, and known vulnerabilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information sharing controls for shared system resources to prevent unauthorized information transfer",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media use restrictions policy and technical controls documentation for portable storage devices and removable media",
+    "owner": "No owner"
+  },
+  {
+    "description": "Plan of Action and Milestones (POA&M) documenting all open vulnerabilities with risk ratings, remediation timelines, and status tracking (RA-5)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration control procedures and records for system components awaiting service, repair, or return to service",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation confirming that information processing, data storage, and system services are restricted to U.S./U.S. Territories or locations with U.S. jurisdiction for all High impact data, systems, or services",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated account management system configuration and audit logs (AC-2(1), AC-2(4))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit logs demonstrating automated enforcement of configuration change restrictions and notifications to approval authorities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current Interconnection Security Agreements (ISAs) or Memoranda of Understanding (MOUs) for all external system connections and data exchanges",
+    "owner": "No owner"
+  },
+  {
+    "description": "Role-based access control (RBAC) or attribute-based access control (ABAC) implementation documentation (AC-6, AC-2(7))",
+    "owner": "No owner"
+  },
+  {
+    "description": "FedRAMP-authorized cloud service provider (CSP) and cloud service offering (CSO) dependencies list",
+    "owner": "No owner"
+  },
+  {
+    "description": "Approval records for off-site maintenance, repair, or replacement activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "System use notification banner text and implementation evidence (AC-8)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Continuous monitoring reports and dashboards provided to the JAB or Authorizing Official showing security and privacy status",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of external network connections and access points to the system",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit record retention policy and evidence of compliance with M-21-31 and NARA requirements (minimum 90 days online, long-term offline)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident response training records for privileged users and incident response personnel, including training completion dates, content, and attendance rosters",
+    "owner": "No owner"
+  },
+  {
+    "description": "User account provisioning and de-provisioning procedures, including identifier management and reuse prevention controls (minimum 2-year restriction)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk assessment reports identifying system-specific threats, vulnerabilities, and risk determinations for architecture and design decisions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Capital planning and investment control documentation showing resource allocation for information security and privacy, including discrete line items in programming and budgeting documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "System component isolation and segregation implementation documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of FedRAMP-authorized cloud service providers (CSPs) and cloud service offerings (CSOs) with connection details and data types",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current maintenance policy and procedures documentation, including roles, responsibilities, and approval authority",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information management and retention schedules in accordance with NARA requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media storage inventory records and physical security controls documentation for controlled areas where media is stored",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security configuration checklists and hardening guides (DISA STIGs, CIS benchmarks, or custom baselines) applied to system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Deny-by-default, allow-by-exception network communications policy and implementation evidence",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current system and information integrity policy and procedures, including review and update dates",
+    "owner": "No owner"
+  },
+  {
+    "description": "Physical intrusion alarm and surveillance equipment documentation and monitoring records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Uninterruptible power supply (UPS) specifications and testing records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Spam protection mechanism configuration at system entry and exit points",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence that static authenticators are not embedded in applications or stored unencrypted",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documentation of temporary and emergency account policies with evidence of automatic disablement within 24 hours (AC-2(2), AC-2(3))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Split tunneling prevention controls and configuration for remote devices",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information flow control policy and enforcement mechanisms (AC-4)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Most recent penetration test report conducted by an independent testing team, including findings, risk ratings, and remediation status",
+    "owner": "No owner"
+  },
+  {
+    "description": "Session authenticity protection mechanisms and implementation evidence",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix showing role assignments and conflicting duties (AC-5)",
+    "owner": "Alex Fung"
+  },
+  {
+    "description": "Automated unauthorized component detection tool configuration, alert logs, and incident response records for detected unauthorized components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Water detection system automated alert mechanisms and notification procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "Password policy documentation showing compliance with NIST SP 800-63B, including minimum length requirements, prohibited password lists, and composition rules",
+    "owner": "No owner"
+  },
+  {
+    "description": "System owner and ISSO contact information and organizational chart",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control policy and procedures documentation (AC-1)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current risk assessment report documenting threats, vulnerabilities, likelihood and magnitude of harm, and impact to individuals from PII processing (RA-3)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Media marking procedures and examples of marked media showing distribution limitations, handling caveats, and security markings",
+    "owner": "No owner"
+  },
+  {
+    "description": "System time synchronization configuration with NIST authoritative time sources",
+    "owner": "No owner"
+  },
+  {
+    "description": "Interconnection security agreements (ISAs) or memoranda of understanding (MOUs) for external system connections",
+    "owner": "No owner"
+  },
+  {
+    "description": "Key and combination change records demonstrating at least annual changes or changes following security events",
+    "owner": "No owner"
+  },
+  {
+    "description": "Audit configuration documentation showing event types selected for continuous logging",
+    "owner": "No owner"
+  },
+  {
+    "description": "Public Key Infrastructure (PKI) certificate policy and approved trust anchor list",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information spillage response procedures, including assigned personnel roles, communication methods, isolation protocols, and eradication processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "DMARC configuration documentation for outgoing email domains (if applicable)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Boundary protection device fail-secure configuration documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of auditable event types configured across all system components (network, data storage, and computing devices)",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of incident response personnel and organizational elements with distribution records showing dissemination of the incident response plan to designated FedRAMP personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "System and communications protection policy and procedures documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "PIV/CAC credential acceptance and verification configuration for federal agency users",
+    "owner": "No owner"
+  },
+  {
+    "description": "Visitor escort procedures and records demonstrating visitor control within restricted access areas",
+    "owner": "No owner"
+  },
+  {
+    "description": "Anti-counterfeit training materials and records for personnel responsible for detecting counterfeit components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Development process documentation showing security and privacy requirements integration, standards and tools used, tool configurations, and integrity controls for process changes (reviewed annually)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of independent assessor qualifications and accreditation status (3PAO accreditation documentation)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Anti-counterfeit policy and procedures including detection and prevention measures for counterfeit components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current Incident Response Policy and Procedures documentation, including version history, approval signatures, and evidence of annual review",
+    "owner": "No owner"
+  },
+  {
+    "description": "Privileged access authorization documentation for authenticated vulnerability scanning activities (RA-5(5))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Social media and external site usage policy and restrictions documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "CISA Emergency and Binding Operational Directives compliance status documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Acquisition contracts for systems, components, or services, including security and privacy functional requirements, assurance requirements, acceptance criteria, and Federal Acquisition Regulation (FAR) Section 889 compliance documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security function isolation implementation showing separation of security and non-security functions",
+    "owner": "No owner"
+  },
+  {
+    "description": "Test environment documentation and evidence of security testing performed prior to production implementation of configuration changes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Continuous Monitoring Strategy and Plan documenting the approach, frequency, and responsibilities for ongoing security monitoring activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Risk Assessment Policy and Procedures documentation addressing purpose, scope, roles, responsibilities, and compliance requirements (RA-1)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Incident response support resource documentation, including help desk procedures, ticketing system access, and forensics service availability",
+    "owner": "No owner"
+  },
+  {
+    "description": "Integrated incident response team charter, including team composition, deployment capabilities, time-to-deploy metrics, and cross-organizational coordination procedures",
+    "owner": "No owner"
+  },
+  {
+    "description": "System Development Life Cycle (SDLC) documentation that incorporates security and privacy considerations, including defined roles and responsibilities throughout the lifecycle",
+    "owner": "No owner"
+  },
+  {
+    "description": "US-CERT and CISA security alerts, advisories, and directives received and disseminated in the past year",
+    "owner": "No owner"
+  },
+  {
+    "description": "Authorization to Operate (ATO) letter or memorandum from the Authorizing Official, including any conditions or limitations",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of monthly privileged account reviews and semi-annual non-privileged account reviews (AC-2(j))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Separation of duties matrix with role assignments for physical access administration and enforcement",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of vulnerability scanner updates within 24 hours prior to scans, including update logs or configuration records (RA-5(2))",
+    "owner": "No owner"
+  },
+  {
+    "description": "Malicious code scanning logs showing weekly scans and real-time scanning at endpoints and network entry/exit points",
+    "owner": "No owner"
+  },
+  {
+    "description": "Personnel screening and background investigation records, including initial screening and rescreening documentation per FedRAMP requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Contingency plan distribution list showing key contingency personnel by name and role",
+    "owner": "No owner"
+  },
+  {
+    "description": "Current Information System Contingency Plan (ISCP) using the FedRAMP template, including all appendices",
+    "owner": "No owner"
+  },
+  {
+    "description": "Developer personnel screening documentation, including access authorizations, background checks, clearances, and list of individuals authorized to perform development activities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual contingency training completion for personnel with contingency roles and responsibilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Public key infrastructure (PKI) certificate validation procedures, including certification path construction and revocation checking",
+    "owner": "No owner"
+  },
+  {
+    "description": "Component disposal procedures and documentation including techniques and methods for secure disposal of data, documentation, tools, and system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Maintenance schedules and records for system components, including dates, descriptions, and personnel involved",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information sharing agreements and data classification guidelines (AC-21)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Remote access policy and procedures including VPN configuration and usage restrictions (AC-17)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Configuration Management Plan (CMP) with documented roles, responsibilities, processes, configuration items, and approval records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Mobile device encryption implementation evidence (full-device or container-based) (AC-19(5))",
+    "owner": "No owner"
+  },
+  {
+    "description": "System owner and ISSO contact information and role assignments",
+    "owner": "No owner"
+  },
+  {
+    "description": "Documented supply chain controls and processes to identify and address weaknesses in supply chain elements",
+    "owner": "No owner"
+  },
+  {
+    "description": "Digital Identity Level (DIL) determination documentation (SSP Appendix E)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of encryption implementation for data at rest across all system components storing Federal data",
+    "owner": "No owner"
+  },
+  {
+    "description": "Annual independent assessor vulnerability scan reports for operating systems/infrastructure, web applications, and databases (RA-5)",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of all user accounts (privileged and non-privileged) with assigned roles, permissions, and account types",
+    "owner": "No owner"
+  },
+  {
+    "description": "Alternate power supply documentation demonstrating automatic activation capability for extended power loss",
+    "owner": "No owner"
+  },
+  {
+    "description": "Access control documentation for configuration change privileges, including role definitions, separation of duties matrix, and quarterly privilege reviews",
+    "owner": "No owner"
+  },
+  {
+    "description": "Enterprise architecture documentation showing how the system integrates with organizational architecture",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual SSP review and updates addressing system changes or assessment findings",
+    "owner": "No owner"
+  },
+  {
+    "description": "Concept of Operations (CONOPS) document describing operational environment and mission/business processes",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of incident response testing conducted within the past six months, including test plans, functional test results, and JAB/AO approval documentation",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inventory of critical system assets supporting essential mission and business functions",
+    "owner": "No owner"
+  },
+  {
+    "description": "System-wide audit trail compilation documentation showing time-correlated records from all network, data storage, and computing devices",
+    "owner": "No owner"
+  },
+  {
+    "description": "Automated notifications of integrity violations sent to ISSO and security personnel",
+    "owner": "No owner"
+  },
+  {
+    "description": "Device identification and authentication mechanisms documentation for local, network, and remote connections",
+    "owner": "No owner"
+  },
+  {
+    "description": "Mobile device management (MDM) policy and configuration requirements (AC-19)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Information location documentation identifying where Federal data is processed and stored, including system component mappings and user access records",
+    "owner": "No owner"
+  },
+  {
+    "description": "Role-based audit configuration change procedures and documentation of authorized individuals with audit configuration responsibilities",
+    "owner": "No owner"
+  },
+  {
+    "description": "Concurrent session limits configuration (3 for privileged, 2 for non-privileged) (AC-10)",
+    "owner": "No owner"
+  },
+  {
+    "description": "Evidence of annual contingency policy and procedures review and approval",
+    "owner": "No owner"
+  },
+  {
+    "description": "Multi-factor authentication configuration documentation demonstrating phishing-resistant MFA implementation for privileged and non-privileged accounts",
+    "owner": "No owner"
+  },
+  {
+    "description": "Maintenance support contracts and spare parts inventory for critical system components",
+    "owner": "No owner"
+  },
+  {
+    "description": "Inventory of internal system connections including all authorized components, interface characteristics, and security requirements",
+    "owner": "No owner"
+  },
+  {
+    "description": "List of individuals with authorized physical access to the facility where the system resides",
+    "owner": "No owner"
+  },
+  {
+    "description": "Security and privacy function verification test results performed at system startup/restart and monthly",
+    "owner": "No owner"
+  },
+  {
+    "description": "System Security Plan (SSP) document including all required sections per FedRAMP High Baseline requirements",
     "owner": "No owner"
   }
 ]

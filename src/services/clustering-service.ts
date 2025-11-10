@@ -1,10 +1,11 @@
-import * as clustering from 'density-clustering';
 import { HDBSCAN } from 'hdbscan-ts';
 import { EmbeddedDocument, Cluster, ClusteringConfig } from '../types.js';
 import { EmbeddingService } from './embedding-service.js';
 
 /**
- * Service for clustering documents based on embedding similarity
+ * Service for clustering documents using HDBSCAN algorithm
+ * HDBSCAN (Hierarchical Density-Based Spatial Clustering of Applications with Noise)
+ * is a density-based clustering algorithm that automatically determines the number of clusters
  */
 export class ClusteringService {
   private config: ClusteringConfig;
@@ -14,115 +15,37 @@ export class ClusteringService {
   }
 
   /**
-   * Cluster documents using the configured algorithm
+   * Cluster documents using HDBSCAN algorithm
    */
   clusterDocuments(docs: EmbeddedDocument[]): Cluster[] {
     if (docs.length === 0) {
       return [];
     }
 
-    const { algorithm } = this.config;
-
-    switch (algorithm) {
-      case 'dbscan':
-        return this.clusterWithDBSCAN(docs);
-      case 'optics':
-        return this.clusterWithOPTICS(docs);
-      case 'kmeans':
-        return this.clusterWithKMeans(docs);
-      case 'hdbscan':
-        return this.clusterWithHDBSCAN(docs);
-      default:
-        throw new Error(`Unsupported algorithm: ${algorithm}`);
-    }
-  }
-
-  /**
-   * Cluster using DBSCAN algorithm (density-based, automatic cluster count)
-   */
-  private clusterWithDBSCAN(docs: EmbeddedDocument[]): Cluster[] {
-    const dbscan = new clustering.DBSCAN();
-    const epsilon = this.config.epsilon ?? 0.3; // Cosine distance threshold
-    const minPoints = this.config.minPoints ?? 2;
-
-    // Extract embeddings as dataset
-    const dataset = docs.map((doc) => doc.embedding);
-
-    // Use cosine distance if specified
-    const distanceFunction =
-      this.config.distanceMetric === 'cosine'
-        ? this.cosineDistance.bind(this)
-        : undefined;
-
-    // Run DBSCAN clustering
-    const clusterIndices = dbscan.run(
-      dataset,
-      epsilon,
-      minPoints,
-      distanceFunction
-    );
-
-    // Convert cluster indices to Cluster objects
-    return this.indicesToClusters(docs, clusterIndices);
-  }
-
-  /**
-   * Cluster using OPTICS algorithm (hierarchical density-based)
-   */
-  private clusterWithOPTICS(docs: EmbeddedDocument[]): Cluster[] {
-    const optics = new clustering.OPTICS();
-    const epsilon = this.config.epsilon ?? 0.3;
-    const minPoints = this.config.minPoints ?? 2;
-
-    const dataset = docs.map((doc) => doc.embedding);
-
-    const distanceFunction =
-      this.config.distanceMetric === 'cosine'
-        ? this.cosineDistance.bind(this)
-        : undefined;
-
-    const clusterIndices = optics.run(
-      dataset,
-      epsilon,
-      minPoints,
-      distanceFunction
-    );
-
-    return this.indicesToClusters(docs, clusterIndices);
-  }
-
-  /**
-   * Cluster using K-Means algorithm (requires specifying k)
-   */
-  private clusterWithKMeans(docs: EmbeddedDocument[]): Cluster[] {
-    const kmeans = new clustering.KMEANS();
-    const k = this.config.k ?? Math.ceil(Math.sqrt(docs.length / 2));
-
-    const dataset = docs.map((doc) => doc.embedding);
-
-    const clusterIndices = kmeans.run(dataset, k);
-
-    return this.indicesToClusters(docs, clusterIndices);
+    return this.clusterWithHDBSCAN(docs);
   }
 
   /**
    * Cluster using HDBSCAN algorithm (hierarchical density-based, automatic cluster count)
-   * HDBSCAN is superior to DBSCAN as it doesn't require epsilon parameter and
-   * automatically determines the number of clusters at varying densities.
+   * HDBSCAN automatically determines the number of clusters at varying densities.
+   * Supports configurable distance metrics (euclidean, cosine).
    */
   private clusterWithHDBSCAN(docs: EmbeddedDocument[]): Cluster[] {
     const minClusterSize = this.config.minClusterSize ?? 2;
     const minSamples = this.config.minSamples ?? 2;
+    const metric = this.config.metric ?? 'euclidean';
 
     // Extract embeddings as dataset
     const dataset = docs.map((doc) => doc.embedding);
 
-    // Run HDBSCAN clustering
+    // Run HDBSCAN clustering with configurable distance metric
+    // Note: metric parameter may not be in type definitions but is supported at runtime
     const hdbscan = new HDBSCAN({
       minClusterSize,
       minSamples,
+      metric,
       debugMode: false,
-    });
+    } as any);
 
     const labels = hdbscan.fit(dataset);
 
@@ -181,66 +104,6 @@ export class ClusteringService {
     }
 
     return centroid.map((val) => val / docs.length);
-  }
-
-  /**
-   * Cosine distance function for clustering (1 - cosine similarity)
-   * Lower distance means more similar vectors
-   */
-  private cosineDistance(a: number[], b: number[]): number {
-    const similarity = EmbeddingService.cosineSimilarity(a, b);
-    return 1 - similarity;
-  }
-
-  /**
-   * Find similar documents to a query document
-   */
-  findSimilarDocuments(
-    query: EmbeddedDocument,
-    docs: EmbeddedDocument[],
-    threshold: number = 0.8,
-    limit?: number
-  ): Array<{ document: EmbeddedDocument; similarity: number }> {
-    const similarities = docs
-      .filter((doc) => doc.id !== query.id)
-      .map((doc) => ({
-        document: doc,
-        similarity: EmbeddingService.cosineSimilarity(
-          query.embedding,
-          doc.embedding
-        ),
-      }))
-      .filter((item) => item.similarity >= threshold)
-      .sort((a, b) => b.similarity - a.similarity);
-
-    return limit ? similarities.slice(0, limit) : similarities;
-  }
-
-  /**
-   * Calculate pairwise similarity matrix
-   */
-  calculateSimilarityMatrix(docs: EmbeddedDocument[]): number[][] {
-    const n = docs.length;
-    const matrix: number[][] = Array(n)
-      .fill(0)
-      .map(() => Array(n).fill(0));
-
-    for (let i = 0; i < n; i++) {
-      for (let j = i; j < n; j++) {
-        if (i === j) {
-          matrix[i][j] = 1; // Self-similarity is 1
-        } else {
-          const similarity = EmbeddingService.cosineSimilarity(
-            docs[i].embedding,
-            docs[j].embedding
-          );
-          matrix[i][j] = similarity;
-          matrix[j][i] = similarity; // Symmetric
-        }
-      }
-    }
-
-    return matrix;
   }
 
   /**

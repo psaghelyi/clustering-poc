@@ -10,7 +10,7 @@ import {
   GetIndexCommand,
   GetVectorBucketCommand,
 } from '@aws-sdk/client-s3vectors';
-import type { EmbeddedDocument, S3VectorsConfig, VectorStore } from '../types.js';
+import type { EmbeddedDocument, S3VectorsConfig } from '../types.js';
 
 /**
  * S3 Vectors service for native vector storage and similarity search
@@ -18,7 +18,7 @@ import type { EmbeddedDocument, S3VectorsConfig, VectorStore } from '../types.js
  * Uses AWS S3 Vectors for efficient vector storage with built-in similarity search.
  * Provides up to 90% cost reduction compared to traditional vector databases.
  */
-export class S3VectorsService implements VectorStore {
+export class S3VectorsService {
   private client: S3VectorsClient;
   private config: S3VectorsConfig;
 
@@ -26,7 +26,6 @@ export class S3VectorsService implements VectorStore {
     this.config = config;
     this.client = new S3VectorsClient({
       region: config.region,
-      ...(config.endpoint && { endpoint: config.endpoint }),
     });
   }
 
@@ -252,16 +251,25 @@ export class S3VectorsService implements VectorStore {
   }
 
   /**
-   * Prepare metadata for S3 Vectors (AWS Document type - supports nested objects)
+   * Prepare metadata for S3 Vectors
+   * Note: S3 Vectors only supports string, number, boolean, or array values (no nested objects)
+   * Stores source document information including owner, description, sourceFile, and index
    */
   private prepareMetadata(doc: EmbeddedDocument): any {
     const metadata: any = {
       content: doc.content,
     };
 
+    // Store source document metadata (owner, description, sourceFile, index, etc.)
     if (doc.metadata) {
-      // S3 Vectors supports nested metadata as AWS Document type
-      metadata.originalMetadata = doc.metadata;
+      // Flatten common source document fields for easier querying
+      if (doc.metadata.owner) metadata.owner = doc.metadata.owner;
+      if (doc.metadata.description) metadata.description = doc.metadata.description;
+      if (doc.metadata.sourceFile) metadata.sourceFile = doc.metadata.sourceFile;
+      if (doc.metadata.index !== undefined) metadata.index = doc.metadata.index;
+      
+      // Store all metadata as JSON string (S3 Vectors doesn't support nested objects)
+      metadata.originalMetadata = JSON.stringify(doc.metadata);
     }
 
     if (doc.timestamp) {
@@ -273,6 +281,7 @@ export class S3VectorsService implements VectorStore {
 
   /**
    * Convert S3 Vectors response to EmbeddedDocument
+   * Reconstructs source document information from stored metadata
    */
   private convertToEmbeddedDocument(vector: any): EmbeddedDocument {
     const metadata: Record<string, any> = {};
@@ -287,8 +296,20 @@ export class S3VectorsService implements VectorStore {
         timestamp = new Date(vector.metadata.timestamp);
       }
 
+      // Reconstruct source document metadata from flattened fields
+      if (vector.metadata.owner) metadata.owner = vector.metadata.owner;
+      if (vector.metadata.description) metadata.description = vector.metadata.description;
+      if (vector.metadata.sourceFile) metadata.sourceFile = vector.metadata.sourceFile;
+      if (vector.metadata.index !== undefined) metadata.index = vector.metadata.index;
+
+      // Parse originalMetadata from JSON string
       if (vector.metadata.originalMetadata) {
-        Object.assign(metadata, vector.metadata.originalMetadata);
+        try {
+          const parsed = JSON.parse(vector.metadata.originalMetadata);
+          Object.assign(metadata, parsed);
+        } catch (error) {
+          console.warn('Failed to parse originalMetadata:', error);
+        }
       }
     }
 

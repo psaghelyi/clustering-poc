@@ -16,7 +16,7 @@ export interface EmbeddingModelConfig {
 }
 
 /**
- * Pre-configured embedding models
+ * Pre-configured embedding models using cross-region inference profiles where available
  */
 export const EMBEDDING_MODELS: Record<EmbeddingProvider, EmbeddingModelConfig> = {
   nova: {
@@ -31,8 +31,8 @@ export const EMBEDDING_MODELS: Record<EmbeddingProvider, EmbeddingModelConfig> =
   },
   cohere: {
     provider: 'cohere',
-    modelId: 'cohere.embed-english-v3:0:512',
-    dimensions: 512,
+    modelId: 'us.cohere.embed-v4:0', // Using cross-region inference profile
+    dimensions: 1024, // Cohere v4 supports 1024 dimensions
   },
 };
 
@@ -63,40 +63,21 @@ export interface Cluster {
 }
 
 /**
- * Clustering algorithm configuration
+ * HDBSCAN clustering configuration
  */
 export interface ClusteringConfig {
-  /** Algorithm to use */
-  algorithm: 'dbscan' | 'optics' | 'kmeans' | 'hdbscan';
-  /** Epsilon (maximum distance between points for DBSCAN) */
-  epsilon?: number;
-  /** Minimum points in neighborhood for DBSCAN/OPTICS */
-  minPoints?: number;
-  /** Minimum cluster size for HDBSCAN */
+  /** Algorithm (only HDBSCAN is supported) */
+  algorithm: 'hdbscan';
+  /** Minimum cluster size - minimum number of documents to form a cluster (default: 2) */
   minClusterSize?: number;
-  /** Minimum samples for HDBSCAN */
+  /** Minimum samples - minimum samples for core points (default: 2) */
   minSamples?: number;
-  /** Number of clusters for k-means */
-  k?: number;
-  /** Distance metric */
-  distanceMetric?: 'euclidean' | 'cosine';
+  /** Distance metric for similarity calculation (default: 'euclidean') */
+  metric?: 'euclidean' | 'cosine';
 }
 
 /**
- * S3 configuration (for simple JSON storage)
- */
-export interface S3Config {
-  bucket: string;
-  region: string;
-}
-
-/**
- * Vector store backend types
- */
-export type VectorStoreType = 'simple-s3' | 's3-vectors';
-
-/**
- * S3 Vectors configuration (for native vector storage)
+ * S3 Vectors configuration
  */
 export interface S3VectorsConfig {
   /** Vector bucket name */
@@ -105,49 +86,6 @@ export interface S3VectorsConfig {
   indexName: string;
   /** AWS region */
   region: string;
-  /** Optional endpoint (for testing) */
-  endpoint?: string;
   /** Number of dimensions (must match embedding model) */
   dimensions: number;
-}
-
-/**
- * Vector store configuration (supports multiple backends)
- */
-export interface VectorStoreConfig {
-  /** Type of vector store backend */
-  type: VectorStoreType;
-  /** Configuration for simple S3 backend */
-  s3Config?: S3Config;
-  /** Configuration for S3 Vectors backend */
-  s3VectorsConfig?: S3VectorsConfig;
-}
-
-/**
- * Vector store interface (abstraction for multiple backends)
- */
-export interface VectorStore {
-  /** Store a single embedding */
-  storeEmbedding(doc: EmbeddedDocument): Promise<void>;
-  /** Store multiple embeddings in batch */
-  storeEmbeddings(docs: EmbeddedDocument[]): Promise<void>;
-  /** Get a specific embedding by ID */
-  getEmbedding(id: string): Promise<EmbeddedDocument | null>;
-  /** Get all embeddings */
-  getAllEmbeddings(): Promise<EmbeddedDocument[]>;
-  /** Delete a specific embedding */
-  deleteEmbedding(id: string): Promise<void>;
-  /** Delete all embeddings */
-  deleteAllEmbeddings(): Promise<void>;
-  /** Query similar vectors (if supported) */
-  querySimilar?(queryVector: number[], topK: number): Promise<EmbeddedDocument[]>;
-}
-
-/**
- * Application configuration
- */
-export interface AppConfig {
-  embeddingModel: EmbeddingModelConfig;
-  vectorStore: VectorStoreConfig;
-  clustering: ClusteringConfig;
 }

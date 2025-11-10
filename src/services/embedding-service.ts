@@ -29,10 +29,91 @@ export class EmbeddingService {
   }
 
   /**
-   * Generate embeddings for multiple documents
+   * Generate embeddings for multiple documents using batch processing
    */
   async embedDocuments(docs: Document[]): Promise<EmbeddedDocument[]> {
-    return Promise.all(docs.map((doc) => this.embedDocument(doc)));
+    const { provider } = this.config;
+    
+    // Cohere supports native batch processing
+    if (provider === 'cohere') {
+      return this.embedDocumentsBatch(docs);
+    }
+    
+    // For Titan and Nova, use parallel processing with concurrency limit
+    return this.embedDocumentsParallel(docs, 10);
+  }
+
+  /**
+   * Batch embed documents using Cohere's native batch API
+   */
+  private async embedDocumentsBatch(docs: Document[]): Promise<EmbeddedDocument[]> {
+    if (docs.length === 0) return [];
+    
+    const batchSize = 96; // Cohere supports up to 96 texts per request
+    const results: EmbeddedDocument[] = [];
+    
+    for (let i = 0; i < docs.length; i += batchSize) {
+      const batch = docs.slice(i, i + batchSize);
+      const texts = batch.map(doc => doc.content);
+      
+      const embeddings = await this.generateEmbeddingsBatch(texts);
+      
+      // Combine documents with their embeddings
+      for (let j = 0; j < batch.length; j++) {
+        results.push({
+          ...batch[j],
+          embedding: embeddings[j],
+        });
+      }
+    }
+    
+    return results;
+  }
+
+  /**
+   * Process documents in parallel with concurrency limit
+   */
+  private async embedDocumentsParallel(docs: Document[], concurrency: number): Promise<EmbeddedDocument[]> {
+    const results: EmbeddedDocument[] = [];
+    
+    for (let i = 0; i < docs.length; i += concurrency) {
+      const batch = docs.slice(i, i + concurrency);
+      const batchResults = await Promise.all(
+        batch.map(doc => this.embedDocument(doc))
+      );
+      results.push(...batchResults);
+    }
+    
+    return results;
+  }
+
+  /**
+   * Generate embeddings for multiple texts in one API call (Cohere only)
+   */
+  private async generateEmbeddingsBatch(texts: string[]): Promise<number[][]> {
+    const { provider, modelId } = this.config;
+    
+    if (provider !== 'cohere') {
+      throw new Error('Batch embedding only supported for Cohere');
+    }
+    
+    const requestBody = {
+      texts,
+      input_type: 'search_document',
+      truncate: 'END',
+    };
+    
+    const command = new InvokeModelCommand({
+      modelId,
+      contentType: 'application/json',
+      accept: 'application/json',
+      body: JSON.stringify(requestBody),
+    });
+    
+    const response = await this.client.send(command);
+    const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+    
+    return responseBody.embeddings;
   }
 
   /**

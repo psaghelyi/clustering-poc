@@ -21,18 +21,20 @@ export interface MergedDocument {
 }
 
 /**
- * Service for calling AWS Bedrock Claude models to merge documents
+ * Service for calling AWS Bedrock LLMs (Claude and Nova) to merge documents
  */
 export class ClaudeService {
   private client: BedrockRuntimeClient;
   private modelId: string;
+  private isNova: boolean;
 
-  constructor(region: string = 'us-east-1', modelId: string = 'anthropic.claude-haiku-4-5-20251001-v1:0') {
+  constructor(region: string = 'us-east-1', modelId: string = 'us.anthropic.claude-haiku-4-5-20251001-v1:0') {
     this.client = new BedrockRuntimeClient({ 
       region,
       // AWS SDK will automatically use credentials from aws-vault or environment
     });
     this.modelId = modelId;
+    this.isNova = modelId.includes('nova');
   }
 
   /**
@@ -66,7 +68,7 @@ export class ClaudeService {
   }
 
   /**
-   * Build the prompt for Claude to merge documents
+   * Build the prompt for the LLM to merge documents
    */
   private buildMergePrompt(documents: InputDocument[]): string {
     const docList = documents
@@ -95,9 +97,33 @@ Only return the JSON object, no additional text.`;
   }
 
   /**
-   * Invoke the Claude model via Bedrock
+   * Invoke the model (Claude or Nova) via Bedrock
    */
   private async invokeModel(prompt: string): Promise<string> {
+    const command = new InvokeModelCommand({
+      modelId: this.modelId,
+      contentType: 'application/json',
+      accept: 'application/json',
+      body: this.isNova ? this.buildNovaPayload(prompt) : this.buildClaudePayload(prompt),
+    });
+
+    const response = await this.client.send(command);
+    const responseBody = JSON.parse(new TextDecoder().decode(response.body));
+
+    // Parse response based on model type
+    if (this.isNova) {
+      // Nova response format: { output: { message: { content: [{ text: "..." }] } } }
+      return responseBody.output.message.content[0].text;
+    } else {
+      // Claude response format: { content: [{ text: "..." }] }
+      return responseBody.content[0].text;
+    }
+  }
+
+  /**
+   * Build Claude API payload
+   */
+  private buildClaudePayload(prompt: string): string {
     const payload = {
       anthropic_version: 'bedrock-2023-05-31',
       max_tokens: 2000,
@@ -107,25 +133,36 @@ Only return the JSON object, no additional text.`;
           content: prompt,
         },
       ],
-      temperature: 0.3, // Lower temperature for more consistent merging
+      temperature: 0.3,
     };
-
-    const command = new InvokeModelCommand({
-      modelId: this.modelId,
-      contentType: 'application/json',
-      accept: 'application/json',
-      body: JSON.stringify(payload),
-    });
-
-    const response = await this.client.send(command);
-    const responseBody = JSON.parse(new TextDecoder().decode(response.body));
-
-    // Claude response format: { content: [{ text: "..." }], ... }
-    return responseBody.content[0].text;
+    return JSON.stringify(payload);
   }
 
   /**
-   * Parse Claude's response and extract the merged document
+   * Build Nova API payload
+   */
+  private buildNovaPayload(prompt: string): string {
+    const payload = {
+      messages: [
+        {
+          role: 'user',
+          content: [
+            {
+              text: prompt,
+            },
+          ],
+        },
+      ],
+      inferenceConfig: {
+        temperature: 0.3,
+        maxTokens: 2000,
+      },
+    };
+    return JSON.stringify(payload);
+  }
+
+  /**
+   * Parse LLM response and extract the merged document
    */
   private parseResponse(response: string, originalDocs: InputDocument[]): MergedDocument {
     try {
@@ -143,7 +180,7 @@ Only return the JSON object, no additional text.`;
         mergedFrom: originalDocs.map(d => d.description),
       };
     } catch (error) {
-      console.error('Failed to parse Claude response:', response);
+      console.error('Failed to parse LLM response:', response);
       // Fallback: just concatenate descriptions
       return {
         description: originalDocs.map(d => d.description).join('; '),

@@ -1,72 +1,84 @@
 #!/usr/bin/env tsx
 
 /**
- * Document Clustering and Merging Workflow
+ * Document Clustering and Merging Workflow with S3 Vectors
  * 
  * This script:
  * 1. Loads all documents from JSON files in agent-input-output/outputs/
  * 2. Generates embeddings for each document using AWS Bedrock
- * 3. Clusters semantically similar documents using DBSCAN
- * 4. Merges documents in each cluster using Claude 4.5 Haiku
- * 5. Outputs a single merged JSON file
+ * 3. Stores embeddings in S3 Vectors with metadata
+ * 4. Retrieves embeddings from S3 Vectors for clustering
+ * 5. Clusters semantically similar documents using HDBSCAN
+ * 6. Merges documents in each cluster using Claude Haiku 4.5
+ * 7. Outputs a single merged JSON file
  */
 
-import { writeFile, readFile, access } from 'fs/promises';
+import { writeFile } from 'fs/promises';
 import { join } from 'path';
 import { EmbeddingService } from './services/embedding-service.js';
+import { S3VectorsService } from './services/s3-vectors-service.js';
 import { ClusteringService } from './services/clustering-service.js';
 import { ClaudeService } from './services/claude-service.js';
 import { DocumentLoader, type SourceDocument } from './services/document-loader.js';
 import type { Document, EmbeddedDocument } from './types.js';
 import { EMBEDDING_MODELS } from './types.js';
 
+// LLM Model mapping - using cross-region inference profiles
+const LLM_MODELS = {
+  'claude-haiku': process.env.CLAUDE_MODEL_ID || 'us.anthropic.claude-haiku-4-5-20251001-v1:0',
+  'nova': process.env.NOVA_MODEL_ID || 'us.amazon.nova-lite-v1:0',
+};
+
 // Configuration
 const CONFIG = {
   inputDir: join(process.cwd(), 'agent-input-output', 'outputs'),
   outputFile: join(process.cwd(), 'agent-input-output', 'output.json'),
-  embeddingsCacheFile: join(process.cwd(), 'agent-input-output', 'embeddings-cache.json'),
   awsRegion: process.env.AWS_REGION || 'us-east-1',
   embeddingProvider: (process.env.EMBEDDING_PROVIDER || 'titan') as 'nova' | 'titan' | 'cohere',
-  claudeModelId: process.env.CLAUDE_MODEL_ID || 'anthropic.claude-3-5-haiku-20241022-v1:0',
+  llmModel: (process.env.LLM_MODEL || 'claude-haiku') as keyof typeof LLM_MODELS,
+  s3Vectors: {
+    vectorBucket: process.env.S3_VECTOR_BUCKET || 'clustering-poc-vectors',
+    indexName: process.env.S3_VECTOR_INDEX || 'embeddings-index',
+    dimensions: parseInt(process.env.EMBEDDING_DIMENSIONS || '1024'),
+  },
   clustering: {
     algorithm: 'hdbscan' as const,
-    minClusterSize: 2,  // Minimum documents to form a cluster
-    minSamples: 2,      // Minimum samples for core points
+    minClusterSize: parseInt(process.env.MIN_CLUSTER_SIZE || '2'),         // Minimum documents to form a cluster
+    minSamples: parseInt(process.env.MIN_SAMPLES || '2'),                  // Minimum samples for core points
+    metric: (process.env.DISTANCE_METRIC as 'euclidean' | 'cosine') || 'euclidean', // Distance metric for similarity
   },
 };
 
 /**
- * Check if embeddings cache file exists
+ * Check if embeddings exist in S3 Vectors
  */
-async function cacheExists(): Promise<boolean> {
+async function checkS3VectorsPopulated(s3Vectors: S3VectorsService): Promise<boolean> {
   try {
-    await access(CONFIG.embeddingsCacheFile);
-    return true;
+    const embeddings = await s3Vectors.getAllEmbeddings();
+    return embeddings.length > 0;
   } catch {
     return false;
   }
 }
 
-/**
- * Load embeddings from cache file
- */
-async function loadEmbeddingsCache(): Promise<EmbeddedDocument[]> {
-  const content = await readFile(CONFIG.embeddingsCacheFile, 'utf-8');
-  return JSON.parse(content);
-}
-
-/**
- * Save embeddings to cache file
- */
-async function saveEmbeddingsCache(embeddings: EmbeddedDocument[]): Promise<void> {
-  const content = JSON.stringify(embeddings, null, 2);
-  await writeFile(CONFIG.embeddingsCacheFile, content, 'utf-8');
-}
-
 async function main() {
-  console.log('🚀 Starting document clustering and merging workflow...\n');
+  console.log('🚀 Starting document clustering and merging workflow with S3 Vectors...\n');
 
-  // Step 1: Load documents
+  // Step 1: Initialize S3 Vectors
+  console.log('🔧 Initializing S3 Vectors...');
+  console.log(`   - Bucket: ${CONFIG.s3Vectors.vectorBucket}`);
+  console.log(`   - Index: ${CONFIG.s3Vectors.indexName}`);
+  console.log(`   - Dimensions: ${CONFIG.s3Vectors.dimensions}`);
+  const s3Vectors = new S3VectorsService({
+    vectorBucket: CONFIG.s3Vectors.vectorBucket,
+    indexName: CONFIG.s3Vectors.indexName,
+    region: CONFIG.awsRegion,
+    dimensions: CONFIG.s3Vectors.dimensions,
+  });
+  await s3Vectors.initialize();
+  console.log('✅ S3 Vectors initialized\n');
+
+  // Step 2: Load documents
   console.log('📂 Loading documents from:', CONFIG.inputDir);
   const loader = new DocumentLoader();
   const sourceDocs = await loader.loadDocuments(CONFIG.inputDir);
@@ -77,13 +89,15 @@ async function main() {
     process.exit(1);
   }
 
-  // Step 2: Generate or load embeddings
+  // Step 3: Generate or load embeddings from S3 Vectors
   let embeddedDocs: EmbeddedDocument[];
   
-  if (await cacheExists()) {
-    console.log('📦 Loading embeddings from cache...');
-    embeddedDocs = await loadEmbeddingsCache();
-    console.log(`✅ Loaded ${embeddedDocs.length} embeddings from cache\n`);
+  const hasExistingEmbeddings = await checkS3VectorsPopulated(s3Vectors);
+  
+  if (hasExistingEmbeddings) {
+    console.log('📦 Loading embeddings from S3 Vectors...');
+    embeddedDocs = await s3Vectors.getAllEmbeddings();
+    console.log(`✅ Loaded ${embeddedDocs.length} embeddings from S3 Vectors\n`);
   } else {
     console.log('🧠 Generating embeddings using AWS Bedrock...');
     const embeddingModelConfig = EMBEDDING_MODELS[CONFIG.embeddingProvider];
@@ -94,34 +108,39 @@ async function main() {
       content: doc.description,
       metadata: {
         owner: doc.owner,
+        description: doc.description, // Store for S3 Vectors metadata
         sourceFile: doc.sourceFile,
         index: doc.index,
       },
     }));
 
+    // Use batch processing for faster embedding generation
+    const totalDocs = documents.length;
+    const batchSize = CONFIG.embeddingProvider === 'cohere' ? 96 : 10;
+    
     embeddedDocs = [];
     let processedCount = 0;
-    const totalDocs = documents.length;
     
-    for (const doc of documents) {
-      const embeddedDoc = await embeddingService.embedDocument(doc);
-      embeddedDocs.push(embeddedDoc);
-      processedCount++;
+    // Process in batches with progress logging
+    for (let i = 0; i < documents.length; i += batchSize) {
+      const batch = documents.slice(i, i + batchSize);
+      const batchResults = await embeddingService.embedDocuments(batch);
+      embeddedDocs.push(...batchResults);
       
-      // Log progress every 10 documents
+      processedCount += batch.length;
       if (processedCount % 10 === 0 || processedCount === totalDocs) {
         console.log(`   Progress: ${processedCount}/${totalDocs} embeddings generated (${Math.round(processedCount/totalDocs*100)}%)`);
       }
     }
     console.log(`✅ Generated ${embeddedDocs.length} embeddings\n`);
     
-    // Save embeddings to cache
-    console.log('💾 Saving embeddings to cache...');
-    await saveEmbeddingsCache(embeddedDocs);
-    console.log(`✅ Cached embeddings saved to: ${CONFIG.embeddingsCacheFile}\n`);
+    // Store embeddings in S3 Vectors with metadata
+    console.log('💾 Storing embeddings in S3 Vectors...');
+    await s3Vectors.storeEmbeddings(embeddedDocs);
+    console.log('✅ Embeddings stored in S3 Vectors\n');
   }
 
-  // Step 3: Cluster similar documents
+  // Step 4: Cluster similar documents using HDBSCAN
   console.log('🔍 Clustering similar documents...');
   const clusteringService = new ClusteringService(CONFIG.clustering);
   const clusters = clusteringService.clusterDocuments(embeddedDocs);
@@ -146,15 +165,20 @@ async function main() {
   });
   console.log();
 
-  // Step 4: Merge documents using Claude
-  console.log('🤖 Merging documents with Claude 4.5 Haiku...');
-  const claudeService = new ClaudeService(CONFIG.awsRegion, CONFIG.claudeModelId);
+  // Step 5: Merge documents using LLM (only clusters with >2 documents)
+  const llmModelId = LLM_MODELS[CONFIG.llmModel];
+  const llmName = CONFIG.llmModel === 'nova' ? 'Nova Lite' : 'Claude Haiku 4.5';
+  console.log(`🤖 Merging clusters with >2 documents using ${llmName}...`);
+  const claudeService = new ClaudeService(CONFIG.awsRegion, llmModelId);
 
   const mergedDocuments = [];
 
-  // Merge clustered documents
+  // Merge clusters with more than 2 documents
+  const clustersToMerge = clusters.filter(c => c.documents.length > 2);
+  const smallClusters = clusters.filter(c => c.documents.length <= 2);
+
   let mergedCount = 0;
-  for (const cluster of clusters) {
+  for (const cluster of clustersToMerge) {
     const inputDocs = cluster.documents.map(doc => ({
       description: doc.content,
       owner: doc.metadata?.owner || 'No owner',
@@ -163,7 +187,17 @@ async function main() {
     const merged = await claudeService.mergeDocuments(inputDocs);
     mergedDocuments.push(merged);
     mergedCount++;
-    console.log(`   ✓ [${mergedCount}/${clusters.length}] Merged cluster ${cluster.clusterId} (${cluster.documents.length} docs → 1)`);
+    console.log(`   ✓ [${mergedCount}/${clustersToMerge.length}] Merged cluster ${cluster.clusterId} (${cluster.documents.length} docs → 1)`);
+  }
+
+  // Add small clusters as-is (no merging needed for <=2 docs)
+  for (const cluster of smallClusters) {
+    for (const doc of cluster.documents) {
+      mergedDocuments.push({
+        description: doc.content,
+        owner: doc.metadata?.owner || 'No owner',
+      });
+    }
   }
 
   // Add noise documents as-is (no merging needed)
@@ -176,7 +210,7 @@ async function main() {
 
   console.log(`✅ Merged into ${mergedDocuments.length} final documents\n`);
 
-  // Step 5: Save output
+  // Step 6: Save output
   console.log('💾 Saving merged documents to:', CONFIG.outputFile);
   const output = JSON.stringify(mergedDocuments, null, 2);
   await writeFile(CONFIG.outputFile, output, 'utf-8');
